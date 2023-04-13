@@ -1,0 +1,46 @@
+---
+name: Feature Suggestion
+description: Suggest something for this project.
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature suggestion!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: What benefits does the suggestion solve?
+      description: Please describe what benefits the feature suggestion would enable.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature suggestion description
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative solutions
+      description: Did you consider some alternative solutions, please describe.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Anything else that you consider important for understanding your feature suggestion.
+    validations:
+      required: false
