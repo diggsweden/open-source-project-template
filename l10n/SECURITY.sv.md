@@ -1,6 +1,6 @@
 # Säkerhetsrapport
 
-Om du vill rapportera en sårbarhet, men inte i ett offentligt ärende - tack! Vi ber dig att följa följande process.
+Om du vill rapportera en sårbarhet, men inte i ett offentligt ärende - tack!! Vi ber dig att följa följande process.
 
 Vänligen rapportera säkerhetsbrister genom att meddela oss:
 

@@ -96,7 +96,5 @@ Credits, references or other relevant information.
 Example:
 
 Special Thanks to
-* [Keep A Changelog](https://keepachangelog.com/)
-* [Contributor Covenant](https://www.contributor-covenant.org/)
 * [IEEE Open Source Maintainers Manual](https://opensource.ieee.org/community/manual/)
 

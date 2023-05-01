@@ -43,13 +43,13 @@ Use this checklist in a practical way - as a discussion starter for the project,
 ### Security
 
 - **TODO: General guidance will be added in the future**
-- **For details regarding GitHub- or Contributor- specific security, see (TO-DO: How we work on GitHub** and [CONTRIBUTING](CONTRIBUTING.adoc)**
+- **For details regarding GitHub- or Contributor- specific security, see (Yet-to-be-written: How we work on GitHub** and [CONTRIBUTING](CONTRIBUTING.adoc)**
 
 ### People & maintenance
 
 - **Ensure there is a maintenance and archival (if non maintained) plan**
-- **Ensure that any maintaining team has done the education regarding working Open Source(TODO)**
-- **Ensure that any maintaining team has a plan for handling community issues? (responding to issues, reviewing and merging pull requests)**
+- **Ensure that any maintaining team has gotten some education or experience regarding working Open Source**
+- **Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)**
 - **Is there a need for a release plan? - if so, ensure that is clear how it should be announced and promoted**
 
 ## Concerns and questions

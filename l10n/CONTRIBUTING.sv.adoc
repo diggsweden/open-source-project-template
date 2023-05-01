@@ -1,6 +1,5 @@
-= Riktlinjer för att bidra
+= Riktlinjer för bidrag
 :toc: 
-// OBS: om avsikt, Länkar till uppförandekod, licens, säkerhet, utveckling fungerar inte ännu, eftersom en del av dessa kommer att //föreslås eller utökas i ytterligare workshops // Även pr-mallar kommer att hanteras där. // - lägg till en svensk översättning // - diskutera _ ska det finnas ett "Icke bidragande för projekt som vill vara öppna vill inte ha något inflöde?" // - Förslag om konventionella åtaganden, rösta om detta förslag ska tas bort 
 
 Välkommen! Vi är glada över att du är intresserad av att bidra till vårt projekt! 
 Det finns en del du kan behöva känna till först, så läs igenom följande: 
@@ -20,21 +19,21 @@ Att vara ny i ett projekt är ju också ett utmärkt tillfälle för att ge åte
 [[community-guideline]] 
 == Uppförandekoder för gemenskapen
  
- Visa respekt för varandra. 
+Visa respekt för varandra. 
   
-Vi följer uppförandekoden för bidrag till gemeskapen link:CODE_OF_CONDUCT.sv.md[Uppförandekod för bidrag till gemenskapen]].
+Vi följer gemenskapens uppförandekod vid bidrag link:CODE_OF_CONDUCT.sv.md[Gemenskapens uppförandekod vid bidra].
   
 [[file-issue]]
 == Skicka ett in ärende
 
 Kontrollera först om det redan finns ett ärende liknande ditt tänkta ämne.
-Om så, lägga till en kommentar till det istället för att skapa ett nytt ärende. 
+Om så, lägg till en kommentar till det istället för att skapa ett nytt.
 
 === Rapportera fel
 
 Att rapportera fel är ett bra och enkelt sätt att bidra på.
 
-För att göra detta, öppa upp ett nytt ärende som sammanfattar felet och ställ in etiketten på "bugg". 
+För att göra detta, öppna upp ett nytt ärende som sammanfattar felet och ställ in etiketten på "bug". 
 
 === Föreslå en funktion
 
@@ -48,30 +47,31 @@ Ställ in etiketten för ärendet på "feature" eller "enhancenment".
 Du vill bidra med kod, dokumentation eller 'din fantastiska sak x'.
 Det uppskattar vi, men det finns några praktiska punkter för att se till att det går så smidigt som möjligt.
 
-* Det är bäst att diskutera dina planer i förväg för att försäkra dig om att ditt bidrag är i linje med våra mål.
-* Kontrollera listan över öppna ärenden. Du kan antingen tilldela en befintligt ärende till dig själv, eller skapa ett nytt som du skulle vilja arbeta med. Diskutera gärna dina idéer och användningsfall.
-* Följ projektens konventioner och stilar avseende test, kod och dokumentation och git-commit. 
-* Projektet kan tacka nej till ett bidrag som inte följer de allmänna projektriktlinjerna, eller som bedöms inte passa in i det allmänna projektets mål/arkitektur.
-* Se till att du har förståelse för link:#pull-request[Pull-begäran och dess flöden]
-* Du samtycker till att bidrag till detta projekt kommer släppas under normen **ingående=utgående**, det vill säga att bidrag du skickar in till projektet faller samma licenser som projektet. Mer formellt - "Om du inte uttryckligen anger något annat, ska alla bidrag som du avsiktligt skickat in för inkludering omfattas av villkoren för projektlicenserna, utan några ytterligare villkor." 
+* Det är bäst att diskutera dina planer i förväg för att försäkra dig om att ditt bidrag är i linje med projektets väg framåt.
+* Kontrollera listan över öppna ärenden. Du kan antingen tilldela dig ett befintligt ärende, eller skapa ett nytt som du skulle vilja arbeta med. Diskutera gärna dina idéer och användningsfall.
+* Följ projektets konventioner och stilar avseende test, kod, dokumentation och git-commit. 
+* Projektet kan tacka nej till ett bidrag som inte följer de allmänna projektriktlinjerna, eller som bedöms inte passa dess mål/arkitektur.
+* Se till att du har förståelse för link:#pull-request[Pull Request och dess flöden]
+* Du samtycker till att bidrag till detta projekt kommer släppas under normen **ingående=utgående**, det vill säga att bidrag du skickar in till projektet faller under samma licenser som projektet delas under. Mer formellt - "Om du inte uttryckligen anger annat, kommer bidrag som du skickat in för inkludering omfattas av villkoren för projektlicenserna." 
 * link:#signoff-and-signing-a-commit[Underteckna din commit].
  
 [[pull-request]] 
-== Pull-begäran och dess flöde
+== Pull Request och dess flöde
  
-Generellt sett bör du göra en kopia (fork) av projektet till din egen användare, göra ändringar och sedan skicka en pull-begäran Detta arbetsflöde är vanligt, kanske också det förväntade, om inget annat nämns, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model[läs mer här].
+Generellt sett bör du göra en kopia (fork) av projektet till din egen användare, göra ändringar och sedan skicka en Pull Request. 
+Det är ett vanligt arbetsflöde, kanske också det förväntade, om inget annat nämns, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model[läs mer här].
 
 Ett praktiskt exempel på ett sådant arbetsflöde: 
-    1 Gör en kopia av utvecklingskatalogen. 
-    2 Skapa en gren från din kopias huvud-/huvudgren och skapa en jobbgren. 
-    3 Spara dina ändringar till ämnesgrenen (i din kopia).
-    4 Öppna en ny pull-begäran till huvudprojektet.
-    5 Projektmedarbetare kan kommentera och ge återkoppling på din Pull-begäran. 
+1. Gör en kopia av utvecklingskatalogen. 
+2. Skapa en jobbgren utifrån din kopias huvudgren. 
+3. Spara dina ändringar till ämnesgrenen (i din jobbgren).
+4. Öppna en ny Pull Request till huvudprojektet.
+5. Projektdeltagare kan kommentera och ge återkoppling på din Pull Request.
     
 [[commit-guideline]] 
 == Commit-riktlinjer
 
-=== DCO - signoff och signering av en commit
+=== DCO - underskrift och signering av en commit
 
 NOTE: Signoff och signering: Två liknande termer för två olika saker +
 **_En signoff försäkrar projektet om att du har rätt att bidra med ditt innehåll_** +
@@ -80,11 +80,11 @@ NOTE: Signoff och signering: Två liknande termer för två olika saker +
 ==== Signoff (DCO-underskrift) 
 
 En vanlig standard för öppen källkod-bidrag är användandet av https://developercertificate.org/[DCO - Developer Certificate Origin].
-Det är ett sätt för ett projekt att försäkra sig om att bidragsgivaren har rätt att lämna in bidraget.
+DCO är sätt för ett projekt att försäkra sig om att bidragsgivaren har rätten att lämna in bidraget.
 
 Det är jätteenkelt i praktiken! 
 
-Du skriver under DCO för detta projekt genom att lägga till en *sign off* till din commit.
+Du skriver under DCO genom att lägga till en *sign off* till din commit.
 Tekniskt sett sker detta genom att ange flaggan `-s`/`--signoff` enligt följande exempel:
 
 [source,shell]
@@ -95,8 +95,12 @@ Tekniskt sett sker detta genom att ange flaggan `-s`/`--signoff` enligt följand
 ==== Signera
 
 Du kan också valfritt signera din commit: `-S`/`--gpg-sign`. 
-Det ger en extra tillit, och visar din commit med en grön ok-ruta i de flesta Git-plattformar.
+Det ger en extra tillit, och visar din commit som verifierad i de flesta Git-plattformar.
 För denna funktion måste du ha angett GPG-nyckel, se https://docs.github.com/en/github/authenticating-to-github/signing-commits[Sign commit on GitHub with GPG key].
+
+
+Äldre versioner av Git kräver att du har ett GPG nyckelpar för att signera, https://docs.github.com/en/github/authenticating-to-github/signing-commits[Sign commit on GitHub with GPG key].
+I nyare Git-versioner kan du använda din SSH-nyckel, https://github.blog/changelog/2022-08-23-ssh-commit-verification-now-supported/[Sign commit on GitHub with SSH key].
 
 [source,shell]
 ----
@@ -105,14 +109,14 @@ För denna funktion måste du ha angett GPG-nyckel, se https://docs.github.com/e
 
 === Commit-konvention
 
-Eftersträva en ren och mänskligt läsabar commit-historik.
+Eftersträva en ren och mänskligt läsbar commit-historik.
 
 * **_Om projektet redan har en definierad standard för commit-meddelanden, följ den_**. 
 * Godkänn att du har rätt att ge ditt bidrag med en DCO link:#dco-signoff-and-signing-a-commitsign-off[Sign-Off].
 * Vidare:
+    ** För ett projekt som inte har någon commit-standard, se exempelvis https://www.conventionalcommits.org[Conventional Commit standard].
     ** Bidrag bör höra ihop logiskt.
     ** Låt din commit-meddelanden berätta för läsaren vad som händer när de tillämpas.
-    ** För ett projekt som inte har någon commit-standard, se exempelvis https://www.conventionalcommits.org[Conventional Commit standard].
     ** Låt dina commit-meddelanden vara mänskligt läsbara: +
         *** Ett Conventional Commit-exempel: +
         _fix: add a null pointer check to MyMethod parameter_ +
@@ -123,7 +127,7 @@ Eftersträva en ren och mänskligt läsabar commit-historik.
 
 Om du upptäcker ett säkerhetsproblem, blir vi väldigt glada om du vill uppmärksamma oss på det.
 
-Om sårbarheten är offentligt och allmänt känt, som till exempel släppt av en auktoritet som https://nvd.nist.gov/vuln/search[NIST/NVD] är det ok lägga in ett öppet ärende.
+Om sårbarheten är offentligt och allmänt känt är det ok lägga in ett öppet ärende.
 
 Men, om det finns någon osäkerhet kring detta, vänligen - **LÄGG HELST INTE** ett offentligt ärende utan läs link:./SECURITY.sv.md[Säkerhetsinformation] för mer om hur man hanterar detta.
 
