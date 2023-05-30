@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+
+SPDX-License-Identifier: CC0-1.0
+-->
+
 # Säkerhetsrapport
 
 Om du vill rapportera en sårbarhet, men inte i ett offentligt ärende - tack!! Vi ber dig att följa följande process.

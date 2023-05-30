@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+
+SPDX-License-Identifier: CC0-1.0
+-->
+
 # Open Source Project Template
 
 This a template project containing 'Community Health Files' and Checklists.

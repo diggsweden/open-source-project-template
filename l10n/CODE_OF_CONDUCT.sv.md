@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: Contributor Covenant
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # Gemenskapens uppförandekod vid bidrag
 
 ## Vårt löfte
