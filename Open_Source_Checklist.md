@@ -10,7 +10,7 @@ Use this checklist in a practical way - as a discussion starter for the project,
 ### Documentation
 
 - **Verify that the project fulfills the basic standard of Community Health Files (CHANGELOG, CONTRIBUTING etc).  
-    See [README.md - Template Files Explanation](README.md#template-files-explanation) for a basic list and further information**
+    See [README.md - Template Files Explanation](README.md#contents) for a basic list and further information**
 - **Add any relevant, usage documentation, Software Architecture Descriptions regarding the project.**
 
 ### Workflows
@@ -51,6 +51,14 @@ Use this checklist in a practical way - as a discussion starter for the project,
 - **Ensure that any maintaining team has gotten some education or experience regarding working Open Source**
 - **Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)**
 - **Is there a need for a release plan? - if so, ensure that is clear how it should be announced and promoted**
+
+### Open Source Excellence
+
+There a quite a few extra steps you might want to consider for keeping your Open Source Projects clean, clear, re-usable, accessible and up-to-date.
+
+- Consider [following the REUSE licensing standard](https://reuse.software/)
+- Prefer declaring licenses with the [SPDX-standard](https://spdx.github.io/spdx-spec/v2.3/using-SPDX-short-identifiers-in-source-files/)
+- Consider [following the Foundation for Public Code recommendations](https://standard.publiccode.net/)
 
 ## Concerns and questions
 

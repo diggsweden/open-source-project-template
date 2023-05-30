@@ -116,7 +116,7 @@ Aim for a clear human readable commit history:
 * Make sure you link:#dco-signoff-and-signing-a-commitsign-off[Sign-Off] your commits.
 * In general
     ** If the project does not have standard for commits, you might want to consider https://www.conventionalcommits.org[Conventional Commit standard].
-    ** Make commits of logical units.
+    ** Group relevant changes in commits, avoid scope creep and keep focus on the relevant issue.
     ** Your commit messages should tell a human reader what will it do when the commit is applied.
     ** Make your commit message/s easily human readable in a expected way: +
         *** A Conventional Commit example: +
