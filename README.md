@@ -7,6 +7,7 @@ SPDX-License-Identifier: CC0-1.0
 # Open Source Project Template
 
 [![Standard commitment](https://github.com/publiccodenet/standard/blob/develop/assets/standard-for-public-code-commitment.svg)](https://github.com/diggsweden/open-source-project-template/blob/main/CONTRIBUTING.adoc#standard-for-public-code)
+[![REUSE status](https://api.reuse.software/badge/github.com/diggsweden/open-source-project-template)](https://api.reuse.software/info/github.com/diggsweden/open-source-project-template)
 
 This a template project containing 'Community Health Files' and Checklists.
 It's intention is to be a practical helper when releasing a project as Open Source.
