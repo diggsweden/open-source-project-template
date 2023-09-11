@@ -118,7 +118,7 @@ License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## Maintainers
 
-öSam/Digg OSPO
+asom/Digg Open Source Guild
 
 ## Credits and References
 
