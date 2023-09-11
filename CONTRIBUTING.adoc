@@ -143,4 +143,8 @@ Security reports are *greatly* appreciated.
 
 For a guide on how to get started with Development, see the link:./DEVELOPMENT.md[DEVELOPMENT Guide].
 
+[[standard-for-public-code]]
+== Standard for Public Code
+This project aims to comply to the principles outlined in the Standard for Public Code. The standard consists of a set of criteria that both the project itself and all contributions must align with. It is important to note that the standard is currently being worked on. The documentation is accessible via the following link: https://standard.publiccode.net/.
+
 **_Happy contributing!_**
