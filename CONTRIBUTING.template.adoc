@@ -63,11 +63,11 @@ Great, however, there are some practical points to check to make sure that every
 [[code-review]]
 == Issues and Pull Request Feedback
 
-The listed project maintainers (see the link:README.md[README]) of the project are doing their best to review and/or respond to Issues. If the project is not listed as archived, it is maintained.
-You should expect feedback for an Issue or Pull Request in a few days.
+The listed Maintainers (see the link:README.md[README]) of the project are doing their best to review and/or respond to Issues and take responsobility in due time. If the project is not listed as archived, it is maintained.
+You should expect feedback from the Maintainers in a few days.
 
-NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first. 
-There might be occasions where the cost of maintainance and review have to be agreed upon before it can be merged and reviewed.
+NOTE: For non trivial and planned "big" contributions, please discuss the contribution with the project first. 
+There might be occasions where the cost of maintainance and contribution review have to be agreed upon before it can be merged and reviewed.
 
 [[pull-request]]
 == Pull Request Lifecycle
@@ -125,9 +125,10 @@ For newer versions you can use SSH for signing https://github.blog/changelog/202
 
 Aim for a clear human readable commit history:
 
+* **_First - does the project have a defined commit message practice, please follow that_**. 
 * Make sure you link:#dco-signoff-and-signing-a-commitsign-off[Sign-Off] your commits.
 * In general
-    ** Use the https://www.conventionalcommits.org[Conventional Commit standard].
+    ** If the project does not have standard for commits, you might want to consider https://www.conventionalcommits.org[Conventional Commit standard].
     ** Group relevant changes in commits, avoid scope creep and keep focus on the relevant issue.
     ** Your commit messages should tell a human reader what will it do when the commit is applied.
     ** Make your commit message/s easily human readable in a expected way: +
@@ -140,7 +141,7 @@ Aim for a clear human readable commit history:
 
 If you discover a security issue, please bring it to our attention.
 
-If the vulnerability is a widely known issue, detected by various Vulnerability Scanning sources it might be okay to file an public Issue.
+If the vulnerability is a widely known issuee, detected by various Vulnerability Scanning sources it might be okay to file an public Issue.
 
 However, if any uncertainty around this, please **DO NOT** file a public issue, see link:SECURITY.md[Security information] for how to handle this. 
 
