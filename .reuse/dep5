@@ -1,6 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: https://www.github.com/diggsweden/digg-open-source-project-template
-
-Files: .gitignore .gitattributes 
-Copyright: 2023 Digg - Agency for Digital Government
-License: CC0-1.0

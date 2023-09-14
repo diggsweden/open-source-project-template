@@ -1,0 +1,31 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: CC0-1.0
+= Development
+:toc:
+
+If you submit a PR to this project, a few checks will be run on it with CI.
+However, you can (as in really should) run the same checks locally when you are happy
+with your contribution, to avoid surprises.
+
+[[code-quality]]
+== Code Quality Check
+
+* Project quality tooling:
+** https://github.com/oxsecurity/megalinter[megalinter] (various linter tools)
+** https://github.com/fsfe/reuse-tool[reuse] (license compliance check)
+** https://github.com/siderolabs/conform[conform] (commit check)
+
+=== Code quality tools and test coverage
+
+Run the code quality tooling check locally with the code-quality check script:
+The script is dependent on https://podman.io/[podman].
+
+[source,shell]
+----
+$ ./development/code_quality.sh
+----
+The resulting out put should be pretty self explantory.
+Green and ok for passing checks, red and error for failing checks.
+
+
