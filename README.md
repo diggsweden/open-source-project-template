@@ -9,21 +9,11 @@ SPDX-License-Identifier: CC0-1.0
 [![Standard commitment](https://github.com/publiccodenet/standard/blob/develop/assets/standard-for-public-code-commitment.svg)](https://github.com/diggsweden/open-source-project-template/blob/main/CONTRIBUTING.adoc#standard-for-public-code)
 [![REUSE status](https://api.reuse.software/badge/github.com/diggsweden/open-source-project-template)](https://api.reuse.software/info/github.com/diggsweden/open-source-project-template)
 
-This a template project containing 'Community Health Files' and Checklists.
-It's intention is to be a practical helper when releasing a project as Open Source.
+This a template project containing 'Community Health Files' and relevant checklists.
+It's intention is to be a practical starter when releasing a project as Open Source.
 It was created in a general way to be usable for anyone, and proposes well know conventions and de-facto standards when possible.
 
 You _are supposed_ to adjust the contents and suggestions to suit your project needs.
-
-## Project background
-
-The project originated at Digg, when Digg needed a practical companion to their [Open Source Guidelines (see references)](#credits-and-references) for releasing Open Source projects.
-The intent was, in particular, to fill a practical role of Appendix B _Software documentation_ in the mentioned guidelines.
-
-The initial material was created in Digg's internal Open Source Guild, (an informal group of different interests in the organisation) who reveiwed and proposed the base material.
-
-Seeing it could be of wider usage, we aimed to make it as general we could.
-There were already quite a few variants of these template projects out there, which we used for inspiration.
 
 ---
 
@@ -32,22 +22,24 @@ There were already quite a few variants of these template projects out there, wh
 ### Template Files
 
 An short summary of the files in the repository, and how you can use them.
-You are always supposed to use the '.template' marked versions of any files if one such exists.
+You are supposed to use the '.template' marked versions of any files if one such exists.
+These can be found in the 'templates'-directory. However, you should also consider other project files mentioned here:
 
-- LICENSE - The LICENSE containing the projects "main" LICENSE, which must be an [OSI approved license](https://en.wikipedia.org/wiki/Open_Source_Initiative). You are not supposed to use the one in this project - add your own.
-- CHANGELOG - Describes the project updates in a standard human readable way. Version: [Keep-a-changelog 1.1.0](https://keepachangelog.com/en/1.1.0/).
+- LICENSE - The LICENSE containing the projects "main" LICENSE. This which must be an [OSI approved license](https://en.wikipedia.org/wiki/Open_Source_Initiative). You are not supposed to use the one in this project - add your own.
 - CODE_OF_CONDUCT - defines standards for how to engage in a community. Version: [Contributor Covenant 2.1](https://www.contributor-covenant.org).
 - CONTRIBUTING - the guidelines for how people can contribute to your project.
+- SECURITY - instructions for how to report a security vulnerabilitity in your project.
+- README- a template for creating a good informative readme.
 - Issue Templates - `bug, feature and pull request templates`. Issue and pull request templates to standardize the information contributors can see when they open issues and pull requests in your repository. Might be specific for GitHub/GitLab and so on.
   - `.github/` - contains GitHub specific versions of bug-, pr, feature-templates.
   - `.github/workflows` - contains GitHub workflows for this project. You will most likely write your own workflows for your project.
-- SECURITY - instructions for how to report a security vulnerabilitity in your project.
-- README- a template for creating a good informative readme.
+- CHANGELOG - Describes the project updates in a standard human readable way. Version: [Keep-a-changelog 1.1.0](https://keepachangelog.com/en/1.1.0/).
 
-### Other Content
+### Docs
 
-- Open_Source_Checklist.md - a basic checklist of questions you should be to answer.
-- l10n/ - contains Swedish translations for many of the files.
+- docs/Open_Source_Checklist.md - a basic checklist of questions you should be able to answer.
+- docs/public_code - assesement for how this project fulfills the standard for public code criteria.
+- l10n/ - contains translations for many of the files.
 
 ## Usage instructions
 
@@ -56,7 +48,7 @@ You are always supposed to use the '.template' marked versions of any files if o
 3. Add a LICENSE file (do not copy the one in this project), and if needed a [CHANGELOG.md](https://keepachangelog.com/en/1.1.0/).
 4. Go through each of the files and adjust to your needs
    - Correct any [Template Variables](#template-files-variables) in the Template files.
-5. Answer the questions on the [Open Source Checklist:](Open_Source_Checklist.md)
+5. Answer the questions on the [Open Source Checklist:](docs/Open_Source_Checklist.md)
 
 > Keep the README fresh! It's the first thing people see and will make the initial impression.  
 > Understand the contents of the files you use from this project. Do they fit within your project, or are you looking for something else?  
@@ -86,7 +78,8 @@ There are future plans for this template project.
 
 ### Before version 0.1.0 is released
 
-Currently, the project is undergoing a feedback revision from Foundation for Public Code. After that, 0.1.0 will be tagged.
+Currently, the project is undergoing a feedback revision from Foundation for Public Code, and other initial improvements.
+After that, 0.1.0 will be tagged.
 
 ### Future
 
@@ -100,6 +93,18 @@ Currently, the project is undergoing a feedback revision from Foundation for Pub
 - Add corresponding template versions for GitLab of the GitHub-specific templates
 - Add a few graphical items to lighten up the text in the README and so on
 - Your suggestions
+
+---
+
+## Project background
+
+The project originated at Digg, when Digg needed a practical companion to their [Open Source Guidelines (see references)](#credits-and-references) for releasing Open Source projects.
+The intent was, in particular, to fill a practical role of Appendix B _Software documentation_ in the mentioned guidelines.
+
+The initial material was created in Digg's internal Open Source Guild, (an informal group of different interests in the organisation) who reveiwed and proposed the base material.
+
+Seeing it could be of wider usage, we aimed to make it as general we could.
+There were already quite a few variants of these template projects out there, which we used for inspiration.
 
 ---
 
