@@ -149,7 +149,7 @@ Security reports are *greatly* appreciated.
 [[development]]
 == Development Guidelines
 
-For a guide on how to get started with Development, see the link:./DEVELOPMENT.md[DEVELOPMENT Guide].
+For a guide on how to get started with Development, see the link:./DEVELOPMENT.adoc[DEVELOPMENT Guide].
 
 [[standards]]
 ## FOSS Standards
