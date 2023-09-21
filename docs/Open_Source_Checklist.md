@@ -57,6 +57,7 @@ Use this checklist in a practical way - as a discussion starter for the project,
 - **Ensure that any maintaining team has gotten some education or experience regarding working Open Source**
 - **Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)**
 - **Is there a need for a release plan? - if so, ensure that is clear how it should be announced and promoted**
+- **Consider using a CODEOWNERS file to clearify maintainer information**
 
 ### Open Source Excellence
 

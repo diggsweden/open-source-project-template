@@ -34,6 +34,7 @@ These can be found in the 'templates'-directory. However, you should also consid
   - `.github/` - contains GitHub specific versions of bug-, pr, feature-templates.
   - `.github/workflows` - contains GitHub workflows for this project. You will most likely write your own workflows for your project.
 - CHANGELOG - Describes the project updates in a standard human readable way. Version: [Keep-a-changelog 1.1.0](https://keepachangelog.com/en/1.1.0/).
+- CODEOWNERS - Describes the maintainers in a de-facto standard way: [GitHub link about CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
 
 ### Docs
 
@@ -84,10 +85,8 @@ After that, 0.1.0 will be tagged.
 ### Future
 
 - Mention project excellence additions (extras in the checklist?) - OpenSSF scorecard, Foundation for Public Codes metadata standard and so on.
-- Handling GOVERNANCE.md recomendations?
+- Handling GOVERNANCE.md recomendations? Clearify briefly what asom digg is and how decisions are taken etc.
 - Handling DEVELOPMENT.md recommendations?
-- Add CODEOWNERS?
-- Add local linting (currently only in CI-pipeline)
 - Keep the Swedish translations up-to-date
 - Handling where to recommend communication channels for users and developers
 - Add corresponding template versions for GitLab of the GitHub-specific templates
@@ -123,11 +122,11 @@ License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## Maintainers
 
-Governance of the project is currently handled by the collaboration of:
+General Governance of the project is currently handled by the collaboration of:
 
 asom (arbetsgruppen för samordning av mjukvara) and Digg's Open Source Guild
 
-It will be further clearified in the future (see [future versions](#roadmap))
+For information about the current individual or team maintainers, see [CODEOWNERS](CODEOWNERS).
 
 ## Credits and References
 
