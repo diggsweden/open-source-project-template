@@ -64,6 +64,7 @@ In the special case that you git cloned this project and are using it as a proje
 
 Replace the following variables with if you are using these files.
 
+- CONTRIBUTING.template.adoc - Replace `INSERT_DAYS`. (Standard for Public Code recommends two business days)
 - CODE_OF_CONDUCT.adoc - Replace `INSERT_CONTACT_METHOD`.
 - SECURITY.template.md - Replace `INSERT_CONTACT_METHOD` and `INSERT_CONTACT`.
 - .github/pull_request_template.md - Replace `INSERT_CONTRIBUTING_LINK`.
@@ -104,6 +105,15 @@ The initial material was created in Digg's internal Open Source Guild, (an infor
 
 Seeing it could be of wider usage, we aimed to make it as general we could.
 There were already quite a few variants of these template projects out there, which we used for inspiration.
+
+### Digg's Open Source Policy Summary
+
+A (non official summary) of Digg's Open Source Policy:
+
+_The guidelines for open-source software aim to complement Digg's (the Swedish Agency for Digital Government) policy for the procurement and development of software.
+The target audience includes those involved in software development at Digg.
+These guidelines apply when developing open-source software and when Digg, as a government agency, participates in open collaborations involving shared development.
+These documents include, for example, advice on procurement and risk analysis related to open source code._
 
 ---
 

@@ -4,6 +4,8 @@
 
 = Contributing
 :toc:
+:revdate: {docdatetime}
+:revnumber: 0.0.0
 
 Welcome! We are excited that you are interested in contributing to our project!
 However, there are some things you might need to know, so please browse the following:
@@ -60,14 +62,22 @@ Great, however, there are some practical points to check to make sure that every
  contributions are submitted under the same terms as the project licenses. In a more formal way - 'Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of the projects License, without any additional terms or conditions.'
 * link:#signoff-and-signing-a-commit[Sign your commits].
 
+
 [[code-review]]
 == Issues and Pull Request Feedback
 
-The listed Maintainers (see the link:README.md[README]) of the project are doing their best to review and/or respond to Issues and take responsobility in due time. If the project is not listed as archived, it is maintained.
-You should expect feedback from the Maintainers in a few days.
+The listed project maintainers (see the link:README.md[README]) of the project are doing their best to review and/or respond to Issues. *If the project is not listed as archived, it is maintained.*
+You should expect feedback for an Issue or Pull Request in [INSERT_DAYS] business days.
 
-NOTE: For non trivial and planned "big" contributions, please discuss the contribution with the project first. 
-There might be occasions where the cost of maintainance and contribution review have to be agreed upon before it can be merged and reviewed.
+NOTE: Feedback might mean a lot of things depending on the scope of your Issue/Pull Request. 
+What you should expect is at least a comment on your Issue. 
+
+NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first. 
+There might be occasions where the cost of maintainance and review have to be agreed upon before it can be merged and reviewed.
+
+The quality of the given information in your Pull Request/Issue will affect the feedback loop. 
+So please keep the focus and topic, and be sure to give as much relevant information as possible.
+It is highly recommended that you fill in the requested fields when submitting a contribution.
 
 [[pull-request]]
 == Pull Request Lifecycle
@@ -150,7 +160,14 @@ Security reports are *greatly* appreciated.
 [[development]]
 == Development Guidelines
 
-For a guide on how to get started with Development, see the link:./DEVELOPMENT.md[DEVELOPMENT Guide].
+For a guide on how to get started with Development, see the link:./DEVELOPMENT.adoc[DEVELOPMENT Guide].
+
+[[translations]]
+## Translations
+
+English is the primary language, and any translations are done on a best effort basis.
+This implies that for any contributions to the translated version, make sure that the English version contains the
+corresponding change.
 
 [[standards]]
 ## FOSS Standards

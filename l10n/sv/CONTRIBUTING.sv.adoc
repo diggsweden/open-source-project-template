@@ -4,6 +4,8 @@
 
 = Riktlinjer för bidrag
 :toc: 
+:revdate: {docdatetime}
+:revnumber: 0.0.0
 
 Välkommen! Vi är glada över att du är intresserad av att bidra till vårt projekt! 
 Det finns en del du kan behöva känna till först, så läs igenom följande: 
