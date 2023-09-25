@@ -51,12 +51,12 @@ These can be found in the 'templates'-directory. However, you should also consid
    - Correct any [Template Variables](#template-files-variables) in the Template files.
 5. Answer the questions on the [Open Source Checklist:](docs/Open_Source_Checklist.adoc)
 
-> Keep the README fresh! It's the first thing people see and will make the initial impression.  
-> Understand the contents of the files you use from this project. Do they fit within your project, or are you looking for something else?  
+> Keep the README fresh! It's the first thing people see and will make the initial impression.
+> Understand the contents of the files you use from this project. Do they fit within your project, or are you looking for something else?
 
 In the special case that you git cloned this project and are using it as a project base (instead of copying files from it), also make sure to:
 
-> Remove the .git-folder and create a new one with 'git init'.  
+> Remove the .git-folder and create a new one with 'git init'.
 > Remove any workflows that are not applicable for your application.(see the folder `.github/workflows`)
 > Remove any other project specifics like l10n (translations/.reuse and so on)
 
@@ -125,7 +125,7 @@ Most assets released are under Creative Commons CC0-1.0 except for
 
 CODE_OF_CONDUCT.md template:
 
-Copyright: [Contributor Covenant](https://www.contributor-covenant.org/)  
+Copyright: [Contributor Covenant](https://www.contributor-covenant.org/)
 License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---

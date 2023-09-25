@@ -3,32 +3,32 @@
 // SPDX-License-Identifier: CC0-1.0
 
 = Riktlinjer för bidrag
-:toc: 
+:toc:
 :revdate: {docdatetime}
 :revnumber: 0.0.0
 
-Välkommen! Vi är glada över att du är intresserad av att bidra till vårt projekt! 
-Det finns en del du kan behöva känna till först, så läs igenom följande: 
+Välkommen! Vi är glada över att du är intresserad av att bidra till vårt projekt!
+Det finns en del du kan behöva känna till först, så läs igenom följande:
 
-[[att-bidra]] 
-== Bidra 
+[[att-bidra]]
+== Bidra
 
 Det finns flera sätt att engagera sig:
 
-Att vara ny i ett projekt är ju också ett utmärkt tillfälle för att ge återkoppling. Till exempel genom att: 
- 
+Att vara ny i ett projekt är ju också ett utmärkt tillfälle för att ge återkoppling. Till exempel genom att:
+
 * Åtgärda eller rapportera fel.
-* Föreslå förbättringar till kod, dokumentation och tester. 
+* Föreslå förbättringar till kod, dokumentation och tester.
 * Rapportera/lösa problem under installation eller i utvecklarmiljö.
-* Bidra med något annat du tycker saknas. 
- 
-[[community-guideline]] 
+* Bidra med något annat du tycker saknas.
+
+[[community-guideline]]
 == Uppförandekoder för gemenskapen
- 
-Visa respekt för varandra. 
-  
+
+Visa respekt för varandra.
+
 Vi följer gemenskapens uppförandekod vid bidrag link:CODE_OF_CONDUCT.sv.md[Gemenskapens uppförandekod vid bidra].
-  
+
 [[file-issue]]
 == Skicka ett in ärende
 
@@ -39,13 +39,13 @@ Om så, lägg till en kommentar till det istället för att skapa ett nytt.
 
 Att rapportera fel är ett bra och enkelt sätt att bidra på.
 
-För att göra detta, öppna upp ett nytt ärende som sammanfattar felet och ställ in etiketten på "bug". 
+För att göra detta, öppna upp ett nytt ärende som sammanfattar felet och ställ in etiketten på "bug".
 
 === Föreslå en funktion
 
 För att begära en ny funktion bör du sammanfatta önskad funktionalitet och dess användningsfall.
 
-Ställ in etiketten för ärendet på "feature" eller "enhancenment". 
+Ställ in etiketten för ärendet på "feature" eller "enhancenment".
 
 [[contribute-code]]
 == Bidra med kod, dokumentation eller annat
@@ -55,40 +55,40 @@ Det uppskattar vi, men det finns några praktiska punkter för att se till att d
 
 * Det är bäst att diskutera dina planer i förväg för att försäkra dig om att ditt bidrag är i linje med projektets väg framåt.
 * Kontrollera listan över öppna ärenden. Du kan antingen tilldela dig ett befintligt ärende, eller skapa ett nytt som du skulle vilja arbeta med. Diskutera gärna dina idéer och användningsfall.
-* Följ projektets konventioner och stilar avseende test, kod, dokumentation och git-commit. 
+* Följ projektets konventioner och stilar avseende test, kod, dokumentation och git-commit.
 * Projektet kan tacka nej till ett bidrag som inte följer de allmänna projektriktlinjerna, eller som bedöms inte passa dess mål/arkitektur.
 * Se till att du har förståelse för link:#pull-request[Pull Request och dess flöden]
-* Du samtycker till att bidrag till detta projekt kommer släppas under normen **ingående=utgående**, det vill säga att bidrag du skickar in till projektet faller under samma licenser som projektet delas under. Mer formellt - "Om du inte uttryckligen anger annat, kommer bidrag som du skickat in för inkludering omfattas av villkoren för projektlicenserna." 
+* Du samtycker till att bidrag till detta projekt kommer släppas under normen **ingående=utgående**, det vill säga att bidrag du skickar in till projektet faller under samma licenser som projektet delas under. Mer formellt - "Om du inte uttryckligen anger annat, kommer bidrag som du skickat in för inkludering omfattas av villkoren för projektlicenserna."
 * link:#signoff-and-signing-a-commit[Underteckna din commit].
- 
-[[pull-request]] 
+
+[[pull-request]]
 == Pull Request och dess flöde
- 
-Generellt sett bör du göra en kopia (fork) av projektet till din egen användare, göra ändringar och sedan skicka en Pull Request. 
+
+Generellt sett bör du göra en kopia (fork) av projektet till din egen användare, göra ändringar och sedan skicka en Pull Request.
 Det är ett vanligt arbetsflöde, kanske också det förväntade, om inget annat nämns, https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model[läs mer här].
 
-Ett praktiskt exempel på ett sådant arbetsflöde: 
-1. Gör en kopia av utvecklingskatalogen. 
-2. Skapa en jobbgren utifrån din kopias huvudgren. 
+Ett praktiskt exempel på ett sådant arbetsflöde:
+1. Gör en kopia av utvecklingskatalogen.
+2. Skapa en jobbgren utifrån din kopias huvudgren.
 3. Spara dina ändringar till ämnesgrenen (i din jobbgren).
 4. Öppna en ny Pull Request till huvudprojektet.
 5. Projektdeltagare kan kommentera och ge återkoppling på din Pull Request.
-    
-[[commit-guideline]] 
+
+[[commit-guideline]]
 == Commit-riktlinjer
 
 === DCO - underskrift och signering av en commit
 
 NOTE: Signoff och signering: Två liknande termer för två olika saker +
 **_En signoff försäkrar projektet om att du har rätt att bidra med ditt innehåll_** +
-**_En signering försäkrar projektet om att bidraget kom från din användare_** 
+**_En signering försäkrar projektet om att bidraget kom från din användare_**
 
-==== Signoff (DCO-underskrift) 
+==== Signoff (DCO-underskrift)
 
 En vanlig standard för öppen källkod-bidrag är användandet av https://developercertificate.org/[DCO - Developer Certificate Origin].
 DCO är sätt för ett projekt att försäkra sig om att bidragsgivaren har rätten att lämna in bidraget.
 
-Det är jätteenkelt i praktiken! 
+Det är jätteenkelt i praktiken!
 
 Du skriver under DCO genom att lägga till en *sign off* till din commit.
 Tekniskt sett sker detta genom att ange flaggan `-s`/`--signoff` enligt följande exempel:
@@ -100,7 +100,7 @@ Tekniskt sett sker detta genom att ange flaggan `-s`/`--signoff` enligt följand
 
 ==== Signera
 
-Du kan också valfritt signera din commit: `-S`/`--gpg-sign`. 
+Du kan också valfritt signera din commit: `-S`/`--gpg-sign`.
 Det ger en extra tillit, och visar din commit som verifierad i de flesta Git-plattformar.
 För denna funktion måste du ha angett GPG-nyckel, se https://docs.github.com/en/github/authenticating-to-github/signing-commits[Sign commit on GitHub with GPG key].
 
@@ -117,7 +117,7 @@ I nyare Git-versioner kan du använda din SSH-nyckel, https://github.blog/change
 
 Eftersträva en ren och mänskligt läsbar commit-historik.
 
-* **_Om projektet redan har en definierad standard för commit-meddelanden, följ den_**. 
+* **_Om projektet redan har en definierad standard för commit-meddelanden, följ den_**.
 * Godkänn att du har rätt att ge ditt bidrag med en DCO link:#dco-signoff-and-signing-a-commitsign-off[Sign-Off].
 * Vidare:
     ** För ett projekt som inte har någon commit-standard, se exempelvis https://www.conventionalcommits.org[Conventional Commit standard].

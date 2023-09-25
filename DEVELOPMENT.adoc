@@ -44,7 +44,7 @@ Currently, the following checks are enabled:
 
 Tool: https://github.com/fsfe/reuse-tool[reuse] (license compliance check)
 
-A license compliance check is run and controls that every file has valid copyright (in the SPDX-standard format). 
+A license compliance check is run and controls that every file has valid copyright (in the SPDX-standard format).
 
 ==== Commit structure
 
@@ -58,12 +58,12 @@ You will get a summary report at the end of the script run, telling you if somet
 
 _If the locally run script shows failing checks:_
 
-You should be able to see the errors by scrolling through the output in your terminal. 
+You should be able to see the errors by scrolling through the output in your terminal.
 Fix the errors, git add the fixes to your pr and re-run the script. Hopefully it shows all green the next round.
 
 _If the CI Pipeline shows failing checks:_
 
-You can repeat the errors found by the CI by running the code quality-script locally. 
+You can repeat the errors found by the CI by running the code quality-script locally.
 Fix the errors locally, and update the Pull Request when the local tests have passed.
 The CI-tests should now show that you passed.
 

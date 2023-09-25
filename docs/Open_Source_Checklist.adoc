@@ -63,7 +63,7 @@ TO-DO
 * Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)
 * Is there a need for a release plan? - if so, ensure that is clear how it should be announced and promoted
 * Every project README MUST have a ``Maintainer''-header. Team, individual, role, does not matter. If there are no Maintainers to be found, the project should be Archived.
-** Additionally, the project SHOULD use a CODEOWNERS-file. 
+** Additionally, the project SHOULD use a CODEOWNERS-file.
   A CODEOWNERS-file can be more granualar in describing the project maintenance, whereas the README’s Maintainer-line might be more general.
 
 == Open Source Excellence

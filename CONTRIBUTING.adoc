@@ -20,7 +20,7 @@ As a new contributor, you are in an excellent position to give us feedback to ou
 * Fix or report a bug.
 * Suggest enhancements to code, tests and documentation.
 * Report/fix problems found during installing or developer environments.
-* Add suggestions for something else that is missing. 
+* Add suggestions for something else that is missing.
 
 [[community-guideline]]
 == Community Guideline
@@ -50,7 +50,7 @@ Set the Issue label to "feature" or "enhancement".
 [[contribute-code]]
 == Contribute Code, Documentation and more
 
-You want to contribute code, documentation or 'your fantastic thing x'. 
+You want to contribute code, documentation or 'your fantastic thing x'.
 Great, however, there are some practical points to check to make sure that everything runs as smoothly as possible.
 
 * It is always best to discuss your plans beforehand, to ensure that your contribution is in line with the project goals.
@@ -68,20 +68,20 @@ Great, however, there are some practical points to check to make sure that every
 The listed project maintainers (see the link:README.md[README]) of the project are doing their best to review and/or respond to Issues. *If the project is not listed as archived, it is maintained.*
 You should expect feedback for an Issue or Pull Request in five business days.
 
-NOTE: Feedback might mean a lot of things depending on the scope of your Issue/Pull Request. 
-What you should expect is at least a comment on your Issue.  
+NOTE: Feedback might mean a lot of things depending on the scope of your Issue/Pull Request.
+What you should expect is at least a comment on your Issue.
 
-NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first. 
+NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first.
 There might be occasions where the cost of maintainance and review have to be agreed upon before it can be merged and reviewed.
 
-The quality of the given information in your Pull Request/Issue will affect the feedback loop. 
+The quality of the given information in your Pull Request/Issue will affect the feedback loop.
 So please keep the focus and topic, and be sure to give as much relevant information as possible.
 It is highly recommended that you fill in the requested fields when submitting a contribution.
 
 [[pull-request]]
 == Pull Request Lifecycle
 
-Generally speaking, you should fork this repository, make changes in your own fork, and then submit a pull-request. 
+Generally speaking, you should fork this repository, make changes in your own fork, and then submit a pull-request.
 This workflow is common, maybe even expected if nothing else mentioned, and is called the https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models#fork-and-pull-model[Fork-and-Pull model]
 
 A practical example of such a workflow could be:
@@ -97,13 +97,13 @@ A practical example of such a workflow could be:
 
 === DCO - Signoff and Signing a Commit
 
-NOTE: Signoff and signing: Two similar terms for two different things + 
-**_A Signoff assures to the project that you have the right to contribute your content_** + 
+NOTE: Signoff and signing: Two similar terms for two different things +
+**_A Signoff assures to the project that you have the right to contribute your content_** +
 **_A Sign assures that the commit came from you_**
 
 ==== Signoff (DCO agree)
 
-A standard practice in the Open Source communities is the https://developercertificate.org/[DCO - Developer Certificate of Origin]. 
+A standard practice in the Open Source communities is the https://developercertificate.org/[DCO - Developer Certificate of Origin].
 DCO a lightweight way for a project to assure that the contributor wrote and/or have the right to submit the contribution.
 
 It is supersimple!
@@ -119,7 +119,7 @@ $ git commit --signoff -m 'fix: add fix for superbug x'
 
 ==== Sign
 
-You can also sign the commit with `-S`/`--gpg-sign`. 
+You can also sign the commit with `-S`/`--gpg-sign`.
 Besides extra trust, it also gives your commit a nice verified button in the UI on most Git platforms and further assures trust.
 
 Older versions of Git requires that you have a GPG keypair set up, see https://docs.github.com/en/github/authenticating-to-github/signing-commits[Sign commit on GitHub with GPG key].
@@ -151,7 +151,7 @@ If you discover a security issue, please bring it to our attention.
 
 If the vulnerability is a widely known issue, detected by various Vulnerability Scanning sources it might be okay to file an public Issue.
 
-However, if any uncertainty around this, please **DO NOT** file a public issue, see link:SECURITY.md[Security information] for how to handle this. 
+However, if any uncertainty around this, please **DO NOT** file a public issue, see link:SECURITY.md[Security information] for how to handle this.
 
 Security reports are *greatly* appreciated.
 
