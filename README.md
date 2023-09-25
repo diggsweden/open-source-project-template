@@ -38,7 +38,7 @@ These can be found in the 'templates'-directory. However, you should also consid
 
 ### Docs
 
-- docs/Open_Source_Checklist.md - a basic checklist of questions you should be able to answer.
+- docs/Open_Source_Checklist- a basic checklist of questions you should be able to answer.
 - docs/public_code - assesement for how this project fulfills the standard for public code criteria.
 - l10n/ - contains translations for many of the files.
 
@@ -49,7 +49,7 @@ These can be found in the 'templates'-directory. However, you should also consid
 3. Add a LICENSE file (do not copy the one in this project), and if needed a [CHANGELOG.md](https://keepachangelog.com/en/1.1.0/).
 4. Go through each of the files and adjust to your needs
    - Correct any [Template Variables](#template-files-variables) in the Template files.
-5. Answer the questions on the [Open Source Checklist:](docs/Open_Source_Checklist.md)
+5. Answer the questions on the [Open Source Checklist:](docs/Open_Source_Checklist.adoc)
 
 > Keep the README fresh! It's the first thing people see and will make the initial impression.  
 > Understand the contents of the files you use from this project. Do they fit within your project, or are you looking for something else?  
