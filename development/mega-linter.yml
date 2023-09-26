@@ -24,7 +24,7 @@ GITHUB_STATUS_REPORTER: true
 GITLAB_COMMENT_REPORTER: false
 UPDATED_SOURCES_REPORTER: true
 
-# Lint specifig settings
+# Lint specific settings
 ENABLE_LINTERS:
   [
     BASH_SHELLCHECK,

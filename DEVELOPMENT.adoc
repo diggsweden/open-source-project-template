@@ -7,7 +7,7 @@
 :revnumber: 0.0.0
 :imagesdir: assets
 
-If you submit a Pull Request to this project, a few checks will be run on it with Continous Integration.
+If you submit a Pull Request to this project, a few checks will be run on it with Continuous Integration.
 Luckily, you can (as in, really should) run the checks locally to avoid surprises.
 
 [[code-quality]]
@@ -24,7 +24,7 @@ $ ./development/code_quality.sh
 
 The script is dependent on https://podman.io/[podman].
 
-The resulting out put should be pretty self explantory.
+The resulting output should be pretty self explanatory.
 
 ===  What quality checks are done?
 

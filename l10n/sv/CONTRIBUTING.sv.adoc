@@ -45,7 +45,7 @@ För att göra detta, öppna upp ett nytt ärende som sammanfattar felet och st�
 
 För att begära en ny funktion bör du sammanfatta önskad funktionalitet och dess användningsfall.
 
-Ställ in etiketten för ärendet på "feature" eller "enhancenment".
+Ställ in etiketten för ärendet på "feature" eller "enhancement".
 
 [[contribute-code]]
 == Bidra med kod, dokumentation eller annat
