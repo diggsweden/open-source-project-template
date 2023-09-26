@@ -73,7 +73,7 @@ NOTE: Feedback might mean a lot of things depending on the scope of your Issue/P
 What you should expect is at least a comment on your Issue. 
 
 NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first. 
-There might be occasions where the cost of maintainance and review have to be agreed upon before it can be merged and reviewed.
+There might be occasions where the cost of maintenance and review have to be agreed upon before it can be merged and reviewed.
 
 The quality of the given information in your Pull Request/Issue will affect the feedback loop. 
 So please keep the focus and topic, and be sure to give as much relevant information as possible.
@@ -107,7 +107,7 @@ NOTE: Signoff and signing: Two similar terms for two different things +
 A standard practice in the Open Source communities is the https://developercertificate.org/[DCO - Developer Certificate of Origin]. 
 DCO a lightweight way for a project to assure that the contributor wrote and/or have the right to submit the contribution.
 
-It is supersimple!
+It is super simple!
 
 As part of filing a pull request you agree to the DCO - by just adding a *sign off*  to your commit.
 Technically, this is done by supplying the `-s`/`--signoff` flag to your Git commits:
@@ -151,7 +151,7 @@ Aim for a clear human readable commit history:
 
 If you discover a security issue, please bring it to our attention.
 
-If the vulnerability is a widely known issuee, detected by various Vulnerability Scanning sources it might be okay to file an public Issue.
+If the vulnerability is a widely known issue, detected by various Vulnerability Scanning sources it might be okay to file an public Issue.
 
 However, if any uncertainty around this, please **DO NOT** file a public issue, see link:SECURITY.md[Security information] for how to handle this. 
 
