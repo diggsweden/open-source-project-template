@@ -71,7 +71,7 @@ You should expect feedback for an Issue or Pull Request in five business days.
 NOTE: Feedback might mean a lot of things depending on the scope of your Issue/Pull Request.
 What you should expect is at least a comment on your Issue.
 
-NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first. 
+NOTE: For non trivial and proposed bigger contributions, please discuss the contribution with the project first.
 There might be occasions where the cost of maintenance and review have to be agreed upon before it can be merged and reviewed.
 
 The quality of the given information in your Pull Request/Issue will affect the feedback loop.
@@ -160,8 +160,16 @@ Security reports are *greatly* appreciated.
 
 For a guide on how to get started with Development, see the link:./DEVELOPMENT.adoc[DEVELOPMENT Guide].
 
-[[translations]]
-## Translations
+[[writing_style]]
+## Writing style and Translations
+
+Here are a few guidelines regarding text and documentation.
+
+- Aim to keep the documentation EASY to read, and avoid the official "agency authority" style.
+- Don't be to verbose, bullet points are good in this context.
+- Be concise, in terminology, and avoid longer explanations, link instead.
+- Write in British English first, i.e. colour instead of color.
+- Strive to use https://sembr.org/[one-sentence-per-line] when writing in MarkDown or AsciiDoc.
 
 English is the projects primary language, and any translations are done on a best effort basis.
 This implies that for any contributions to the translated version, make sure that the English primary version contains the corresponding change.
