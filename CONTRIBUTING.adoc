@@ -166,9 +166,9 @@ For a guide on how to get started with Development, see the link:./DEVELOPMENT.a
 Here are a few guidelines regarding text and documentation.
 
 - Aim to keep the documentation EASY to read, and avoid the official "agency authority" style.
-- Don't be to verbose, bullet points are good in this context.
+- Don't be too verbose, bullet points are good in this context.
 - Be concise, in terminology, and avoid longer explanations, link instead.
-- Write in British English first, i.e. colour instead of color.
+- Write in British English first, e.g. colour instead of color.
 - Strive to use https://sembr.org/[one-sentence-per-line] when writing in MarkDown or AsciiDoc.
 
 English is the projects primary language, and any translations are done on a best effort basis.
