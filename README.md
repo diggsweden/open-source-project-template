@@ -35,6 +35,7 @@ These can be found in the 'templates'-directory. However, you should also consid
   - `.github/` - contains GitHub specific versions of bug-, pr, feature-templates.
   - `.github/workflows` - contains GitHub workflows for this project. You will most likely write your own workflows for your project.
 - CHANGELOG - Describes the project updates in a standard human readable way. Version: [Keep-a-changelog 1.1.0](https://keepachangelog.com/en/1.1.0/).
+- GOVERNANCE - Describes decision making and roles in the project.
 - CODEOWNERS - Describes the maintainers in a de-facto standard way: [GitHub link about CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
 
 ### Docs
@@ -82,12 +83,12 @@ There are future plans for this template project.
 ### Before version 0.1.0 is released
 
 Currently, the project is undergoing a feedback revision from Foundation for Public Code, and other initial improvements.
-After that, 0.1.0 will be tagged.
+After that, a 0.1.0 will be tagged.
 
 ### Future
 
 - Mention project excellence additions (extras in the checklist?) - OpenSSF scorecard, Foundation for Public Codes metadata standard and so on.
-- Handling GOVERNANCE.md recomendations? Clearify briefly what asom digg is and how decisions are taken etc.
+- Be somewhat formal in the Open Source Checklist recommendations.
 - Handling DEVELOPMENT.md recommendations?
 - Keep the Swedish translations up-to-date
 - Handling where to recommend communication channels for users and developers
