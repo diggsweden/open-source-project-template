@@ -11,7 +11,7 @@ SPDX-License-Identifier: CC0-1.0
 
 This a template project containing 'Community Health Files' and relevant checklists.
 It's intention is to be a practical starter when releasing a project as Open Source.
-It was created in a general way to be usable for anyone, and proposes well know conventions and de-facto standards when possible.
+It was created in a general way to be usable for anyone, and proposes well known conventions and de-facto standards when possible.
 However, It is slightly opinionated, so adjust it to suit your specific needs. Or even:
 
 **You _are supposed_ to adjust the contents and suggestions to suit your project needs.**
