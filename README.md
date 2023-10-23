@@ -10,7 +10,7 @@ SPDX-License-Identifier: CC0-1.0
 [![REUSE status](https://api.reuse.software/badge/github.com/diggsweden/open-source-project-template)](https://api.reuse.software/info/github.com/diggsweden/open-source-project-template)
 
 This a template project containing 'Community Health Files' and relevant checklists.
-It's intention is to be a practical starter when releasing a project as Open Source.
+Its intention is to be a practical starter when releasing a project as Open Source.
 It was created in a general way to be usable for anyone, and proposes well known conventions and de-facto standards when possible.
 However, It is slightly opinionated, so adjust it to suit your specific needs. Or even:
 
