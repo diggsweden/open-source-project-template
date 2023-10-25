@@ -22,3 +22,5 @@ jobs:
     uses: ./.github/workflows/license.yml
   lint:
     uses: ./.github/workflows/lint.yml
+  lintpubliccode:
+    uses: ./.github/workflows/lintpubliccode.yml

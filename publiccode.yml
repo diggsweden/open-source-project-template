@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# This repository adheres to the publiccode.yml standard by including this
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: "0.3"
+categories:
+  - collaboration
+description:
+  en:
+    features:
+      - Template
+    genericName: Template
+    longDescription: |
+      This is a template project containing 'Community Health  Files' and relevant
+      checklists. Its intention is to be a practical starter when releasing a
+      project as  Open Source. It was created in a general way to be usable for
+      anyone, and proposes  well known conventions and de-facto standards when
+      possible. However, It is slightly opinionated, so adjust it to suit your
+      specific  needs. Or even:
+
+
+      **You **_**are supposed**_** to adjust the contents and suggestions to
+      suit your project needs.          **
+    shortDescription: "https://github.com/diggsweden/open-source-project-template"
+developmentStatus: development
+legal:
+  license: CC0-1.0
+localisation:
+  availableLanguages:
+    - en
+    - sv
+  localisationReady: true
+maintenance:
+  contacts:
+    - name: ospo@digg.se
+  type: internal
+name: open source project template
+platforms:
+  - web
+releaseDate: "2023-10-16"
+softwareType: standalone/other
+softwareVersion: dev
+url: "https://github.com/diggsweden/open-source-project-template.git"
+roadmap: "https://github.com/diggsweden/open-source-project-template#roadmap"

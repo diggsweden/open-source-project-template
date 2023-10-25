@@ -57,6 +57,13 @@ lint() {
   printf '\n\n'
 }
 
+publiccodelint() {
+  print_header 'LINTER publiccode.yml (publiccode.yml)'
+  podman run --rm -i italia/publiccode-parser-go -no-network /dev/stdin <publiccode.yml
+  store_exit_code "$?" "publiccode" "${MISSING} ${RED}Lint of publiccode check failed, see logs and fix problems.${NC}\n" "${GREEN}${CHECKMARK}${CHECKMARK} Lint check for publiccode.yml passed${NC}\n"
+  printf '\n\n'
+}
+
 license() {
   print_header 'LICENSE HEALTH (REUSE)'
   podman run --rm --volume "$(pwd)":/data docker.io/fsfe/reuse:2-debian lint
@@ -99,6 +106,7 @@ check_exit_codes() {
 is_command_available 'podman' 'https://podman.io/'
 
 lint
+publiccodelint
 license
 commit
 

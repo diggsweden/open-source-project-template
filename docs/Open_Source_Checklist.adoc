@@ -4,22 +4,20 @@
 = The Open Source Release Checklist
 :toc:
 :revdate: {docdatetime}
-:revnumber: 0.0.0
+:revnumber: 0.0.1
 
 == About
+It is easy to overlook a few important tasks when releasing and enhancing an Open Source Project.
+This checklist is here to assist your project with suggestions.
 
-It is easy to forget a few important tasks when releasing and improving an Open Source Project.
-This checklist is here to help your project with suggestions.
-
-Use this checklist in a practical way - as a discussion starter for the project, as a base for future improvements.
+Use this checklist practically - as a discussion starter for the project and as a foundation for future improvements.
 
 == Documentation
 
-* Verify that the project fulfills the basic standard of Community
-Health Files (CHANGELOG, CONTRIBUTING etc). +
-  See link:.././README.md[README.md - Template Files Explanation Section] for
-a basic list and further information
-* Add any relevant, usage documentation, Software Architecture Descriptions regarding the project
+* Ensure that the project complies with the basic conventions of Community Health Files (CHANGELOG, CONTRIBUTING, etc.). +
+Please refer to the link:.././README.md[README.md - Template Files Explanation Section] for a basic list and further information.
+
+* Include any relevant usage documentation and software architecture descriptions concerning the project.
 
 == Workflows
 
@@ -27,49 +25,56 @@ a basic list and further information
 
 == Project Quality
 
-* Verify there has been a code review of the project
-* Discuss and implement the projects testing goals and ambitions
+* Verify that the project has undergone a code review.
+* Discuss and establish the project's testing goals and ambitions.
 
-== Release and versioning
+== Release and Versioning
 
 * Use semantic versioning and release tags
 
-== Naming and trademarks check
+== Naming and Trademarks Check
 
-* Ensure that the project name does not conflict with an existing
-project or infringe on trademarks
-** Do a general sanity search engine check of the proposed project name.
-** Do a trademark search at
-https://www.prv.se/sv/immaterialrattsexpert/varumarke/databaser/[PRV]
+* Ensure that the project name does not conflict with an existing project or infringe on trademarks
+** Conduct a general search engine check for the proposed project name.
+** Perform a https://www.prv.se/en/ip-professional/trademarks/trademark-databases/[Trademark Search]
 +
-____
-It might be ok to use a name that is reminiscent of an existing trademark, if the existing trademark is used for other services/areas and is not recognized as a known trademark.
-____
+NOTE: It might be perfectly acceptable to use a name reminiscent of an existing trademark if the existing trademark is used for other services/areas and is not recognized as a well-known trademark.
 
 == Legal and Licensing
 
-* Ensure that the license of the project is not in conflict with third party licenses
-* Declare the licenses for _other resources than code_ (images, text etc). https://reuse.software[REUSE] will help you describe these.
+* Ensure that the project's license does not conflict with third-party licenses.
+* Declare the licenses for resources other than code (images, text, etc.).
 
 == Security
 
-TO-DO
 * For Security details regarding GitHub-usage or Contributor-specific security, see (Under-Construction: How we work on GitHub and link:../CONTRIBUTING.adoc[CONTRIBUTING]
 
-== People & maintenance
-
-* Ensure there is a maintenance and archival (if non maintained) plan
+== People & Maintenance
+* Ensure there is a maintenance and archival plan (if the project becomes non-maintained).
 * Ensure that any maintaining team has gotten some education or experience regarding working Open Source
 * Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)
-* Is there a need for a release plan? - if so, ensure that is clear how it should be announced and promoted
-* Every project README MUST have a ``Maintainer''-header. Team, individual, role, does not matter. If there are no Maintainers to be found, the project should be Archived.
+* Is there a need for a release plan? If so, ensure that is clear how it should be announced and promoted
+* Every project README MUST have a ``Maintainer'' header. Wheter it's a team, an individual, or a role, does not matter.
+* If no Maintainers are found, the project SHOULD be archived.
 ** Additionally, the project SHOULD use a CODEOWNERS-file.
-  A CODEOWNERS-file can be more granualar in describing the project maintenance, whereas the README’s Maintainer-line might be more general.
-
+  A CODEOWNERS-file can provide more granualarity in describing project maintenance, whereas the README’s Maintainer heading might be more general.
 == Open Source Excellence
 
-There a quite a few extra steps you might want to consider for keeping your Open Source Projects clean, clear, re-usable, accessible and up-to-date.
+There are a few additional actions you might want to consider.
+These will help your Open Source Project to be collaborative, reusable, accessible, and up-to-date.
 
-* Consider https://reuse.software/[following the REUSE licensing standard]
-* Prefer declaring licenses with the https://spdx.github.io/spdx-spec/v2.3/using-SPDX-short-identifiers-in-source-files/[SPDX-standard]
-* Consider following the https://standard.publiccode.net/[criterias from Foundation for Public Code]
+.Open Source Excellence
+[cols="1,1"]
+|===
+| What | Why
+
+| https://reuse.software/[The REUSE licensing specification]
+| To simplify licensing compliance and declarations.
+
+| https://standard.publiccode.net/[The Foundation for Public Code Criteria]
+| To ensure collaboration and project openness follow best practices.
+
+| https://yml.publiccode.tools/index.html[The publiccode.yml file].
+| To facilitate project metadata indexing.
+
+|===
