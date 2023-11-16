@@ -3,3 +3,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Files: assets/*.png
 Copyright: Digg - Agency for Digital Government
 License: CC0-1.0
+
+Files: .github/pull_request_template.md
+Copyright: Digg - Agency for Digital Government
+License: CC0-1.0
