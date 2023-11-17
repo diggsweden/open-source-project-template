@@ -20,11 +20,12 @@ However, It is slightly opinionated, so adjust it to suit your specific needs. O
 
 ## Contents
 
-### Template Files
+### Template Files Summary
 
-An short summary of the files in the repository, and how you can use them.
+A summary of the files in the repository, and how you can use them.
 You are supposed to use the '.template' marked versions of any files if one such exists.
-These can be found in the 'templates'-directory. However, you should also consider other project files mentioned here:
+These can be found in the 'templates'-directory.
+However, you should also consider other project files mentioned here:
 
 - LICENSE - The LICENSE containing the projects "main" LICENSE. This which must be an [OSI approved license](https://en.wikipedia.org/wiki/Open_Source_Initiative). You are not supposed to use the one in this project - add your own.
 - CODE_OF_CONDUCT - defines standards for how to engage in a community. Version: [Contributor Covenant 2.1](https://www.contributor-covenant.org).
@@ -87,7 +88,6 @@ After that, a 0.1.0 will be tagged.
 
 ### Future
 
-- Mention project excellence additions (extras in the checklist?) - OpenSSF scorecard, Foundation for Public Codes metadata standard and so on.
 - Be somewhat formal in the Open Source Checklist recommendations.
 - Handling DEVELOPMENT.md recommendations?
 - Keep the Swedish translations up-to-date

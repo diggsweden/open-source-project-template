@@ -4,9 +4,10 @@
 = The Open Source Release Checklist
 :toc:
 :revdate: {docdatetime}
-:revnumber: 0.0.1
+:revnumber: 0.0.2
 
 == About
+
 It is easy to overlook a few important tasks when releasing and enhancing an Open Source Project.
 This checklist is here to assist your project with suggestions.
 
@@ -50,14 +51,15 @@ NOTE: It might be perfectly acceptable to use a name reminiscent of an existing 
 * For Security details regarding GitHub-usage or Contributor-specific security, see (Under-Construction: How we work on GitHub and link:../CONTRIBUTING.adoc[CONTRIBUTING]
 
 == People & Maintenance
-* Ensure there is a maintenance and archival plan (if the project becomes non-maintained).
+
 * Ensure that any maintaining team has gotten some education or experience regarding working Open Source
 * Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)
 * Is there a need for a release plan? If so, ensure that is clear how it should be announced and promoted
-* Every project README MUST have a ``Maintainer'' header. Wheter it's a team, an individual, or a role, does not matter.
+* Every project README MUST have a ``Maintainer'' header. Whether it's a team, an individual, or a role, does not matter.
 * If no Maintainers are found, the project SHOULD be archived.
 ** Additionally, the project SHOULD use a CODEOWNERS-file.
   A CODEOWNERS-file can provide more granualarity in describing project maintenance, whereas the README’s Maintainer heading might be more general.
+
 == Open Source Excellence
 
 There are a few additional actions you might want to consider.
