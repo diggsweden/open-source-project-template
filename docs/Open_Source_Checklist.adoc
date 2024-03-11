@@ -4,7 +4,7 @@
 = The Open Source Release Checklist
 :toc:
 :revdate: {docdatetime}
-:revnumber: 0.0.2
+:revnumber: 0.0.3
 
 == About
 
@@ -15,27 +15,27 @@ Use this checklist practically - as a discussion starter for the project and as 
 
 == Documentation
 
-* Ensure that the project complies with the basic conventions of Community Health Files (CHANGELOG, CONTRIBUTING, etc.). +
+* MUST ensure that the project complies with the basic conventions of Community Health Files (CHANGELOG, CONTRIBUTING, etc.). +
 Please refer to the link:.././README.md[README.md - Template Files Explanation Section] for a basic list and further information.
 
-* Include any relevant usage documentation and software architecture descriptions concerning the project.
+* SHOULD include any relevant usage documentation and software architecture descriptions concerning the project.
 
 == Workflows
 
-* Discuss your GitHub-workflow - a brief summary and suggestion can be found in link:../CONTRIBUTING.adoc[CONTRIBUTING - Pull Request Lifecycle]
+* MAY Discuss your GitHub-workflow - a brief summary and suggestion can be found in link:../CONTRIBUTING.adoc[CONTRIBUTING - Pull Request Lifecycle]
 
 == Project Quality
 
-* Verify that the project has undergone a code review.
-* Discuss and establish the project's testing goals and ambitions.
+* MUST verify that the project has undergone a code review.
+* SHOULD discuss and establish the project's testing goals and ambitions.
 
 == Release and Versioning
 
-* Use semantic versioning and release tags
+* SHOULD use semantic versioning and release tags
 
 == Naming and Trademarks Check
 
-* Ensure that the project name does not conflict with an existing project or infringe on trademarks
+* SHOULD ensure that the project name does not conflict with an existing project or infringe on trademarks
 ** Conduct a general search engine check for the proposed project name.
 ** Perform a https://www.prv.se/en/ip-professional/trademarks/trademark-databases/[Trademark Search]
 +
@@ -43,20 +43,21 @@ NOTE: It might be perfectly acceptable to use a name reminiscent of an existing 
 
 == Legal and Licensing
 
-* Ensure that the project's license does not conflict with third-party licenses.
-* Declare the licenses for resources other than code (images, text, etc.).
+* MUST ensure that the project's license does not conflict with third-party licenses.
+* The project licence declarations MUST follow the https://reuse.software/[The REUSE licensing specification]
 
 == Security
 
+* MUST have discussed security concerns and pro-active actions.
 * For Security details regarding GitHub-usage or Contributor-specific security, see (Under-Construction: How we work on GitHub and link:../CONTRIBUTING.adoc[CONTRIBUTING]
 
 == People & Maintenance
 
-* Ensure that any maintaining team has gotten some education or experience regarding working Open Source
-* Ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)
-* Is there a need for a release plan? If so, ensure that is clear how it should be announced and promoted
-* Every project README MUST have a ``Maintainer'' header. Whether it's a team, an individual, or a role, does not matter.
-* If no Maintainers are found, the project SHOULD be archived.
+* MUST ensure that any maintaining team has gotten some education or experience regarding working Open Source
+* MUST ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests)
+* MAY dicuss there a need for a release plan? If so, ensure that is clear how it should be announced and promoted
+* MUST make sure that every project README have a ``Maintainer'' header. Whether it's a team, an individual, or a role, does not matter.
+* SHOULD be archived if there are no maintainers.
 ** Additionally, the project SHOULD use a CODEOWNERS-file.
   A CODEOWNERS-file can provide more granualarity in describing project maintenance, whereas the README’s Maintainer heading might be more general.
 
@@ -69,9 +70,6 @@ These will help your Open Source Project to be collaborative, reusable, accessib
 [cols="1,1"]
 |===
 | What | Why
-
-| https://reuse.software/[The REUSE licensing specification]
-| To simplify licensing compliance and declarations.
 
 | https://standard.publiccode.net/[The Foundation for Public Code Criteria]
 | To ensure collaboration and project openness follow best practices.
