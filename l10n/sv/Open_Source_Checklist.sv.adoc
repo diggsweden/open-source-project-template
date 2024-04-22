@@ -1,0 +1,144 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: CC0-1.0
+= Checklista för öppen källkod
+:toc:
+:revdate: {docdatetime}
+:revnumber: 0.0.4
+
+== Om
+
+Det är lätt att förbise en del viktiga punkter när du släpper och förbättrar ett projekt med öppen källkod.
+Denna checklista är en hjälp för att uppnå god hälsa, utvecklingspraxis och säkerhet i ditt projekt.
+
+Använd denna checklista praktiskt - som en diskussionsstartare för projektet och som en grund för framtida förbättringar.
+
+== Arkivering och avveckling av ett projekt
+
+* Bör använda plattformens "Arkiverings"-funktion. På så sätt blir det skrivskyddat, inklusive issue-/ärendehanteringen, och markeras som inaktivt.
+* Bör ange i README-filen att projektet inte längre förvaltas.
+* Bör arkiveras om det inte finns några förvaltare.
+
+== Dokumentation
+
+* Måste säkerställa att projektet följer grundläggande praxis för Community Health Files (ändringslogg (CHANGELOG), bidragsguide(CONTRIBUTING), uppförandekod(CODE_OF_CONDUCT) med mera..). +
+Se link:../../README.md[detta projekts README för en lista och ytterligare beskrivning om vilka filer som kan ingå].
+
+* Bör inkludera relevant användardokumentation och arkitekturbeskrivning för projektet.
+
+==  Licenshantering
+
+* Måste säkerställa att projektets licens inte är i konflikt med tredjepartslicenser.
+* Licensinformatioen ska följa specifikationen https://reuse.software/[REUSE-licensspecifikationen]. Det innebär att allt material som erbjuds i ett öppen källkod-projekt också ska ha tydlig upphovsrättsinformation.
+
+=== Kontroll av namn och varumärken
+
+* Bör säkerställa att projektnamnet inte kommer i konflikt med ett befintligt projekt/varumärke.
+** Utför en allmän sökmotorundersökning för det föreslagna projektnamnet.
+** Utför en https://www.prv.se/en/ip-professional/trademarks/trademark-databases/[Varumärkessökning].
+
++
+OBS: Det kan vara fullt acceptabelt att använda ett namn som påminner om ett befintligt varumärke - om det befintliga varumärket används för andra tjänster/områden och inte erkänns som ett välkänt varumärke.
+
+== Team & Underhåll
+
+* Måste säkerställa att förvaltare har fått någon utbildning eller erfarenhet av att arbeta med öppen källkod. Till exempel genom att läsa guider på https://opensource.guide.
+* Måste säkerställa att förvaltare har en plan för hantering av Merge/Pull-requests (kodgranskningar, etc.).
+* Måste säkerställa att förvaltare har en plan för hantering av community-/gemenskapsfrågor (svara på ärenden, granska och dra in Pull-requests, med mera).
+* Måste säkerställa att förvaltare har en ansvarig för att agera på säkerhetsproblem.
+* Måste se till att var projekts README har en `Maintainer`-rubrik och information - ett team,individer eller en roll.
+
+* Bör diskutera om det finns behov av en release-plan. Om så är fallet, se till att det är tydligt hur den ska tillkännages.
+** Dessutom bör projektet använda en CODEOWNERS-fil.
+En CODEOWNERS-fil kan ge mer detaljer om beskrivningen av projektunderhåll, medan README-filens Maintainer-rubrik och information kan vara mer allmän.
+
+== Projektetkvalitet
+
+* Måste verifiera att projektet har genomgått en kodgranskning.
+* Bör diskutera och fastställa projektets testmål och testambitioner.
+* Bör göra det lätt för slutanvändare att använda projektetet - dokumentation, exempel, körbara artifakter med mera.
+
+== Utgivning och versionering
+
+* Bör använda semantisk versionering och tag:ar, https://semver.org/[enligt standard.]
+
+== Säkerhet
+
+Följande del av checklistan om säkerhet är rakt av baserad på https://github.com/ossf/wg-best-practices-os-developers/blob/main/docs/Concise-Guide-for-Developing-More-Secure-Software.md[Open Source Security Foundation (OpenSSF) praxis för säkrare utveckling i öppen källkodprojekt], version: 2023-06-14, https://openssf.org/blog/2024/04/15/open-source-security-openssf-and-openjs-foundations-issue-alert-for-social-engineering-takeovers-of-open-source-projects/[(och kompletterande information)].
+
+=== Allmänt
+
+* Måste använda tvåfaktorsautentisering (2FA) eller multifaktorautentisering (MFA) för att göra det svårare för någon att ta över konton.
+* Måste begränsa merge- och push-rättigheter till specifika grenar.
+* Måste ha aktiverat branch-skydd.
+* Måste ha en praxis med signerade commits.
+
+* Bör ha överblick och kännedom om vilka committers och maintainers som deltar i projektet, och bör göra återkommande översikt av dem.
+* Bör ha automatiserade testnings- och testtäckningsrutiner, inklusive tester för negativa fall. Att upptäcka programfel/buggar är en del i säkra projektet.
+
+=== Bidrag
+
+* Bör ha en praxis för kodgranskningar.
+* Pull-/Merge requests och andra bidrag bör ha god läsbarhet och begränsad omfattning för att säkerställa att det inte är för komplexa. Minimera svåranalyserade binärfiler.
+
+=== Tredjepartsberoenden och identifiering av sårbarheter
+
+* Måste använda SCA-verktyg i CI-pipelinen för att upptäcka sårbarheter och licensinkompatibiliteter.
+* Måste använda lint-verktyg i CI-pipelinen för att upptäcka sårbarheter och dåliga utvecklingsmönster.
+* Måste använda verktyg för att skanna efter hemligheter för att upptäcka lösenord, loggar, tokens.
+* Måste använda automatiserad teknik för att övervaka uppdateringar av beroenden för kritiska sårbarheter.
+* Måste ha löpande förvaltning för att snabbt hantera uppdateringar av sårbarheter.
+
+* Bör använda SAST-verktyg i CI-pipelinen för att upptäcka potentiella sårbarheter och dålig utvecklingsmönster.
+* Bör utvärdera hälsan hos varje nytt direkt tredjepartsberoende som läggs till i projektet.
+* Bör föredra att använda pakethanterare (på system-, språk- och containernivå) för automatiska och konsekventa beroendeuppdateringar.
+
+=== Publicering
+
+* Måste producera en SBOM (Software-Bill-of-Materials) för projektet så att slutanvändare och system kan verifiera sårbarheter och licensinkompatibiliteter.
+* Måste begränsa vilka som rättigheter att publicera projektartifakter.
+
+* Bör signera alla projekt-utgåvor och artifakter som ges ut.
+* Bör göra det enkelt för slutanvändare att uppgradera till nya utgåvor. Använd semantisk versionering, stöd stabila API:er och informera om kommande föråldringar.
+
+=== Policy
+
+* Måste ha en säkerhetspolicy på plats - den bör innehålla information om var man rapporterar icke-offentliga sårbarheter och processen för rapportering.
+
+Säker programvaruutveckling och verktyg från OpenSSF och OWASP:
+
+=== Verktyg
+
+* https://github.com/ossf/wg-security-tooling/blob/main/guide.md#readme[OpenSSF guide för säkerhetsverktyg].
+* https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools[OWASP-applikationssäkerhetsverktyg]
+* https://github.com/ossf/scorecard[OpenSSF Scorecards för repositories-säkerhet]
+
+=== Guider
+
+* https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software[OpenSSF:s guide för att utvärdera öppen källkod]
+* https://github.com/cncf/tag-security/blob/main/supply-chain-security/supply-chain-security-paper/CNCF_SSCP_v1.pdf[CNCF Security TAG Software Supply Chain Best Practices-guide].
+* https://cheatsheetseries.owasp.org/index.html[OWASP-sammanfattning].
+* https://owasp.org/www-project-developer-guide/release/[OWASP-utvecklarguide].
+* https://www.sigstore.dev/[Signering av artefakter i supply chain - OpenSSF sigstore-projekt].
+* https://owasp.org/www-project-application-security-verification-standard/[OWASP Application Security Verification Standard - ASVS].
+* https://slsa.dev/[Supply-chain Levels for Software Artifacts - (SLSA)].
+
+== Arbetsflöden
+
+* Bör diskutera ditt GitHub-arbetsflöde - en kort sammanfattning och förslag finns i link:../../CONTRIBUTING.adoc[CONTRIBUTING - Livscykel för Pull Requests]
+
+== Ytterligare standarder och specifikationer för öppen källkod-projekt
+
+Att även följa dessa hjälper ditt öppen källkod-projekt att vara återanvändbart, tillgängligt och uppdaterat.
+
+[cols="1,1"]
+|===
+| Vad | Varför
+
+| https://standard.publiccode.net/[Stiftelsen för offentliga kodkriterier]
+| För att säkerställa samarbete och projektöppenhet enligt bästa praxis.
+
+| https://yml.publiccode.tools/index.html[publiccode.yml-filen].
+| För att underlätta indexering och katalogisering av projektmätdata.
+
+|===
