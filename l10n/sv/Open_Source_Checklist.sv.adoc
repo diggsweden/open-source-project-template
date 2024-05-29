@@ -38,7 +38,7 @@ Se link:../../README.md[detta projekts README för en lista och ytterligare besk
 ** Utför en https://www.prv.se/en/ip-professional/trademarks/trademark-databases/[Varumärkessökning].
 
 +
-OBS: Det kan vara fullt acceptabelt att använda ett namn som påminner om ett befintligt varumärke - om det befintliga varumärket används för andra tjänster/områden och inte erkänns som ett välkänt varumärke.
+OBS: Det kan vara acceptabelt att använda ett namn som påminner om ett befintligt varumärke - om det befintliga varumärket används för andra tjänster/områden än det aktuella och inte erkänns som ett välkänt varumärke.
 
 == Team & Underhåll
 
@@ -52,7 +52,7 @@ OBS: Det kan vara fullt acceptabelt att använda ett namn som påminner om ett b
 ** Dessutom bör projektet använda en CODEOWNERS-fil.
 En CODEOWNERS-fil kan ge mer detaljer om beskrivningen av projektunderhåll, medan README-filens Maintainer-rubrik och information kan vara mer allmän.
 
-== Projektetkvalitet
+== Projektkvalitet
 
 * Måste verifiera att projektet har genomgått en kodgranskning.
 * Bör diskutera och fastställa projektets testmål och testambitioner.
@@ -135,10 +135,10 @@ Att även följa dessa hjälper ditt öppen källkod-projekt att vara återanvä
 |===
 | Vad | Varför
 
-| https://standard.publiccode.net/[Stiftelsen för offentliga kodkriterier]
-| För att säkerställa samarbete och projektöppenhet enligt bästa praxis.
+| https://standard.publiccode.net/[Standarden för offentlig kod]
+| För att säkerställa samarbete och projektets öppenhet enligt god praxis.
 
-| https://yml.publiccode.tools/index.html[publiccode.yml-filen].
-| För att underlätta indexering och katalogisering av projektmätdata.
+| https://yml.publiccode.tools/index.html[publiccode.yml-fil].
+| För att underlätta indexering och katalogisering av projekt.
 
 |===
