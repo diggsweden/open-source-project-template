@@ -6,13 +6,12 @@ SPDX-License-Identifier: CC0-1.0
 
 # Open Source Project Template
 
-[![Standard commitment](https://github.com/publiccodenet/standard/blob/develop/assets/standard-for-public-code-commitment.svg)](https://github.com/diggsweden/open-source-project-template/blob/main/CONTRIBUTING.adoc#standard-for-public-code)
-[![REUSE status](https://api.reuse.software/badge/github.com/diggsweden/open-source-project-template)](https://api.reuse.software/info/github.com/diggsweden/open-source-project-template)
+[![Version](https://img.shields.io/github/v/tag/diggsweden/open-source-project-template?style=for-the-badge&color=green&label=Version)](https://github.com/diggswedenn/open-source-project-template/tags])
+[![REUSE](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.reuse.software%2Fstatus%2Fgithub.com%2Fdiggsweden%2Fopen-source-project-template&query=status&style=for-the-badge&label=REUSE)](https://api.reuse.software/info/github.com/diggsweden/open-source-project-template)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/diggsweden/open-source-project-template/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/diggsweden/open-source-project-template)
+![Standard for Public Code Commitment](https://img.shields.io/badge/Standard%20for%20Public%20Code%20Commitment-green?style=for-the-badge)
 
-This is a template project containing 'Community Health Files' and relevant checklists.
-Its intention is to be a practical starter when releasing a project as Open Source.
-It was created in a general way to be usable for anyone, and proposes well known conventions and de-facto standards when possible.
-However, It is slightly opinionated, so adjust it to suit your specific needs. Or even:
+This is a template project containing 'Community Health Files' and relevant checklists. Its intention is to be a practical starter when releasing a project as Open Source. It was created in a general way to be usable for anyone, and proposes well known conventions and de-facto standards when possible. However, It is slightly opinionated, so adjust it to suit your specific needs. Or even:
 
 **You _are supposed_ to adjust the contents and suggestions to suit your project needs.**
 
@@ -22,10 +21,7 @@ However, It is slightly opinionated, so adjust it to suit your specific needs. O
 
 ### Template Files Summary
 
-A summary of the files in the repository, and how you can use them.
-You are supposed to use the '.template' marked versions of any files if one such exists.
-These can be found in the 'templates'-directory.
-However, you should also consider other project files mentioned here:
+A summary of the files in the repository, and how you can use them. You are supposed to use the '.template' marked versions of any files if one such exists. These can be found in the 'templates'-directory. However, you should also consider other project files mentioned here:
 
 - LICENSE - The LICENSE containing the projects "main" LICENSE. This which must be an [OSI approved license](https://en.wikipedia.org/wiki/Open_Source_Initiative). You are not supposed to use the one in this project - add your own.
 - CODE_OF_CONDUCT - defines standards for how to engage in a community. Version: [Contributor Covenant 2.1](https://www.contributor-covenant.org).
@@ -47,12 +43,11 @@ However, you should also consider other project files mentioned here:
 
 ## Usage instructions
 
-1. Copy the files you need into your in-progress project - Start with SECURITY.template.md, README.template.md, CHANGELOG.template.md, CONTRIBUTING.template.adoc, CODE_OF_CONDUCT.md and possibly the .github/ISSUE_TEMPLATE and .github/pull_request_template.md.
-2. Remove '.template' in the filenames you copied.
-3. Add a LICENSE file (do not copy the one in this project), and if needed a [CHANGELOG.md](https://keepachangelog.com/en/1.1.0/).
-4. Go through each of the files and adjust to your needs
+1. Copy the files you need into your in-progress project from the 'templates'-folder - Start with SECURITY.md, README.md, CHANGELOG.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md and possibly the .github/ISSUE_TEMPLATE and .github/pull_request_template.md.
+2. Add a LICENSE file (do not copy the one in this project), and if needed a [CHANGELOG.md](https://keepachangelog.com/en/1.1.0/).
+3. Go through each of the files and adjust to your needs
    - Correct any [Template Variables](#template-files-variables) in the Template files.
-5. Answer the questions on the [Open Source Checklist:](docs/Open_Source_Checklist.adoc)
+4. Answer the questions on the [Open Source Checklist:](docs/Open_Source_Checklist.md)
 
 > Keep the README fresh! It's the first thing people see and will make the initial impression.
 > Understand the contents of the files you use from this project. Do they fit within your project, or are you looking for something else?
@@ -67,15 +62,15 @@ In the special case that you git cloned this project and are using it as a proje
 
 Replace the following variables with if you are using these files.
 
-- CONTRIBUTING.template.adoc - Replace `INSERT_DAYS`. (Standard for Public Code recommends two business days)
-- CODE_OF_CONDUCT.adoc - Replace `INSERT_CONTACT_METHOD`.
-- SECURITY.template.md - Replace `INSERT_CONTACT_METHOD` and `INSERT_CONTACT`.
+- CONTRIBUTING.template.md - Replace `INSERT_DAYS`.
+- CODE_OF_CONDUCT.md - Replace `INSERT_CONTACT_METHOD`.
+- SECURITY.template.md - Replace `INSERT_CONTACT_METHOD`.
 - .github/pull_request_template.md - Replace `INSERT_CONTRIBUTING_LINK`.
 
 ## Contributing
 
 If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
-Also, please see [CONTRIBUTING](CONTRIBUTING.adoc).
+Also, please see [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Roadmap
 
@@ -148,6 +143,8 @@ For information about the current individual or team maintainers, see [CODEOWNER
 - [Foundation for Public Code](https://publiccode.net/)
 - [Digg's internal policy and guidance document regarding Open Source](https://www.digg.se/analys-och-uppfoljning/publikationer/publikationer/2022-09-27-anskaffning-utveckling-och-publicering-av-oppen-programvara-policy-och-riktlinjer)
 
-## Public known users of this template
+## Known users of this template
 
 - [Jitsi Outlook Plugin](https://github.com/diggsweden/jitsi-outlook)
+- [Jitsi Moderator](https://github.com/diggsweden/jitsi-moderator)
+- [MLA](https://github.com/diggsweden/mla)

@@ -7,6 +7,7 @@ SPDX-License-Identifier: CC-BY-4.0
 # Gemenskapens uppförandekod vid bidrag
 
 ## Vårt löfte
+
 Vi som medlemmar, bidragsgivare och ledare lovar att göra deltagandet i vår
 gemenskap fri från trakasserier och för alla oavsett ålder, kropp,
 storlek, funktionsnedsättning, etnicitet, könsegenskaper, könsidentitet, erfarenhetsnivå, utbildning, socioekonomisk status,
@@ -17,6 +18,7 @@ Vi lovar att agera och interagera på ett sätt som bidrar till en öppen, välk
 inkluderande och trygg gemenskap rik på mångfald.
 
 ## Våra standarder
+
 Några exempel på beteenden som bidrar till en positiv miljö för
 gemenskapen:
 
@@ -28,6 +30,7 @@ gemenskapen:
 * Att fokusera på det som är bäst, inte bara för oss som individer, utan för gemenskapens helhet.
 
 Några exempel på beteenden som inte är acceptabelt:
+
 * Användning av sexualiserat språk eller bildspråk, samt sexuella närmanden eller anspråk.
 * Trollande, förolämpande och nedsättande kommentarer, personliga eller politiska attacker.
 * Offentliga eller privata trakasserier.
@@ -35,6 +38,7 @@ Några exempel på beteenden som inte är acceptabelt:
 * Annat beteende som rimligen kan anses vara olämpligt i en professionell miljö.
 
 ## Ansvar för tillämpning
+
 Gemenskapens ledare är ansvariga för att klargöra och upprätthålla våra standarder för ett acceptabelt beteende och kommer att vidta lämpliga och rättvisa tillrättavisande åtgärder som svar på beteenden som de anser vara olämpliga, hotfulla, stötande, eller skadliga.
 
 Gemenskapens ledare har rätt och ansvar att ta bort, redigera eller avvisa
@@ -42,10 +46,12 @@ kommentarer, commit, kod, wiki-redigeringar, frågor och andra bidrag som
 inte följer denna uppförandekod. Gemenskapens ledare kommer att informera om skäl för modereringen när så är lämpligt.
 
 ## Omfattning
+
 Denna uppförandekod gäller inom alla gemenskapsområden, även när en individ officiellt representerar gemenskapen i allmänheten.
 Exempel på att representera vår gemenskap inkluderar att använda en officiell e-postadress, att göra inlägg via ett officiellt konto på sociala medier, eller att vara en utsedd representant vid ett evenemang, oavsett om det är virtuellt eller verkligt.
 
 ## Tillämpning och rapportering
+
 Fall av kränkande, trakasserande eller på annat sätt oacceptabelt beteende
 rapporteras till ansvariga ledare för gemenskapen
 [INFOGA KONTAKTMETOD].
@@ -54,14 +60,17 @@ Klagomål kommer att granskas och utredas snabbt och rättvist.
 Alla gemenskapens ledare är skyldiga att respektera rapportörens integritet och säkerhet oavsett incident.
 
 ## Riktlinjer för tillämpning
+
 Gemenskapens ledare kommer att följa dessa riktlinjer för att avgöra konsekvenserna för handlingar som de anser strider mot denna uppförandekod:
 
 ### 1. Rättelse
+
 **Påverkan på gemenskapen**: Användande av olämpligt språk eller annat beteende som anses vara oprofessionellt eller opassande i gemenskapen.
 
 **Konsekvens**: En privat, skriftlig varning från gemenskapsansvariga, en tydlig förklaring av överträdelsens art och till varför beteendet var olämpligt. En offentlig ursäkt kan begäras.
 
 ### 2. Varning
+
 **Påverkan på gemenskapen**: En överträdelse genom en enskild incident eller serie av
 åtgärder.
 
@@ -71,6 +80,7 @@ de som upprätthåller uppförandekoden, under en viss tidsperiod.
 Det inkluderar att undvika interaktioner i gemenskapsutrymmen såväl som externa kanaler som sociala medier. Överträdelse mot dessa villkor kan leda till en tillfällig eller permanent utslutning ur gemenskapen.
 
 ### 3. Tillfälligt avstängd
+
 **Påverkan på gemenskapen**: En allvarlig överträdelse mot gemenskapsstandarder, inklusive ett kontinuerligt olämpligt beteende.
 
 **Konsekvens**: En tillfällig avstängning från någon form av interaktion eller offentlig kommunikation med gemenskapen under en viss tidsperiod.
@@ -79,6 +89,7 @@ med dem som upprätthåller uppförandekoden, tillåts under denna period.
 Överträdelse mot dessa villkor kan leda till en permanent avstängning.
 
 ### 4. Permanent avstängd
+
 **Påverkan på gemenskapen**: Visar ett mönster av överträdelser av gemenskapens
 riktlinjer, inklusive kontinuerligt olämpligt beteende, trakasserier av en
 individ, eller aggression eller nedvärderande av individ.
@@ -87,6 +98,7 @@ individ, eller aggression eller nedvärderande av individ.
 gemenskapen.
 
 ## Erkännanden
+
 Denna uppförandekod är en översättning av [Contributor Covenant][hemsida],
 version 2.1, tillgänglig på
 [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].

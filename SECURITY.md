@@ -5,44 +5,71 @@ SPDX-License-Identifier: CC0-1.0
 -->
 # Security Reporting
 
-If you wish to report a security vulnerability but not in a public issue -- thank you!
-We ask that you follow the following process.
+If you wish to report a security vulnerability privately, we appreciate your diligence. Please follow the guidelines below to submit your report.
 
-Please report security vulnerabilities by filling out the following template:
+## Reporting
 
-- PROJECT: A URL to project's repository
-- PUBLIC: Please let us know if this vulnerability has been made or discussed publicly already, and if so, please let us know where.
-- DESCRIPTION: Please provide precise description of the security vulnerability you have found with as much information as you are able and willing to provide.
+To report a security vulnerability, please provide the following information:
 
-Please send the above info, along with any other information you feel is pertinent to: ospo AT digg.se.
+1. **PROJECT**
+   - Include the URL of the project repository - Example: <https://github.com/open-source-project-template>
 
-Vulnerabilities reported will be handled on a best effort basis.
+2. **PUBLIC**
+   - Indicate whether this vulnerability has already been publicly discussed or disclosed.
+   - If so, provide relevant links.
 
-In addition, you may request that the project provide you a patched release in advance of the release announcement, however, we can not guarantee that such information will be provided to you in advance of the public release and announcement.
+3. **DESCRIPTION**
+   - Provide a detailed description of the security vulnerability.
+   - Include as much information as possible to help us understand and address the issue.
 
-However, ospo AT digg.se will email you at the same time the public announcement is made.
-We will let you know within a few weeks whether or not your report has been accepted or rejected.
-We ask that you please keep the report confidential until we have made a public announcement.
+Send this information, along with any additional relevant details, to <ospo@digg.se>.
+
+## Confidentiality
+
+We kindly ask you to keep the report confidential until a public announcement is made.
+
+## Notes
+
+- Vulnerabilities will be handled on a best-effort basis.
+- You may request an advance copy of the patched release, but we cannot guarantee early access before the public release.
+- You will be notified via email simultaneously with the public announcement.
+- We will respond within a few weeks to confirm whether your report has been accepted or rejected.
+
+Thank you for helping to improve the security of our project!
 
 ---
 
 ## Säkerhetsrapport
 
-Om du vill rapportera en sårbarhet, men inte i ett offentligt ärende - tack!
-Vi ber dig att följa följande process.
+Om du önskar rapportera en säkerhetssårbarhet privat är vi tacksamma.
+Följ riktlinjerna nedan för att skicka in din rapport.
 
-Vänligen rapportera säkerhetsbrister genom att meddela oss:
+## Rapportera
 
-- PROJEKT: En URL till projektets arkiv
-- OFFENTLIG SÅRBARHET: Meddela oss gärna i det fall du vet om denna sårbarhet har spridits eller diskuterats offentligt.
-- BESKRIVNING: Ange en beskrivning av sårbarheten du har hittat, med så mycket information som du kan (och vill) tillhandahålla.
+För att rapportera en säkerhetssårbarhet, tillhandahåll följande:
 
-Skicka ovanstående information tillsammans med övrig information som du anser är relevant för: ospo AT digg.se.
+1. **PROJEKT**
+   - Inkludera URL:en till projektet.
 
-Rapporter hanteras efter bästa förmåga.
+2. **OFFENTLIG SÅRBARHET**
+   - Ange om denna sårbarhet redan har diskuterats eller avslöjats offentligt.
+   - Om så är fallet, tillhandahåll relevanta länkar.
 
-Dessutom kan du begära att projektet ger dig en korrigerad version innan releasemeddelandet, men vi kan inte garantera att sådan information kommer att tillhandahållas till dig innan den offentliga releasen och tillkännagivandet.
+3. **BESKRIVNING**
+   - Ge en detaljerad beskrivning av säkerhetssårbarheten.
+   - Inkludera så mycket information som möjligt för att hjälpa oss förstå och åtgärda problemet.
 
-ospo AT digg.se kommer dock att skicka ett e-postmeddelande till dig samtidigt som det offentliga meddelandet görs.
-Vi kommer att meddela dig inom några veckor om din anmälan har godkänts eller avvisats.
-Vi ber dig att hålla rapporten konfidentiell tills vi har gjort ett offentligt tillkännagivande.
+Skicka denna information, tillsammans med eventuella relevanta detaljer, till <ospo@digg.se>.
+
+## Sekretess
+
+Vi ber vänligen att du håller rapporten konfidentiell tills ett offentligt tillkännagivande görs.
+
+## Anteckningar
+
+- Sårbarheter kommer att hanteras efter bästa förmåga.
+- Du kan begära en förhandsversion av den patchade utgåvan, men vi kan inte garantera tidig åtkomst före den offentliga utgåvan.
+- Du kommer att meddelas via e-post samtidigt som det offentliga tillkännagivandet.
+- Vi kommer att svara inom några veckor för att bekräfta om din rapport har accepterats eller avvisats.
+
+Tack för att du hjälper till att förbättra säkerheten i vårt projekt!

@@ -8,8 +8,13 @@ SPDX-License-Identifier: CC0-1.0
 
 **Project logo and badges**
 
-Highly optional. Embed an image of the project logo and include links to relevant badges in the README.
+Examples: All pointing to this project
+[![Version](https://img.shields.io/github/v/tag/diggsweden/open-source-project-template?style=for-the-badge&color=green&label=Version)](https://github.com/diggswedenn/open-source-project-template/tags])
+[![REUSE](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.reuse.software%2Fstatus%2Fgithub.com%2Fdiggsweden%2Fopen-source-project-template&query=status&style=for-the-badge&label=REUSE)](https://api.reuse.software/info/github.com/diggsweden/open-source-project-template)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/diggsweden/open-source-project-template/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/diggsweden/open-source-project-template)
+![Standard for Public Code Commitment](https://img.shields.io/badge/Standard%20for%20Public%20Code%20Commitment-green?style=for-the-badge)
 
+Highly optional. Embed an image of the project logo and include links to relevant badges in the README.
 
 **Description**:  Put a meaningful, short, plain-language description of what the project is trying to accomplish and why it matters.
 Describe the problem(s) this project solves.
@@ -29,7 +34,6 @@ Describe the problem(s) this project solves.
 - [Maintainers](#maintainers)
 - [Credits and References](#credits-and-references)
 
-
 ## Installation and Requirements
 
 Detailed instructions on how to install, configure, and get the project running.
@@ -43,7 +47,6 @@ Simple example:
 `$ npm install PROJECT --save`
 
 `$ any other command`
-
 
 ## Quick start instructions
 
@@ -73,7 +76,7 @@ This section should detail why people should get involved and describe key areas
 currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building
 important pieces, etc.
 
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](CONTRIBUTING.adoc).
+General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Development
 
@@ -102,5 +105,5 @@ Credits, references or other relevant information.
 Example:
 
 Special Thanks to
-* [IEEE Open Source Maintainers Manual](https://opensource.ieee.org/community/manual/)
 
+- [IEEE Open Source Maintainers Manual](https://opensource.ieee.org/community/manual/)
