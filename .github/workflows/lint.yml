@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+# SPDX-FileCopyrightText: 2024 Skatteverket - Swedish Tax Agency
 #
 # SPDX-License-Identifier: CC0-1.0
 
@@ -6,26 +6,40 @@
 name: MegaLinter
 on: [workflow_call] # yamllint disable-line rule:truthy
 
+permissions:
+  contents: read
+  security-events: write
+
 env:
   MEGALINTER_CONFIG: /development/mega-linter.yml
+
 jobs:
   megalinter:
     name: megalint
     runs-on: ubuntu-latest
+    if: ${{ (github.event_name == 'pull_request') && (github.actor != 'dependabot[bot]') }}
+    permissions:
+      # Needed for Code scanning upload
+      security-events: write
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 #v4.1.7
         with:
           fetch-depth: 7
 
       - name: Run MegaLinter
         id: ml
-        uses: megalinter/megalinter@v8
+        uses: oxsecurity/megalinter@c217fe8f7bc9207062a084e989bd97efd56e7b9a # v8.0.0
 
       - name: Archive production artifacts
-        if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 #v4.4.0
         with:
           name: MegaLinter reports
           path: |
             megalinter-reports
+
+      - name: Upload Megalint Sarif Report
+        uses: github/codeql-action/upload-sarif@323f5ef653b88011bf10e9a0a56d70d742463c9a #v3.26.6
+        with:
+          sarif_file: megalinter-reports/megalinter-report.sarif

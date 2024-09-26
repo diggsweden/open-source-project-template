@@ -3,15 +3,19 @@
 # SPDX-License-Identifier: CC0-1.0
 
 ---
-name: LintPublicCodeMeta
+name: Lint Public Code MetaData
 on: [workflow_call] # yamllint disable-line rule:truthy
+
+permissions:
+  contents: read
 
 jobs:
   publiccode_validation:
-    runs-on: ubuntu-latest
     name: publiccode validation
+    runs-on: ubuntu-latest
+    if: ${{ (github.event_name == 'pull_request') && (github.actor != 'dependabot[bot]') }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: italia/publiccode-parser-action@v1
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 #v4.1.7
+      - uses: italia/publiccode-parser-action@3244a5a109ae23f76cb379831abbad32927cad8c # v1.2.0
         with:
           publiccode: "publiccode.yml"

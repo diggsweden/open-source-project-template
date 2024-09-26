@@ -74,21 +74,12 @@ Also, please see [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Roadmap
 
-There are future plans for this template project.
+### Future Ideas
 
-### Before version 0.1.0 is released
-
-Currently, the project is undergoing a feedback revision from Foundation for Public Code, and other initial improvements.
-After that, a 0.1.0 will be tagged.
-
-### Future
-
-- Be somewhat formal in the Open Source Checklist recommendations.
-- Handling DEVELOPMENT.md recommendations?
-- Keep the Swedish translations up-to-date
 - Handling where to recommend communication channels for users and developers
 - Add corresponding template versions for GitLab of the GitHub-specific templates
 - Add a few graphical items to lighten up the text in the README and so on
+- Suggest a simpler CODE OF CONDUCT with no enforcement details
 - Your suggestions
 
 ---

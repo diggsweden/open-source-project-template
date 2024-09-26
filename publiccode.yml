@@ -6,14 +6,13 @@
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/italia/publiccode.yml
 
-publiccodeYmlVersion: "0.3"
+publiccodeYmlVersion: "0.4"
 categories:
   - collaboration
 description:
   en:
     features:
       - Template
-    genericName: Template
     longDescription: |
       This is a template project containing 'Community Health  Files' and relevant
       checklists. Its intention is to be a practical starter when releasing a

@@ -66,7 +66,7 @@ publiccodelint() {
 
 license() {
   print_header 'LICENSE HEALTH (REUSE)'
-  podman run --rm --volume "$(pwd)":/data docker.io/fsfe/reuse:2-debian lint
+  podman run --rm --volume "$(pwd)":/data docker.io/fsfe/reuse:4-debian lint
   store_exit_code "$?" "License" "${MISSING} ${RED}License check failed, see logs and fix problems.${NC}\n" "${GREEN}${CHECKMARK}${CHECKMARK} License check passed${NC}\n"
   printf '\n\n'
 }

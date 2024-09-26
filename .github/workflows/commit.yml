@@ -6,13 +6,15 @@
 name: Conform DCO (--Sign-off)
 on: [workflow_call] # yamllint disable-line rule:truthy
 
+permissions:
+  contents: read
+
 jobs:
   signoff:
     runs-on: ubuntu-latest
-
-    if: github.event_name == 'pull_request'
+    if: ${{ (github.event_name == 'pull_request') && (github.actor != 'dependabot[bot]') }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 #v4.1.7
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -21,6 +23,6 @@ jobs:
         run: git fetch origin main:main
 
       - name: Conform Action
-        uses: docker://ghcr.io/siderolabs/conform:v0.1.0-alpha.27-2-g7d9dec0
+        uses: docker://ghcr.io/siderolabs/conform:v0.1.0-alpha.30-1-ga6572d2@sha256:31dbdabfe2d9e5d93035bdd8fb8a1e1181d247339e66536b8e6183801d390657
         with:
           args: "enforce --base-branch=main"
