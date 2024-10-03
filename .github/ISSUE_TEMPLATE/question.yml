@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+#
+# SPDX-License-Identifier: CC0-1.0
+
+---
+name: Question
+description: Ask a question!
+labels: ["question"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a question. Please keep it project focused and on-topic!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: (Optional) How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: question
+    attributes:
+      label: What is your question?
+      description: Please describe your question.
+    validations:
+      required: true
