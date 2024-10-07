@@ -37,14 +37,14 @@ body:
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternative solutions
-      description: (Optional) Did you consider some alternative solutions, please describe.
+      label: Alternative solutions (Optional)
+      description: Did you consider some alternative solutions, please describe.
     validations:
       required: false
   - type: textarea
     id: additional
     attributes:
-      label: Additional information
-      description: (Optional) Anything else that you consider important for understanding your feature suggestion.
+      label: Additional information (Optional) 
+      description: Anything else that you consider important for understanding your feature suggestion.
     validations:
       required: false

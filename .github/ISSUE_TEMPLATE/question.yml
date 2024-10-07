@@ -15,15 +15,15 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: (Optional) How can we get in touch with you if we need more info?
+      label: Contact Details (Optional)
+      description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com
     validations:
       required: false
   - type: textarea
     id: question
     attributes:
-      label: What is your question?
+      label: What are you curious about?
       description: Please describe your question.
     validations:
       required: true
