@@ -6,7 +6,7 @@ SPDX-License-Identifier: CC0-1.0
 
 # Project Title
 
-**Project logo and badges**
+Project logo and badges goes here.
 
 Examples: All pointing to this project
 [![Version](https://img.shields.io/github/v/tag/diggsweden/open-source-project-template?style=for-the-badge&color=green&label=Version)](https://github.com/diggswedenn/open-source-project-template/tags])
@@ -66,9 +66,9 @@ Document any known significant shortcomings with the software.
 
 Instruct users how to get help with this software; this might include links to an issue tracker, wiki, mailing list, etc.
 
-**Example**
+Example:
 
-If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
+_If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker._
 
 ## Contributing
 
@@ -82,14 +82,14 @@ General instructions on _how_ to contribute should be stated with a link to [CON
 
 General instructions on how to Develop for the project should be stated with a link to _DEVELOPMENT.md_.
 
-----
+---
 
 ## License
 
 Example:
 This project is licensed under the Creative Commons Zero v1.0 Universal License - see the [LICENSE](LICENSE) file for details
 
-----
+---
 
 ## Maintainers
 

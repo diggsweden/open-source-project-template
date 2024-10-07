@@ -44,7 +44,7 @@ body:
   - type: textarea
     id: additional
     attributes:
-      label: Additional information (Optional) 
+      label: Additional information (Optional)
       description: Anything else that you consider important for understanding your feature suggestion.
     validations:
       required: false
