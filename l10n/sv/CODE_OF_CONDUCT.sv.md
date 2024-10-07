@@ -22,20 +22,20 @@ inkluderande och trygg gemenskap rik på mångfald.
 Några exempel på beteenden som bidrar till en positiv miljö för
 gemenskapen:
 
-* Att visa empati och vänlighet mot andra människor.
-* Att visa respekt för olika åsikter, synsätt och erfarenheter.
-* Att tacksamt ge och ta emot konstruktiv återkoppling.
-* Att ta ansvar och att be om ursäkt till de som drabbats av våra misstag,
+- Att visa empati och vänlighet mot andra människor.
+- Att visa respekt för olika åsikter, synsätt och erfarenheter.
+- Att tacksamt ge och ta emot konstruktiv återkoppling.
+- Att ta ansvar och att be om ursäkt till de som drabbats av våra misstag,
   och lära av erfarenheten
-* Att fokusera på det som är bäst, inte bara för oss som individer, utan för gemenskapens helhet.
+- Att fokusera på det som är bäst, inte bara för oss som individer, utan för gemenskapens helhet.
 
 Några exempel på beteenden som inte är acceptabelt:
 
-* Användning av sexualiserat språk eller bildspråk, samt sexuella närmanden eller anspråk.
-* Trollande, förolämpande och nedsättande kommentarer, personliga eller politiska attacker.
-* Offentliga eller privata trakasserier.
-* Att utan lov publicera andras privata information, såsom en fysisk adress eller e-postadress.
-* Annat beteende som rimligen kan anses vara olämpligt i en professionell miljö.
+- Användning av sexualiserat språk eller bildspråk, samt sexuella närmanden eller anspråk.
+- Trollande, förolämpande och nedsättande kommentarer, personliga eller politiska attacker.
+- Offentliga eller privata trakasserier.
+- Att utan lov publicera andras privata information, såsom en fysisk adress eller e-postadress.
+- Annat beteende som rimligen kan anses vara olämpligt i en professionell miljö.
 
 ## Ansvar för tillämpning
 

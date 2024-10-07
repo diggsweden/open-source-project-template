@@ -6,7 +6,7 @@ version = 1
 
 # configurations
 [[annotations]]
-path = [".github/pull_request_template.md"]
+path = [".github/pull_request_template.md",".markdownlint.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2023 Digg - Agency for Digital Government"
 SPDX-License-Identifier = "CC0-1.0"

@@ -1,0 +1,47 @@
+{
+  "default": true,
+  "MD003": {
+    "style": "atx"
+  },
+  "MD004": {
+    "style": "dash"
+  },
+  "MD007": {
+    "indent": 2
+  },
+  "MD009": {
+    "br_spaces": 2,
+    "list_item_empty_lines": false
+  },
+  "MD013": {
+    "line_length": 500
+  },
+  "MD024": {
+    "allow_different_nesting": true
+  },
+  "MD026": {
+    "punctuation": ".,;:!"
+  },
+  "MD029": {
+    "style": "ordered"
+  },
+  "MD033": {
+    "allowed_elements": [
+      "br",
+      "kbd"
+    ]
+  },
+  "MD035": {
+    "style": "---"
+  },
+  "MD040": true,
+  "MD041": {
+    "level": 1
+  },
+  "MD046": {
+    "style": "fenced"
+  },
+  "MD048": {
+    "style": "backtick"
+  }
+}

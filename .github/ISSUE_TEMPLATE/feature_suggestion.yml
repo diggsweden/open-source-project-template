@@ -15,7 +15,7 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact Details
+      label: Contact Details (Optional)
       description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com
     validations:
@@ -37,14 +37,14 @@ body:
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternative solutions
+      label: Alternative solutions (Optional)
       description: Did you consider some alternative solutions, please describe.
     validations:
       required: false
   - type: textarea
     id: additional
     attributes:
-      label: Additional information
+      label: Additional information (Optional)
       description: Anything else that you consider important for understanding your feature suggestion.
     validations:
       required: false
