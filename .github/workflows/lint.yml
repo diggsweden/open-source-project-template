@@ -45,6 +45,6 @@ jobs:
             megalinter-reports
 
       - name: Upload Megalint Sarif Report
-        uses: github/codeql-action/upload-sarif@10a3f072a02acccf25a5b381a29fbac3a805893d #v3.26.6
+        uses: github/codeql-action/upload-sarif@5b49155c7f37b5ec074ffd26b428e6b64b1bf412 #v3.26.6
         with:
           sarif_file: megalinter-reports/megalinter-report.sarif
