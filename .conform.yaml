@@ -29,3 +29,4 @@ policies:
             "release",
           ]
         scopes: [".*"]
+        descriptionLength: 92

@@ -52,7 +52,7 @@ store_exit_code() {
 lint() {
   export MEGALINTER_DEF_WORKSPACE='/repo'
   print_header 'LINTER HEALTH (MEGALINTER)'
-  podman run --rm --volume "$(pwd)":/repo -e MEGALINTER_CONFIG='development/mega-linter.yml' -e DEFAULT_WORKSPACE=${MEGALINTER_DEF_WORKSPACE} -e LOG_LEVEL=INFO ghcr.io/oxsecurity/megalinter-java:v8.0.0
+  podman run --rm --volume "$(pwd)":/repo -e MEGALINTER_CONFIG='development/mega-linter.yml' -e DEFAULT_WORKSPACE=${MEGALINTER_DEF_WORKSPACE} -e LOG_LEVEL=INFO ghcr.io/oxsecurity/megalinter-java:v8.8.0
   store_exit_code "$?" "Lint" "${MISSING} ${RED}Lint check failed, see logs (std out and/or ./megalinter-reports) and fix problems.${NC}\n" "${GREEN}${CHECKMARK}${CHECKMARK} Lint check passed${NC}\n"
   printf '\n\n'
 }
@@ -66,7 +66,7 @@ publiccodelint() {
 
 license() {
   print_header 'LICENSE HEALTH (REUSE)'
-  podman run --rm --volume "$(pwd)":/data docker.io/fsfe/reuse:4-debian lint
+  podman run --rm --volume "$(pwd)":/data docker.io/fsfe/reuse:5.0.2-debian lint
   store_exit_code "$?" "License" "${MISSING} ${RED}License check failed, see logs and fix problems.${NC}\n" "${GREEN}${CHECKMARK}${CHECKMARK} License check passed${NC}\n"
   printf '\n\n'
 }
@@ -82,7 +82,7 @@ commit() {
     printf "%s" "${GREEN} No commits found in current branch: ${YELLOW}${currentBranch}${NC}, compared to: ${YELLOW}${compareToBranch}${NC} ${NC}"
     store_exit_code "$?" "Commit" "${MISSING} ${RED}Commit check count failed, see logs (std out) and fix problems.${NC}\n" "${YELLOW}${CHECKMARK}${CHECKMARK} Commit check skipped, no new commits found in current branch: ${YELLOW}${currentBranch}${NC}\n"
   else
-    podman run --rm -i --volume "$(pwd)":/repo -w /repo ghcr.io/siderolabs/conform:v0.1.0-alpha.27 enforce --base-branch="${compareToBranch}"
+    podman run --rm -i --volume "$(pwd)":/repo -w /repo ghcr.io/siderolabs/conform:v0.1.0-alpha.30-2-gfadbbb4 enforce --base-branch="${compareToBranch}"
     store_exit_code "$?" "Commit" "${MISSING} ${RED}Commit check failed, see logs (std out) and fix problems.${NC}\n" "${GREEN}${CHECKMARK}${CHECKMARK} Commit check passed${NC}\n"
   fi
 
