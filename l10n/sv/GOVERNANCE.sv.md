@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 
 SPDX-License-Identifier: CC0-1.0
 -->

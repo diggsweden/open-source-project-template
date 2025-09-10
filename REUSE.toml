@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
 
@@ -8,12 +8,12 @@ version = 1
 [[annotations]]
 path = [".github/pull_request_template.md",".markdownlint.json"]
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2023 Digg - Agency for Digital Government"
+SPDX-FileCopyrightText = "2025 The Open Source Project Template Authors"
 SPDX-License-Identifier = "CC0-1.0"
 
 # images etc
 [[annotations]]
 path = ["assets/*.png"]
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2023 Digg - Agency for Digital Government"
+SPDX-FileCopyrightText = "2025 The Open Source Project Template Authors"
 SPDX-License-Identifier = "CC0-1.0"
