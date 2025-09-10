@@ -2,5 +2,19 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+# IDE
 .vscode
+.idea
+
+# Quality tool reports
 megalinter-reports
+mega-linter-reports
+
+# Cache directories
+.mypy_cache
+.ruff_cache
+__pycache__
+
+# OS files
+.DS_Store
+Thumbs.db
