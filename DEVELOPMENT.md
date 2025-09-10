@@ -17,28 +17,98 @@ To avoid surprises and streamline the review process, we strongly recommend runn
 
 ### Prerequisites
 
-- [Just](https://github.com/casey/just) command runner
-- [Podman](https://podman.io/) (or Docker)
+#### Step 1: Install Just (Required)
 
-### Installation
+**[Just](https://github.com/casey/just)** is our command runner. Install it first:
 
 ```bash
-# Install just (choose one method)
-cargo install just                    # Via Rust/Cargo
+# Choose one:
+curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/bin
 brew install just                      # macOS/Linux via Homebrew
-snap install --edge --classic just    # Linux via Snap
+cargo install just                     # Via Rust
+apt install just                       # Debian/Ubuntu (if available)
+snap install just                      # Linux snap
+```
+
+Verify installation: `just --version`
+
+#### Step 2: Install Required Tools
+
+##### Option A: Using mise with .mise.toml (Recommended)
+
+**[mise](https://mise.jdx.dev/)** - Polyglot tool version manager
+```bash
+# Install mise
+curl https://mise.run | sh
+eval "$(mise activate bash)"  # Activate in shell
+
+# Install all tools from .mise.toml
+mise install
+
+# Tools are now available in your PATH
+```
+
+The `.mise.toml` file defines exact versions for reproducible builds across local and CI environments.
+
+##### Tools Managed by mise
+
+All tools are installed automatically via `mise install` from `.mise.toml`:
+
+| Tool | Purpose | Backend | Link |
+|------|---------|---------|------|
+| **just** | Task runner | mise | [GitHub](https://github.com/casey/just) |
+| **rumdl** | Markdown linting | ubi (pre-built binary) | [GitHub](https://github.com/rvben/rumdl) |
+| **yamlfmt** | YAML formatting | go | [GitHub](https://github.com/google/yamlfmt) |
+| **actionlint** | GitHub Actions lint | go | [GitHub](https://github.com/rhysd/actionlint) |
+| **gitleaks** | Secret scanning | go | [GitHub](https://github.com/gitleaks/gitleaks) |
+| **conform** | Commit linting | go | [GitHub](https://github.com/siderolabs/conform) |
+| **publiccode-parser** | publiccode.yml validation | ubi (pre-built binary) | [GitHub](https://github.com/italia/publiccode-parser-go) |
+
+##### System Package
+
+**[reuse](https://reuse.software/)** - License compliance tool
+```bash
+# Note: reuse must be installed via system package manager
+apt install reuse
+```
+
+> **Why apt for reuse?** The reuse tool is a Python application that integrates with system package managers and has dependencies best handled by apt rather than mise.
+
+### Quick Start
+
+```bash
+# 1. Install mise and tools
+curl https://mise.run | sh
+mise install
+eval "$(mise activate bash)"
+
+# 2. Install system packages
+apt install reuse
+
+# 3. Run quality checks
+just verify
 ```
 
 ### Quick Reference
 
 | Command | Description |
 |---------|-------------|
-| `just` | Show available commands |
+| **Verification** | |
 | `just verify` | Run all quality verifications |
-| `just lint` | Run MegaLinter |
-| `just license` | Check REUSE compliance |
-| `just publiccode` | Validate publiccode.yml |
-| `just commit` | Check commit messages |
+| `just verify-deps` | Check if tools are installed |
+| **Linting** | |
+| `just lint` | Run all linters |
+| `just lint-markdown` | Check markdown files |
+| `just lint-yaml` | Check YAML files |
+| `just lint-actions` | Check GitHub Actions |
+| `just lint-secrets` | Scan for secrets |
+| `just lint-publiccode` | Validate publiccode.yml |
+| `just lint-license` | Check REUSE compliance |
+| `just lint-commit` | Check commit messages |
+| **Auto-fix** | |
+| `just lint-fix` | Fix all auto-fixable issues |
+| `just lint-markdown-fix` | Fix markdown issues |
+| `just lint-yaml-fix` | Format YAML files |
 
 ### Example Workflow
 
@@ -56,13 +126,15 @@ just license         # Just license compliance
 
 ## Configuration Files
 
-The development directory contains configuration files for quality tools:
+Configuration files for quality tools:
 
-- `development/mega-linter.yml` - Configuration for MegaLinter (linting rules)
+- `justfile` - Command runner definitions
+- `.mise.toml` - Tool versions (single source of truth for local & CI)
 - `.conform.yaml` - Commit message validation rules
+- `.markdownlint.json` - Markdown linting rules
 - `publiccode.yml` - Public code metadata
 - `REUSE.toml` - License compliance configuration
-- `justfile` - Command runner definitions
+- `.mise.toml` - Tool version management
 
 ## Quality Check Details
 
@@ -70,18 +142,17 @@ Our quality assurance process includes the following checks:
 
 ### 1. Linting
 
-We use [megalinter](https://github.com/oxsecurity/megalinter) to perform various linting tasks:
+We use lightweight, native binary linters (see [Prerequisites](#prerequisites) for installation):
 
-- BASH script linting
-- Markdown linting
-- YAML linting
-- GitHub Action linting
-- Repository secret scanning (using GitLeaks and Credentials scan)
+- **Markdown**: [rumdl](https://github.com/rvben/rumdl) - Fast Rust-based markdown linter
+- **YAML**: [yamlfmt](https://github.com/google/yamlfmt) - Google's YAML formatter/linter
+- **GitHub Actions**: [actionlint](https://github.com/rhysd/actionlint) - Static checker for workflows
+- **Secrets**: [gitleaks](https://github.com/gitleaks/gitleaks) - Detect and prevent secrets
 
-**Command:**
-
+**Commands:**
 ```bash
-just lint        # Run MegaLinter
+# just is installed automatically via mise
+# See "Quick Start" section below
 ```
 
 ### 2. License Compliance
@@ -157,11 +228,40 @@ Visual examples of the quality check outputs:
 
 ### Local Output Example
 
-![Quality Check Output - Local Example](assets/quality_script_output_example.png)
+![Quality Check Output - Local Example](assets/quality_output_example.png)
+
+## Troubleshooting
+
+### Missing Tools Error
+
+If you see "Missing required tools" when running `just verify`:
+
+1. Check which tools are missing
+2. Install them using the instructions in [Prerequisites](#prerequisites)
+3. Ensure they're in your PATH
+
+### Quick Install All Tools
+
+**Using mise (Recommended)**
+
+```bash
+# Install mise: https://mise.jdx.dev/
+curl https://mise.run | sh
+
+# Install all project tools from .mise.toml
+mise install
+
+# Activate mise in your shell
+eval "$(mise activate bash)"  # or zsh, fish, etc.
+
+# Install system packages
+apt install reuse  # Debian/Ubuntu
+```
+
+The project uses mise with various backends (go, ubi) to manage tool versions consistently. All tool versions are defined in `.mise.toml`.
 
 ## Additional Resources
 
 - [Just Documentation](https://github.com/casey/just)
-- [MegaLinter Documentation](https://megalinter.io)
 - [REUSE Specification](https://reuse.software)
 - [Conventional Commits](https://www.conventionalcommits.org)

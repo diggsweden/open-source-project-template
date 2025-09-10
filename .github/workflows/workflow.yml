@@ -1,10 +1,7 @@
 # SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
-
----
 name: Open Source Project Template Workflow
-
 on: # yamllint disable-line rule:truthy
   push:
     branches:
@@ -14,10 +11,8 @@ on: # yamllint disable-line rule:truthy
   pull_request:
     branches:
       - main
-
 permissions:
   contents: read
-
 jobs:
   commit:
     permissions:

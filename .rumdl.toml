@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# rumdl configuration
+# See: https://github.com/rvben/rumdl/blob/main/docs/RULES.md
+
+[global]
+# Disable rules that cause issues or are not appropriate for this project
+disable = [
+  "MD034",  # no-bare-urls - causes panic with Swedish chars
+  "MD041",  # first-line-h1 - copyright headers come first
+  "MD052",  # reference-links-images - template placeholders
+  "MD005",  # list-indent - conflicts with existing style
+  "MD006",  # ul-start-left - conflicts with existing style  
+  "MD007",  # ul-indent - conflicts with existing style
+  "MD032",  # blanks-around-lists - too strict
+  "MD022",  # blanks-around-headings - too strict
+  "MD029",  # ol-prefix - ordered list numbering style
+  "MD031",  # blanks-around-fences - too strict
+  "MD036"   # emphasis-heading - valid use of emphasis
+]
+
+[MD003]
+style = "atx"
+
+[MD004]
+style = "dash"
+
+[MD007]
+indent = 2
+
+[MD013]
+line_length = 500
+
+[MD033]
+allowed_elements = ["br", "kbd"]
+
+[MD035]
+style = "---"
+
+[MD046]
+style = "fenced"
+
+[MD048]
+style = "backtick"

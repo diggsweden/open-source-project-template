@@ -1,8 +1,6 @@
 # SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
-
----
 policies:
   - type: commit
     spec:
@@ -17,16 +15,6 @@ policies:
       body:
         required: false
       conventional:
-        types:
-          [
-            "chore",
-            "ci",
-            "docs",
-            "perf",
-            "refactor",
-            "style",
-            "test",
-            "release",
-          ]
+        types: ["chore", "ci", "docs", "perf", "refactor", "style", "test", "release"]
         scopes: [".*"]
         descriptionLength: 92

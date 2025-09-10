@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Tool versions for mise (https://mise.jdx.dev/)
+# Install all tools: mise install
+# Activate in shell: eval "$(mise activate bash)"
+
+[tools]
+just = "1.41.0"
+"ubi:rvben/rumdl" = "v0.0.139"
+"go:github.com/google/yamlfmt/cmd/yamlfmt" = "v0.10.0"
+"go:github.com/rhysd/actionlint/cmd/actionlint" = "v1.6.26"
+"go:github.com/zricethezav/gitleaks/v8" = "v8.18.1"
+"go:github.com/siderolabs/conform/cmd/conform" = "v0.1.0-alpha.30"
+"ubi:italia/publiccode-parser-go" = { version = "v4.3.7", exe = "publiccode-parser" }

@@ -1,50 +1,49 @@
-# SPDX-FileCopyrightText: 2024 Skatteverket - Swedish Tax Agency
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
-
----
-name: MegaLinter
-on: [workflow_call] # yamllint disable-line rule:truthy
-
+name: Linting
+on: [workflow_call]
 permissions:
   contents: read
-  security-events: write
-
-env:
-  MEGALINTER_CONFIG: /development/mega-linter.yml
-
 jobs:
-  megalinter:
-    name: megalint
+  quality-checks:
+    name: Quality Checks
     runs-on: ubuntu-latest
     if: ${{ (github.event_name == 'pull_request') && (github.actor != 'dependabot[bot]') }}
-    permissions:
-      # Needed for Code scanning upload
-      security-events: write
-
     steps:
       - name: Harden GitHub runner
         uses: step-security/harden-runner@4d991eb9b905ef189e4c376166672c3f2f230481 #v2.11.0
         with:
           egress-policy: audit
-
       - name: Checkout Code
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 #v4.2.2
         with:
-          fetch-depth: 7
-
-      - name: Run MegaLinter
-        id: ml
-        uses: oxsecurity/megalinter@ec124f7998718d79379a3c5b39f5359952baf21d # v8.4.2
-
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 #v4.6.1
+          fetch-depth: 0 # Needed for commit linting
+      - name: Setup mise
+        uses: jdx/mise-action@v2
         with:
-          name: MegaLinter reports
-          path: |
-            megalinter-reports
-
-      - name: Upload Megalint Sarif Report
-        uses: github/codeql-action/upload-sarif@5b49155c7f37b5ec074ffd26b428e6b64b1bf412 #v3.26.6
-        with:
-          sarif_file: megalinter-reports/megalinter-report.sarif
+          version: latest
+          install: true # Install tools from .mise.toml
+          cache: true # Cache tools between runs
+      - name: Install mise tools
+        run: |
+          mise install
+          mise list
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y reuse
+      - name: Verify tools installation
+        run: |
+          # Activate mise to get tools in PATH
+          eval "$(mise activate bash)"
+          # Verify all tools are available
+          mise list
+          echo "---"
+          which just rumdl yamlfmt actionlint gitleaks conform publiccode-parser reuse
+      - name: Run quality checks
+        run: |
+          # Activate mise to get tools in PATH
+          eval "$(mise activate bash)"
+          # Run verification
+          just verify

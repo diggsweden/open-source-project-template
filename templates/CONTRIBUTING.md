@@ -77,9 +77,10 @@ We use the [Fork-and-Pull Model](https://docs.github.com/en/pull-requests/collab
 
 1. Fork the repository.
 2. Create a topic branch from your fork's main branch.
-3. Push your changes to the topic branch in your fork.
-4. Open a new pull request to the main project.
-5. Respond to any feedback from project maintainers.
+3. Make your changes and run quality checks locally (if applicable).
+4. Push your changes to the topic branch in your fork.
+5. Open a new pull request to the main project.
+6. Respond to any feedback from project maintainers.
 
 ## Commit Guidelines
 
