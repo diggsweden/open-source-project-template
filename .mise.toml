@@ -6,11 +6,16 @@
 # Install all tools: mise install
 # Activate in shell: eval "$(mise activate bash)"
 
+[settings]
+experimental = true  # Enable experimental features (required for ubi backend)
+#lockfile = true      # Enable lockfile with checksum verification for all downloads not avail yet
+paranoid = true      # Enable strict security checks and verification
+
 [tools]
-just = "1.41.0"
+"aqua:casey/just" = "1.41.0"
 "ubi:rvben/rumdl" = "v0.0.139"
-"go:github.com/google/yamlfmt/cmd/yamlfmt" = "v0.10.0"
-"go:github.com/rhysd/actionlint/cmd/actionlint" = "v1.6.26"
-"go:github.com/zricethezav/gitleaks/v8" = "v8.18.1"
-"go:github.com/siderolabs/conform/cmd/conform" = "v0.1.0-alpha.30"
-"ubi:italia/publiccode-parser-go" = { version = "v4.3.7", exe = "publiccode-parser" }
+"aqua:google/yamlfmt" = "v0.10.0"
+"aqua:rhysd/actionlint" = "v1.6.26"
+"aqua:zricethezav/gitleaks" = "v8.18.1"
+"aqua:siderolabs/conform" = "v0.1.0-alpha.30"
+"ubi:italia/publiccode-parser-go" = "v4.3.7"

@@ -31,76 +31,78 @@ verify-deps:
     @echo "========================="
     @missing_tools=""; \
     if command -v mise >/dev/null 2>&1; then \
-        printf "{{checkmark}} mise $(mise version 2>/dev/null | cut -d' ' -f1)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} mise $(mise version 2>/dev/null | cut -d' ' -f1)\n"; \
     else \
-        printf "{{missing}} mise\n"; \
+        printf "{{red}}{{missing}}{{nc}} mise\n"; \
         missing_tools="$missing_tools mise"; \
     fi; \
     if command -v just >/dev/null 2>&1; then \
-        printf "{{checkmark}} just $(just --version 2>/dev/null | cut -d' ' -f2)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} just $(just --version 2>/dev/null | cut -d' ' -f2)\n"; \
     else \
-        printf "{{missing}} just\n"; \
+        printf "{{red}}{{missing}}{{nc}} just\n"; \
         missing_tools="$missing_tools just"; \
     fi; \
     if command -v git >/dev/null 2>&1; then \
-        printf "{{checkmark}} git $(git --version 2>/dev/null | cut -d' ' -f3)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} git $(git --version 2>/dev/null | cut -d' ' -f3)\n"; \
     else \
-        printf "{{missing}} git\n"; \
+        printf "{{red}}{{missing}}{{nc}} git\n"; \
         missing_tools="$missing_tools git"; \
     fi; \
     if command -v reuse >/dev/null 2>&1; then \
-        printf "{{checkmark}} reuse $(reuse --version 2>/dev/null | head -1 | cut -d' ' -f3)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} reuse $(reuse --version 2>/dev/null | head -1 | cut -d' ' -f3)\n"; \
     else \
-        printf "{{missing}} reuse\n"; \
+        printf "{{red}}{{missing}}{{nc}} reuse\n"; \
         missing_tools="$missing_tools reuse"; \
     fi; \
     if command -v rumdl >/dev/null 2>&1; then \
-        printf "{{checkmark}} rumdl $(rumdl --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} rumdl $(rumdl --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)\n"; \
     else \
-        printf "{{missing}} rumdl\n"; \
+        printf "{{red}}{{missing}}{{nc}} rumdl\n"; \
         missing_tools="$missing_tools rumdl"; \
     fi; \
     if command -v yamlfmt >/dev/null 2>&1; then \
-        printf "{{checkmark}} yamlfmt $(yamlfmt -version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} yamlfmt $(yamlfmt -version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)\n"; \
     else \
-        printf "{{missing}} yamlfmt\n"; \
+        printf "{{red}}{{missing}}{{nc}} yamlfmt\n"; \
         missing_tools="$missing_tools yamlfmt"; \
     fi; \
     if command -v actionlint >/dev/null 2>&1; then \
-        printf "{{checkmark}} actionlint $(actionlint -version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} actionlint $(actionlint -version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)\n"; \
     else \
-        printf "{{missing}} actionlint\n"; \
+        printf "{{red}}{{missing}}{{nc}} actionlint\n"; \
         missing_tools="$missing_tools actionlint"; \
     fi; \
     if command -v gitleaks >/dev/null 2>&1; then \
         gitleaks_ver=$(gitleaks version 2>&1 | head -1); \
         if echo "$gitleaks_ver" | grep -q "build process"; then \
             mise_ver=$(grep gitleaks .mise.toml 2>/dev/null | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1); \
-            printf "{{checkmark}} gitleaks ${mise_ver:-installed}\n"; \
+            printf "{{green}}{{checkmark}}{{nc}} gitleaks ${mise_ver:-installed}\n"; \
         else \
-            printf "{{checkmark}} gitleaks $gitleaks_ver\n"; \
+            printf "{{green}}{{checkmark}}{{nc}} gitleaks $gitleaks_ver\n"; \
         fi; \
     else \
-        printf "{{missing}} gitleaks\n"; \
+        printf "{{red}}{{missing}}{{nc}} gitleaks\n"; \
         missing_tools="$missing_tools gitleaks"; \
     fi; \
     if command -v conform >/dev/null 2>&1; then \
-        printf "{{checkmark}} conform $(conform version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+-alpha\.[0-9]+' | head -1)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} conform $(conform version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+-alpha\.[0-9]+' | head -1)\n"; \
     else \
-        printf "{{missing}} conform\n"; \
+        printf "{{red}}{{missing}}{{nc}} conform\n"; \
         missing_tools="$missing_tools conform"; \
     fi; \
     if command -v publiccode-parser >/dev/null 2>&1; then \
-        printf "{{checkmark}} publiccode-parser $(publiccode-parser --version 2>&1 | cut -d' ' -f1)\n"; \
+        printf "{{green}}{{checkmark}}{{nc}} publiccode-parser $(publiccode-parser --version 2>&1 | cut -d' ' -f1)\n"; \
     else \
-        printf "{{missing}} publiccode-parser\n"; \
+        printf "{{red}}{{missing}}{{nc}} publiccode-parser\n"; \
         missing_tools="$missing_tools publiccode-parser"; \
     fi; \
     echo ""; \
     if [ -n "$missing_tools" ]; then \
         printf '%b{{missing}} Missing tools detected!%b\n\n' "{{red}}" "{{nc}}"; \
-        printf 'Install: mise install\n'; \
-        printf 'Activate: eval "$(mise activate bash)"\n'; \
+        printf '%bTo fix this:%b\n' "{{yellow}}" "{{nc}}"; \
+        printf '1. Install missing tools: %bmise install%b\n' "{{green}}" "{{nc}}"; \
+        printf '2. Activate mise in your shell: %beval "$(mise activate bash) or fish or zsh"%b\n' "{{green}}" "{{nc}}"; \
+        printf '\nFor more details, see: %bDEVELOPMENT.md%b\n'; \
         exit 1; \
     else \
         printf '%b{{checkmark}} All required tools installed!%b\n' "{{green}}" "{{nc}}"; \
@@ -114,29 +116,29 @@ lint: lint-markdown lint-yaml lint-actions lint-secrets lint-publiccode lint-lic
 lint-markdown:
     @printf '%b\n************ MARKDOWN LINTING (RUMDL) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @rumdl check . \
-    && echo "{{checkmark}} Markdown linting passed" \
-    || { echo "{{missing}} Markdown linting failed - run 'just lint-markdown-fix' to fix"; exit 1; }
+    && echo "{{green}}{{checkmark}} Markdown linting passed{{nc}}" \
+    || { echo "{{red}}{{missing}} Markdown linting failed - run 'just lint-markdown-fix' to fix{{nc}}"; exit 1; }
     @printf '\n'
 
 # Lint YAML files with yamlfmt (Go)
 lint-yaml:
-    @printf '%b\n************ YAML LINTING ***********%b\n\n' "{{yellow}}" "{{nc}}"
+    @printf '%b\n************ YAML LINTING (YAMLFMT) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @yamlfmt -lint . \
-    && echo "{{checkmark}} YAML linting passed" \
-    || { echo "{{missing}} YAML linting failed - run 'just lint-yaml-fix' to fix"; exit 1; }
+    && echo "{{green}}{{checkmark}} YAML linting passed{{nc}}" \
+    || { echo "{{red}}{{missing}} YAML linting failed - run 'just lint-yaml-fix' to fix{{nc}}"; exit 1; }
     @printf '\n'
 
 # Lint GitHub Actions with actionlint (Go)
 lint-actions:
-    @printf '%b\n************ GITHUB ACTIONS LINTING ***********%b\n\n' "{{yellow}}" "{{nc}}"
+    @printf '%b\n************ GITHUB ACTIONS LINTING (ACTIONLINT) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @actionlint \
-    && echo "{{checkmark}} GitHub Actions linting passed" \
-    || { echo "{{missing}} GitHub Actions linting failed"; exit 1; }
+    && echo "{{green}}{{checkmark}} GitHub Actions linting passed{{nc}}" \
+    || { echo "{{red}}{{missing}} GitHub Actions linting failed{{nc}}"; exit 1; }
     @printf '\n'
 
 # Check for secrets with gitleaks (Go) - only scan commits different from main
 lint-secrets:
-    @printf '%b\n************ SECRET SCANNING ***********%b\n\n' "{{yellow}}" "{{nc}}"
+    @printf '%b\n************ SECRET SCANNING (GITLEAKS) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @# Get the default branch (usually main or master)
     @default_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || echo "main"); \
     current_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); \
@@ -147,16 +149,16 @@ lint-secrets:
         echo "Scanning commits different from $default_branch..."; \
         gitleaks detect --no-banner --log-opts="$default_branch..HEAD"; \
     fi \
-    && echo "{{checkmark}} No secrets found" \
-    || { echo "{{missing}} Secret scanning failed"; exit 1; }
+    && echo "{{green}}{{checkmark}} No secrets found{{nc}}" \
+    || { echo "{{red}}{{missing}} Secret scanning failed{{nc}}"; exit 1; }
     @printf '\n'
 
 # Lint publiccode.yml
 lint-publiccode:
-    @printf '%b\n************ LINTER publiccode.yml (publiccode.yml) ***********%b\n\n' "{{yellow}}" "{{nc}}"
+    @printf '%b\n************ PUBLICCODE.YML LINTING (PUBLICCODE-PARSER) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @publiccode-parser -no-network /dev/stdin <publiccode.yml \
-    && echo "{{checkmark}} publiccode.yml is valid" \
-    || { echo "{{missing}} publiccode.yml validation failed"; exit 1; }
+    && echo "{{green}}{{checkmark}} publiccode.yml is valid{{nc}}" \
+    || { echo "{{red}}{{missing}} publiccode.yml validation failed{{nc}}"; exit 1; }
     @printf '\n'
 
 # Check licenses with REUSE
@@ -191,23 +193,23 @@ lint-commit:
 
 # Fix all auto-fixable issues
 lint-fix: lint-markdown-fix lint-yaml-fix
-    @echo "{{checkmark}} All auto-fixable issues resolved"
+    @echo "{{green}}{{checkmark}} All auto-fixable issues resolved{{nc}}"
     @echo "Note: Some issues may require manual fixes"
 
 # Fix markdown issues with rumdl
 lint-markdown-fix:
     @printf '%b\n************ FIXING MARKDOWN (RUMDL) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @rumdl check --fix . \
-    && echo "{{checkmark}} Markdown files fixed" \
-    || { echo "{{missing}} Failed to fix markdown files"; exit 1; }
+    && echo "{{green}}{{checkmark}} Markdown files fixed{{nc}}" \
+    || { echo "{{red}}{{missing}} Failed to fix markdown files{{nc}}"; exit 1; }
     @printf '\n'
 
 # Fix YAML formatting with yamlfmt
 lint-yaml-fix:
     @printf '%b\n************ FIXING YAML (YAMLFMT) ***********%b\n\n' "{{yellow}}" "{{nc}}"
     @yamlfmt . \
-    && echo "{{checkmark}} YAML files formatted" \
-    || { echo "{{missing}} Failed to format YAML files"; exit 1; }
+    && echo "{{green}}{{checkmark}} YAML files formatted{{nc}}" \
+    || { echo "{{red}}{{missing}} Failed to format YAML files{{nc}}"; exit 1; }
     @printf '\n'
 
 # Print summary (internal)
