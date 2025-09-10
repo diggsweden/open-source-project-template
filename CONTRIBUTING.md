@@ -6,11 +6,14 @@ SPDX-License-Identifier: CC0-1.0
 
 # Contributing
 
+<!-- This file is for contributing to the Open Source Project Template itself.
+     For a template to use in your project, see templates/CONTRIBUTING.md -->
+
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?style=for-the-badge&logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-2.1-4baaaa.svg?style=for-the-badge)](CODE_OF_CONDUCT.md)
 [![DCO - developer certificate of origin](https://img.shields.io/badge/DCO-Developer%20Certificate%20of%20Origin-lightyellow?style=for-the-badge)](https://developercertificate.org/)
 
-Welcome! We are excited that you are interested in contributing to our project!
+Welcome! We're excited you're interested in contributing to our project.
 
 Here's what you need to know:
 
@@ -31,9 +34,9 @@ We follow the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## File an Issue
 
-Before creating a new issue, please check if a similar one already exists.
+Before creating a new issue, check if a similar one already exists.
 
-If so, you can add your information as a comment to the existing issue.
+If it does, add your information as a comment to the existing issue.
 
 ### Report a Bug
 
@@ -63,11 +66,11 @@ To contribute code, documentation, or other improvements:
 
 ## Issues and Pull Request Feedback
 
-Project maintainers will do their best to review and respond to issues within five business days.
+Project maintainers aim to review and respond to issues within five business days.
 
-The quality of information in your issue or pull request will affect the feedback loop.
+The quality of information in your issue or pull request affects the speed of feedback.
 
-For non-trivial contributions, please discuss with the project team first.
+For non-trivial contributions, discuss with the project team first.
 
 **If the project is not listed as archived, it is maintained.**
 
@@ -94,7 +97,7 @@ We use the [Fork-and-Pull Model](https://docs.github.com/en/pull-requests/collab
 
 #### Signoff (DCO agree)
 
-***A Signoff assures to the project that you have the right to contribute your content*** +
+***A Signoff assures the project that you have the right to contribute your content***
 
 Add a signoff to your commit using the `-s` or `--signoff` flag:
 
@@ -120,7 +123,7 @@ git commit --signoff --gpg-sign -m "fix: add fix for the bug"
 
 ## Reporting Security Issues
 
-For security vulnerabilities, please follow the guidelines in our [Security information](SECURITY.md).
+For security vulnerabilities, follow the guidelines in our [Security information](SECURITY.md).
 
 ## Development Guidelines
 
@@ -138,7 +141,7 @@ English is the primary language, with translations on a best-effort basis.
 
 ## FOSS Standards
 
-We aim to comply with the following standards and best practices:
+We follow these standards and best practices:
 
 - [REUSE License specification](https://reuse.software/)
   - Ensures clear and standardized license compliance across the project.
@@ -148,6 +151,9 @@ We aim to comply with the following standards and best practices:
 
 - [Keep-A-Changelog format](https://keepachangelog.com/en/1.1.0/)
   - Maintains a clear and user-friendly release history.
+
+- [Semantic Versioning 2.0.0](https://semver.org/)
+  - Provides consistent version numbering for releases.
 
 - [Contributor Covenant guidelines](https://www.contributor-covenant.org/)
   - Establishes a social contract for respectful and inclusive collaboration.
@@ -161,6 +167,6 @@ We aim to comply with the following standards and best practices:
 - [Standard for Public Code](https://standard.publiccode.net/)
   - Ensures our project meets criteria for public code quality and sustainability.
 
-Contributors are encouraged to familiarize themselves with these guidelines and help us uphold these standards in their contributions.
+Please familiarize yourself with these guidelines and help us maintain these standards in your contributions.
 
 ***Happy contributing!***

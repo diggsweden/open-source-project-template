@@ -6,6 +6,9 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # Contributor Covenant Code of Conduct
 
+<!-- This file is for contributing to the Open Source Project Template itself.
+     For a template to use in your project, see templates/CODE_OF_CONDUCT.md -->
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our

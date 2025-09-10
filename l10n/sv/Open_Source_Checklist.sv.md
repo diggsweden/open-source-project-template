@@ -8,9 +8,9 @@ SPDX-License-Identifier: CC0-1.0
 
 ## Om
 
-Denna checklista finns här för att hjälpa ditt projekt med förslag för god hälsa, utvecklingspraxis och säkerhet.
+Det är lätt att missa viktiga uppgifter när man släpper och underhåller ett projekt med öppen källkod. Denna checklista hjälper till att säkerställa att ditt projekt följer bästa praxis för hälsa, utveckling och säkerhet.
 
-Använd denna checklista praktiskt - som en diskussionsstartare för projektet och som en grund för framtida förbättringar.
+Använd checklistan som diskussionsunderlag för teamet och som grund för kontinuerlig förbättring.
 
 ## Arkivering och avveckling av ett projekt
 
@@ -20,15 +20,15 @@ Använd denna checklista praktiskt - som en diskussionsstartare för projektet o
 
 ## Dokumentation
 
-- Måste säkerställa att projektet följer de grundläggande konventionerna för Community Health Files (CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT etc.).  
-  Se [README.md - för en lista och ytterligare information om relevanta filer](../README.md).
+- Måste säkerställa att projektet inkluderar standardfiler för Community Health (CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT, etc.).  
+  Se [README.md Template Files-avsnittet för en komplett lista](../README.md).
 
-- Bör inkludera relevant användningsdokumentation och en kort arkitekturbeskrivning för projektet.
+- Bör inkludera användningsdokumentation och arkitekturbeskrivningar relevanta för projektet.
 
 ## Juridik och licensiering
 
 - Måste säkerställa att projektets licens inte strider mot tredjepartslicenser.
-- Licensdeklarationer ska följa [REUSE-licensspecifikationen](https://reuse.software/). Detta innebär att allt material som erbjuds i ett projekt med öppen källkod också bör ha tydlig upphovsrättsinformation.
+- Licensdeklarationer måste följa [REUSE-licensspecifikationen](https://reuse.software/), vilket säkerställer att allt material har tydlig upphovsrättsinformation.
 
 ### Kontroll av namn och varumärken
 
@@ -40,14 +40,14 @@ Använd denna checklista praktiskt - som en diskussionsstartare för projektet o
 
 ## Förvaltning
 
-- Måste säkerställa att alla förvaltare har fått viss utbildning eller erfarenhet av att arbeta med öppen källkod. Till exempel genom att läsa guider på <https://opensource.guide>.
-- Måste säkerställa att alla förvaltare har en plan för hantering av merge/pull-requests (kodgranskningar, etc.).
-- Måste säkerställa att förvaltare har en plan för hantering av community-/gemenskapsfrågor (svar på ärenden, granskning och sammanslagning av pull-requests).
-- Måste säkerställa att alla underhållsteam har någon som ansvarar för att följa upp säkerhetsfrågor.
-- Måste se till att varje projekt-README har en `Maintainer`-rubrik, oavsett om det är ett team, en individ eller en roll.
+- Måste säkerställa att förvaltare har utbildning eller erfarenhet av öppen källkod. Till exempel genom att läsa guider på <https://opensource.guide>.
+- Måste säkerställa att förvaltare har en plan för hantering av merge/pull-requests (kodgranskningar, etc.).
+- Måste säkerställa att förvaltare har en plan för gemenskapsengagemang (svara på ärenden, granska pull-requests).
+- Måste säkerställa att någon ansvarar för säkerhetsfrågor.
+- Måste inkludera en `Maintainer`-sektion i varje projekt-README (team, individ eller roll).
 
-- Bör diskutera om det finns behov av en release-plan. Om så är fallet, se till att det är tydligt hur den ska tillkännages.
-  - Dessutom BÖR projektet använda en CODEOWNERS-fil. En CODEOWNERS-fil kan ge mer detaljerad beskrivning av projektunderhållet, medan README:s Underhållare-rubrik kan vara mer generell.
+- Bör etablera en releaseplan med tydliga strategier för tillkännagivande och marknadsföring.
+- Bör använda en CODEOWNERS-fil för detaljerad beskrivning av underhåll (kompletterar README:s generella Maintainer-sektion).
 
 ## Projektkvalitet
 
@@ -76,13 +76,13 @@ Denna del av checklistan är baserad på [Open Source Security Foundation (OpenS
 ### Bidrag
 
 - Bör ha en praxis för kodgranskningar.
-- Bör ha goda läsbarhetskrav och omfattningskrav för att säkerställa att nya PR inte är obskyrerade, och användningen av ogenomskinliga binärer minimeras.
+- Bör ha goda läsbarhets- och omfattningskrav för att säkerställa att nya PR:er inte är obfuskerade och att användningen av ogenomskinliga binärer minimeras.
 
 ### Upptäckt av beroenden och sårbarheter
 
 - Måste använda SCA-verktyg i CI-pipelinen för att upptäcka sårbarheter och licensinkompatibiliteter.
 - Måste använda linter-verktyg i CI-pipelinen för att upptäcka sårbarheter och dålig utvecklingspraxis.
-- Måste använda verktyg  för att skanna efter hemligheter (lösenord, loggar, tokens).
+- Måste använda verktyg för att skanna efter hemligheter (lösenord, loggar, tokens).
 - Måste använda automatiserade verktyg för att övervaka uppdateringar av beroenden för kritiska sårbarheter.
 - Måste ha förvaltning för att snabbt hantera uppdatering av sårbarheter.
 
@@ -124,7 +124,7 @@ Säkra programvarurutiner och verktyg från OpenSSF och OWASP:
 
 - Kan diskutera ditt GitHub-arbetsflöde - en kort sammanfattning och förslag finns i [CONTRIBUTING - Pull Request Lifecycle](CONTRIBUTING.md)
 
-## Ytterligare rekommendationer
+## Spefikationer och standarder att följa
 
 Följande kommer att hjälpa ditt projekt med öppen källkod att vara samarbetsvänligt, återanvändbart, tillgängligt och uppdaterat.
 

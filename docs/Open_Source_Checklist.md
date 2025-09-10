@@ -8,9 +8,9 @@ SPDX-License-Identifier: CC0-1.0
 
 ## About
 
-It is easy to overlook a few important tasks when releasing and enhancing an Open Source Project. This checklist is here to assist your project with suggestions for good health, development practices and security.
+It's easy to overlook important tasks when releasing and maintaining an open source project. This checklist helps ensure your project follows best practices for health, development, and security.
 
-Use this checklist practically - as a discussion starter for the project and as a foundation for future improvements.
+Use this checklist as a discussion starter for your team and a foundation for continuous improvement.
 
 ## Archiving and Deprecating a Project
 
@@ -20,15 +20,15 @@ Use this checklist practically - as a discussion starter for the project and as 
 
 ## Documentation
 
-- Must ensure that the project complies with the basic conventions of Community Health Files (CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT etc.).  
-  Please refer to the [README.md - Template Files Explanation Section for a list and further information about relevant files](../README.md).
+- Must ensure the project includes standard Community Health Files (CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT, etc.).  
+  See the [README.md Template Files section for a complete list](../README.md).
 
-- Should include any relevant usage documentation and software architecture descriptions concerning the project.
+- Should include usage documentation and architecture descriptions relevant to the project.
 
 ## Legal and Licensing
 
-- Must ensure that the project's license does not conflict with third-party licenses.
-- License declarations must follow the [The REUSE licensing specification](https://reuse.software/). This implies that all material offered in an Open Source project also should have clear copyright information.
+- Must ensure the project's license doesn't conflict with third-party licenses.
+- License declarations must follow the [REUSE licensing specification](https://reuse.software/), ensuring all materials have clear copyright information.
 
 ### Naming and Trademarks Check
 
@@ -40,14 +40,14 @@ Use this checklist practically - as a discussion starter for the project and as 
 
 ## People & Maintenance
 
-- Must ensure that any maintaining team has received some education or experience regarding working with Open Source. For example, read through guides at <https://opensource.guide>.
-- Must ensure that any maintaining team has a plan for handling Merge/Pull-requests (code reviews, etc.).
-- Must ensure that any maintaining team has a plan for handling community issues (responding to issues, reviewing and merging pull requests).
-- Must ensure that any maintaining team has someone responsible for following up on security issues.
-- Must make sure that every project README has a `Maintainer` header, whether it's a team, an individual, or a role.
+- Must ensure maintainers have education or experience with open source. For example, reading guides at <https://opensource.guide>.
+- Must ensure maintainers have a plan for handling merge/pull requests (code reviews, etc.).
+- Must ensure maintainers have a plan for community engagement (responding to issues, reviewing pull requests).
+- Must ensure someone is responsible for security issues.
+- Must include a `Maintainer` section in every project README (team, individual, or role).
 
-- Should discuss if there is a need for a release plan. If so, ensure it is clear how it should be announced and promoted.
-  - Additionally, the project SHOULD use a CODEOWNERS file. A CODEOWNERS file can provide more granularity in describing project maintenance, whereas the README's Maintainer heading might be more general.
+- Should establish a release plan with clear announcement and promotion strategies.
+- Should use a CODEOWNERS file for granular maintenance descriptions (complementing the README's general Maintainer section).
 
 ## Project Quality
 
@@ -57,7 +57,7 @@ Use this checklist practically - as a discussion starter for the project and as 
 
 ## Release and Versioning
 
-- Should use semantic versioning and release tags.
+- Should use [Semantic Versioning 2.0.0](https://semver.org/) and release tags.
 
 ## Security
 
@@ -124,7 +124,7 @@ Secure software practices and tooling from OpenSSF and OWASP:
 
 - May discuss your GitHub workflow - a brief summary and suggestion can be found in [CONTRIBUTING - Pull Request Lifecycle](../CONTRIBUTING.md)
 
-## Open Source Excellence
+## Specifications and Standards to Follow
 
 The following will help your Open Source Project to be collaborative, reusable, accessible, and up-to-date.
 
@@ -136,6 +136,9 @@ The following will help your Open Source Project to be collaborative, reusable, 
 
 - [Keep-A-Changelog format](https://keepachangelog.com/en/1.1.0/)
   - Maintains a clear and user-friendly release history.
+
+- [Semantic Versioning 2.0.0](https://semver.org/)
+  - Provides consistent version numbering for releases.
 
 - [Contributor Covenant guidelines](https://www.contributor-covenant.org/)
   - Establishes a social contract for respectful and inclusive collaboration.

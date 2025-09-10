@@ -107,7 +107,7 @@ verify-deps:
     fi
 
 # Run all linters
-lint: lint-markdown lint-yaml lint-actions lint-secrets
+lint: lint-markdown lint-yaml lint-actions lint-secrets lint-publiccode lint-license lint-commit
     @echo "LINT_PASS" > /tmp/just_lint_status
 
 # Lint markdown files with rumdl (Rust)
@@ -134,10 +134,19 @@ lint-actions:
     || { echo "{{missing}} GitHub Actions linting failed"; exit 1; }
     @printf '\n'
 
-# Check for secrets with gitleaks (Go)
+# Check for secrets with gitleaks (Go) - only scan commits different from main
 lint-secrets:
     @printf '%b\n************ SECRET SCANNING ***********%b\n\n' "{{yellow}}" "{{nc}}"
-    @gitleaks detect --no-banner \
+    @# Get the default branch (usually main or master)
+    @default_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || echo "main"); \
+    current_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); \
+    if [ "$current_branch" = "$default_branch" ]; then \
+        echo "On default branch, scanning all commits..."; \
+        gitleaks detect --no-banner; \
+    else \
+        echo "Scanning commits different from $default_branch..."; \
+        gitleaks detect --no-banner --log-opts="$default_branch..HEAD"; \
+    fi \
     && echo "{{checkmark}} No secrets found" \
     || { echo "{{missing}} Secret scanning failed"; exit 1; }
     @printf '\n'

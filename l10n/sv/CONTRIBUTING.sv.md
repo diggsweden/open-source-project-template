@@ -10,16 +10,15 @@ SPDX-License-Identifier: CC0-1.0
 [![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-2.1-4baaaa.svg?style=for-the-badge)](CODE_OF_CONDUCT.md)
 [![DCO - developer certificate of origin](https://img.shields.io/badge/DCO-Developer%20Certificate%20of%20Origin-lightyellow?style=for-the-badge)](https://developercertificate.org/)
 
-Välkommen! Vi är glada över att du vill bidra till vårt projekt!
+Välkommen! Vi är glada över att du vill bidra till vårt projekt.
 
 Här är vad du behöver veta:
 
-## Bidra
+## Sätt att bidra
 
-Som ny är det ett värdefullt tillfälle för återkoppling.
-Exempelvis genom att:
+Som ny bidragsgivare är du i en utmärkt position att ge värdefull feedback. Du kan hjälpa till genom att:
 
-- Fixa eller rapportera en bugg.
+- Fixa eller rapportera ett programfel.
 - Föreslå förbättringar av kod, tester och dokumentation.
 - Rapportera eller fixa problem som upptäcks under installation eller i utvecklingsmiljöer.
 - Föreslå nya funktioner eller förbättringar.
@@ -30,13 +29,13 @@ Var trevlig och respektfull mot varandra.
 
 Vi följer [Contributor Covenants uppförandekod](CODE_OF_CONDUCT.md).
 
-## Att skapa ett ärende
+## Skapa ett ärende
 
-Innan du skapar ett nytt ärende, vänligen kontrollera om ett liknande redan finns.
+Innan du skapar ett nytt ärende, kontrollera om ett liknande redan finns.
 
-Om så är fallet kan du lägga till din information som en kommentar till det befintliga ärendet.
+Om det gör det, lägg till din information som en kommentar till det befintliga ärendet.
 
-### Att rapportera fel
+### Rapportera ett fel
 
 Att rapportera programfel är ett värdefullt sätt att bidra:
 
@@ -64,11 +63,11 @@ För att bidra med kod, dokumentation eller andra förbättringar:
 
 ## Återkoppling på ärenden och Pull Requests
 
-Projektunderhållare kommer att göra sitt bästa för att granska och svara på ärenden inom fem arbetsdagar.
+Projektunderhållare strävar efter att granska och svara på ärenden inom fem arbetsdagar.
 
-Kvaliteten på informationen i ditt ärende eller pull request kommer att påverka feedbackslingan.
+Kvaliteten på informationen i ditt ärende eller pull request påverkar återkopplingshastigheten.
 
-För icke-triviala bidrag, vänligen diskutera med projektteamet först.
+För icke-triviala bidrag, diskutera med projektteamet först.
 
 **Om projektet inte är listat som arkiverat underhålls det.**
 
@@ -88,7 +87,7 @@ Vi använder [Fork-and-Pull-modellen](https://docs.github.com/en/pull-requests/c
 
 #### Signoff (DCO-godkännande)
 
-***En Signoff försäkrar projektet om att du har rätt att bidra med ditt innehåll*** +
+***En Signoff försäkrar projektet att du har rätt att bidra med ditt innehåll***
 
 Lägg till en signoff till din commit med flaggan `-s` eller `--signoff`:
 
@@ -114,7 +113,7 @@ git commit --signoff --gpg-sign -m "fix: lägg till fix för buggen"
 
 ## Rapportera säkerhetsproblem
 
-För säkerhetssårbarheter, följ riktlinjerna i vår [Säkerhetsinformation](SECURITY.md).
+För säkerhetssårbarheter, följ riktlinjerna i vår [säkerhetsinformation](SECURITY.md).
 
 ## Utvecklingsriktlinjer
 
@@ -128,11 +127,11 @@ För utvecklingsvägledning, se [DEVELOPMENT Guide](DEVELOPMENT.md).
 - Använd brittisk engelska (t.ex. "colour" istället för "color").
 - Följ [en-mening-per-rad](https://sembr.org/)-principen i Markdown eller AsciiDoc.
 
-Engelska är det primära språket, med översättningar på bästa möjliga sätt.
+Engelska är huvudspråket, med översättningar efter bästa förmåga.
 
 ## FOSS-standarder
 
-Vi strävar efter att följa följande standarder och bästa praxis:
+Vi följer dessa standarder och bästa praxis:
 
 - [REUSE Licensspecifikation](https://reuse.software/)
   - Säkerställer tydlig och standardiserad licensefterlevnad i hela projektet.
@@ -155,4 +154,4 @@ Vi strävar efter att följa följande standarder och bästa praxis:
 - [Standard for Public Code](https://standard.publiccode.net/)
   - Säkerställer att projektet uppfyller kriterier för offentlig kodkvalitet och hållbarhet.
 
-Bidragsgivare uppmuntras att bekanta sig med dessa riktlinjer och hjälpa oss att upprätthålla dessa standarder i sina bidrag.
+Bekanta dig gärna med dessa riktlinjer och hjälp oss upprätthålla dessa standarder i dina bidrag.

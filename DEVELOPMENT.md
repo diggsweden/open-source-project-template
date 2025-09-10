@@ -8,260 +8,259 @@ SPDX-License-Identifier: CC0-1.0
 
 This guide outlines the process for submitting Pull Requests and ensuring code quality in our project.
 
-## Pull Request Checks
-
-When you submit a Pull Request, our Continuous Integration (CI) system will run several checks automatically.
-To avoid surprises and streamline the review process, we strongly recommend running these checks locally before submitting your PR.
-
-## Running Code Quality Checks Locally
-
-### Prerequisites
-
-#### Step 1: Install Just (Required)
-
-**[Just](https://github.com/casey/just)** is our command runner. Install it first:
+## Quick Start
 
 ```bash
-# Choose one:
-curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/bin
-brew install just                      # macOS/Linux via Homebrew
-cargo install just                     # Via Rust
-apt install just                       # Debian/Ubuntu (if available)
-snap install just                      # Linux snap
-```
-
-Verify installation: `just --version`
-
-#### Step 2: Install Required Tools
-
-##### Option A: Using mise with .mise.toml (Recommended)
-
-**[mise](https://mise.jdx.dev/)** - Polyglot tool version manager
-```bash
-# Install mise
+# 1. Install mise (tool version manager)
 curl https://mise.run | sh
-eval "$(mise activate bash)"  # Activate in shell
-
-# Install all tools from .mise.toml
-mise install
-
-# Tools are now available in your PATH
-```
-
-The `.mise.toml` file defines exact versions for reproducible builds across local and CI environments.
-
-##### Tools Managed by mise
-
-All tools are installed automatically via `mise install` from `.mise.toml`:
-
-| Tool | Purpose | Backend | Link |
-|------|---------|---------|------|
-| **just** | Task runner | mise | [GitHub](https://github.com/casey/just) |
-| **rumdl** | Markdown linting | ubi (pre-built binary) | [GitHub](https://github.com/rvben/rumdl) |
-| **yamlfmt** | YAML formatting | go | [GitHub](https://github.com/google/yamlfmt) |
-| **actionlint** | GitHub Actions lint | go | [GitHub](https://github.com/rhysd/actionlint) |
-| **gitleaks** | Secret scanning | go | [GitHub](https://github.com/gitleaks/gitleaks) |
-| **conform** | Commit linting | go | [GitHub](https://github.com/siderolabs/conform) |
-| **publiccode-parser** | publiccode.yml validation | ubi (pre-built binary) | [GitHub](https://github.com/italia/publiccode-parser-go) |
-
-##### System Package
-
-**[reuse](https://reuse.software/)** - License compliance tool
-```bash
-# Note: reuse must be installed via system package manager
-apt install reuse
-```
-
-> **Why apt for reuse?** The reuse tool is a Python application that integrates with system package managers and has dependencies best handled by apt rather than mise.
-
-### Quick Start
-
-```bash
-# 1. Install mise and tools
-curl https://mise.run | sh
-mise install
 eval "$(mise activate bash)"
 
-# 2. Install system packages
+# 2. Install all project tools from .mise.toml
+mise install
+
+# 3. Install system packages
 apt install reuse
 
-# 3. Run quality checks
+# 4. Run quality checks
 just verify
 ```
 
-### Quick Reference
+## Pull Request Checks
+
+When you submit a Pull Request, our CI system runs several checks automatically. We strongly recommend running these checks locally before submitting your PR to avoid surprises and streamline the review process.
+
+## Prerequisites
+
+### Required Tools
+
+#### Tool Manager: mise
+
+**[mise](https://mise.jdx.dev/)** manages all project tools with consistent versions across local and CI environments.
+
+```bash
+# Install mise
+curl https://mise.run | sh
+eval "$(mise activate bash)"  # Add to your shell config
+
+# Install all tools
+mise install
+```
+
+#### Tools Automatically Installed by mise
+
+The `.mise.toml` file defines exact versions for reproducible builds:
+
+| Tool | Purpose | Backend | Documentation |
+|------|---------|---------|---------------|
+| **just** | Task runner | mise | [GitHub](https://github.com/casey/just) |
+| **rumdl** | Markdown linting | ubi | [GitHub](https://github.com/rvben/rumdl) |
+| **yamlfmt** | YAML formatting/linting | go | [GitHub](https://github.com/google/yamlfmt) |
+| **actionlint** | GitHub Actions linting | go | [GitHub](https://github.com/rhysd/actionlint) |
+| **gitleaks** | Secret scanning | go | [GitHub](https://github.com/gitleaks/gitleaks) |
+| **conform** | Commit message validation | go | [GitHub](https://github.com/siderolabs/conform) |
+| **publiccode-parser** | publiccode.yml validation | ubi | [GitHub](https://github.com/italia/publiccode-parser-go) |
+
+#### System Package
+
+**[reuse](https://reuse.software/)** - License compliance tool
+
+```bash
+apt install reuse  # Debian/Ubuntu
+```
+
+> **Why apt for reuse?** The reuse tool is a Python application with system dependencies best handled by your package manager.
+
+## Available Commands
+
+### Verification Commands
 
 | Command | Description |
 |---------|-------------|
-| **Verification** | |
+| `just` | Show all available commands |
 | `just verify` | Run all quality verifications |
 | `just verify-deps` | Check if tools are installed |
-| **Linting** | |
+
+### Linting Commands
+
+| Command | Description |
+|---------|-------------|
 | `just lint` | Run all linters |
-| `just lint-markdown` | Check markdown files |
-| `just lint-yaml` | Check YAML files |
-| `just lint-actions` | Check GitHub Actions |
-| `just lint-secrets` | Scan for secrets |
+| `just lint-markdown` | Check markdown files with rumdl |
+| `just lint-yaml` | Check YAML files with yamlfmt |
+| `just lint-actions` | Check GitHub Actions with actionlint |
+| `just lint-secrets` | Scan for secrets with gitleaks (branch commits only) |
 | `just lint-publiccode` | Validate publiccode.yml |
 | `just lint-license` | Check REUSE compliance |
-| `just lint-commit` | Check commit messages |
-| **Auto-fix** | |
+| `just lint-commit` | Check commit messages with conform |
+
+### Auto-fix Commands
+
+| Command | Description |
+|---------|-------------|
 | `just lint-fix` | Fix all auto-fixable issues |
-| `just lint-markdown-fix` | Fix markdown issues |
-| `just lint-yaml-fix` | Format YAML files |
+| `just lint-markdown-fix` | Auto-fix markdown issues |
+| `just lint-yaml-fix` | Auto-format YAML files |
+
+## Configuration Files
+
+| File | Purpose |
+|------|---------|
+| `justfile` | Command runner definitions |
+| `.mise.toml` | Tool versions (single source of truth) |
+| `.rumdl.toml` | Markdown linting rules |
+| `.conform.yaml` | Commit message validation rules |
+| `publiccode.yml` | Public code metadata |
+| `REUSE.toml` | License compliance configuration |
+
+## Quality Check Details
+
+### 1. Markdown Linting
+
+**Tool:** rumdl (Rust-based, ~2MB)  
+**Config:** `.rumdl.toml`  
+**Command:** `just lint-markdown`
+
+Checks for common markdown issues like broken links, formatting problems, and style violations.
+
+### 2. YAML Linting
+
+**Tool:** yamlfmt (Go-based, ~5MB)  
+**Config:** Embedded in tool  
+**Command:** `just lint-yaml`
+
+Ensures consistent YAML formatting and validates syntax.
+
+### 3. GitHub Actions Linting
+
+**Tool:** actionlint (Go-based, ~4MB)  
+**Command:** `just lint-actions`
+
+Static analysis for GitHub Actions workflows, catching errors before CI runs.
+
+### 4. Secret Scanning
+
+**Tool:** gitleaks (Go-based, ~8MB)  
+**Command:** `just lint-secrets`
+
+Scans commits for accidentally committed secrets. On feature branches, only scans commits different from main.
+
+### 5. License Compliance
+
+**Tool:** reuse (Python-based)  
+**Config:** `REUSE.toml`  
+**Command:** `just lint-license`
+
+Ensures all files have proper SPDX license headers.
+
+### 6. Commit Message Validation
+
+**Tool:** conform (Go-based, ~6MB)  
+**Config:** `.conform.yaml`  
+**Command:** `just lint-commit`
+
+Validates commit messages follow [Conventional Commits](https://www.conventionalcommits.org) format.
+
+### 7. Public Code Validation
+
+**Tool:** publiccode-parser (Go-based, ~15MB)  
+**Command:** `just lint-publiccode`
+
+Validates the `publiccode.yml` metadata file.
+
+## Interpreting Results
+
+The output provides colored indicators:
+
+- ✓ Green checkmarks for passed checks
+- ✗ Red crosses for failed checks
+- Yellow headers for each check section
 
 ### Example Workflow
 
 ```bash
-# See what's available
-just
-
-# Run all verifications before committing
+# Before committing
 just verify
 
-# Run individual checks as needed
-just lint            # Just linting
-just license         # Just license compliance
+# If markdown fails
+just lint-markdown-fix
+git add .
+just verify
+
+# If YAML fails
+just lint-yaml-fix
+git add .
+just verify
 ```
 
-## Configuration Files
+## Handling CI Failures
 
-Configuration files for quality tools:
+If CI fails but local checks pass:
 
-- `justfile` - Command runner definitions
-- `.mise.toml` - Tool versions (single source of truth for local & CI)
-- `.conform.yaml` - Commit message validation rules
-- `.markdownlint.json` - Markdown linting rules
-- `publiccode.yml` - Public code metadata
-- `REUSE.toml` - License compliance configuration
-- `.mise.toml` - Tool version management
-
-## Quality Check Details
-
-Our quality assurance process includes the following checks:
-
-### 1. Linting
-
-We use lightweight, native binary linters (see [Prerequisites](#prerequisites) for installation):
-
-- **Markdown**: [rumdl](https://github.com/rvben/rumdl) - Fast Rust-based markdown linter
-- **YAML**: [yamlfmt](https://github.com/google/yamlfmt) - Google's YAML formatter/linter
-- **GitHub Actions**: [actionlint](https://github.com/rhysd/actionlint) - Static checker for workflows
-- **Secrets**: [gitleaks](https://github.com/gitleaks/gitleaks) - Detect and prevent secrets
-
-**Commands:**
-```bash
-# just is installed automatically via mise
-# See "Quick Start" section below
-```
-
-### 2. License Compliance
-
-We use [REUSE](https://github.com/fsfe/reuse-tool) to ensure proper license compliance.
-This tool checks that every file has valid copyright information in the SPDX-standard format.
-
-**Command:**
-
-```bash
-just license     # Check REUSE compliance
-```
-
-### 3. Commit Structure
-
-[Conform](https://github.com/siderolabs/conform) is used to check commit messages against our project's commit guidelines. For more details, refer to the `CONTRIBUTING.md` file.
-
-**Command:**
-
-```bash
-just commit      # Validate commit messages
-```
-
-### 4. Public Code Validation
-
-If your project has a `publiccode.yml` file, it will be validated for correctness.
-
-**Command:**
-
-```bash
-just publiccode  # Validate publiccode.yml
-```
-
-## Interpreting Check Results
-
-After running the quality checks, you'll receive a summary report indicating whether all checks passed or if any failed.
-
-The output provides colored indicators:
-
-- ✓✓ Green checkmarks for passed checks
-- ✗ Red crosses for failed checks
-- ✓✓ Yellow for skipped checks (e.g., no new commits)
-
-### Handling Failed Checks
-
-#### Local Check Failures
-
-1. Review the terminal output for specific error messages.
-2. Fix the identified issues in your code.
-3. Stage your changes (`git add`).
-4. Re-run the quality verifications: `just verify`
-5. Repeat until all checks pass.
-
-#### CI Pipeline Failures
-
-1. Run the quality verifications locally to reproduce the CI errors:
+1. Ensure you have the latest tools:
 
    ```bash
-   just verify   # Run all verifications
+   mise upgrade
+   mise install
    ```
 
-2. Fix the issues in your local environment.
-3. Update your Pull Request with the fixes.
-4. The CI tests should now pass in the updated PR.
+2. Check you're on the correct branch:
 
-## Examples
+   ```bash
+   git fetch origin
+   git rebase origin/main
+   ```
 
-Visual examples of the quality check outputs:
+3. Run the full verification:
 
-### CI Output Example
-
-![Quality Check Output - CI Example](assets/quality_ci_output_example.png)
-
-### Local Output Example
-
-![Quality Check Output - Local Example](assets/quality_output_example.png)
+   ```bash
+   just verify
+   ```
 
 ## Troubleshooting
 
-### Missing Tools Error
-
-If you see "Missing required tools" when running `just verify`:
-
-1. Check which tools are missing
-2. Install them using the instructions in [Prerequisites](#prerequisites)
-3. Ensure they're in your PATH
-
-### Quick Install All Tools
-
-**Using mise (Recommended)**
+### Missing Tools
 
 ```bash
-# Install mise: https://mise.jdx.dev/
-curl https://mise.run | sh
+# Check what's missing
+just verify-deps
 
-# Install all project tools from .mise.toml
+# Install missing tools
 mise install
-
-# Activate mise in your shell
-eval "$(mise activate bash)"  # or zsh, fish, etc.
-
-# Install system packages
-apt install reuse  # Debian/Ubuntu
+apt install reuse  # if needed
 ```
 
-The project uses mise with various backends (go, ubi) to manage tool versions consistently. All tool versions are defined in `.mise.toml`.
+### Permission Errors
+
+```bash
+# Ensure mise is activated
+eval "$(mise activate bash)"
+
+# Check PATH
+echo $PATH | grep -q .local/share/mise || echo "mise not in PATH"
+```
+
+### Tool Version Mismatch
+
+```bash
+# Update to project versions
+mise install --force
+```
+
+## Visual Examples
+
+### CI Output
+
+![Quality Check Output - CI Example](assets/quality_ci_output_example.png)
+
+### Local Output
+
+![Quality Check Output - Local Example](assets/quality_output_example.png)
 
 ## Additional Resources
 
-- [Just Documentation](https://github.com/casey/just)
-- [REUSE Specification](https://reuse.software)
-- [Conventional Commits](https://www.conventionalcommits.org)
+- [mise Documentation](https://mise.jdx.dev/) - Tool version management
+- [Just Documentation](https://just.systems/) - Command runner documentation
+- [REUSE Specification](https://reuse.software/) - License compliance standards
+- [Conventional Commits](https://www.conventionalcommits.org/) - Commit message conventions
+- [OpenSSF Best Practices](https://github.com/ossf/wg-best-practices-os-developers) - Security guidelines
+- [Standard for Public Code](https://standard.publiccode.net/) - Public code quality criteria

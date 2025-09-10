@@ -6,7 +6,7 @@ SPDX-License-Identifier: CC0-1.0
 
 # Security Reporting
 
-If you wish to report a security vulnerability privately, we appreciate your diligence. Please follow the guidelines below to submit your report.
+If you've found a security vulnerability, we appreciate you taking the time to report it privately. Please follow these guidelines to submit your report.
 
 ## Reporting
 
