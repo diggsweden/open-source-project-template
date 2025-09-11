@@ -18,4 +18,4 @@ paranoid = true      # Enable strict security checks and verification
 "aqua:rhysd/actionlint" = "v1.6.26"
 "aqua:zricethezav/gitleaks" = "v8.18.1"
 "aqua:siderolabs/conform" = "v0.1.0-alpha.30"
-"ubi:italia/publiccode-parser-go" = "v4.3.7"
+"github:italia/publiccode-parser-go" = "v4.3.7"
