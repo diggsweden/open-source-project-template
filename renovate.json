@@ -1,0 +1,96 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "osvVulnerabilityAlerts": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
+  "extends": [
+    "config:best-practices",
+    "security:openssf-scorecard",
+    ":gitSignOff",
+    ":automergeMinor",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    ":rebaseStalePrs",
+    "mergeConfidence:all-badges",
+    ":configMigration"
+  ],
+  "commitMessageLowerCase": "auto",
+  "minimumReleaseAge": "3 days",
+  "labels": ["dependencies"],
+  "vulnerabilityAlerts": {
+    "labels": ["security", "dependencies"]
+  },
+  "enabledManagers": ["github-actions", "mise", "regex"],
+  "packageRules": [
+    {
+      "description": "Group all GitHub Actions minor and patch updates",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "addLabels": ["actions"],
+      "groupName": "github actions",
+      "groupSlug": "github-actions"
+    },
+    {
+      "description": "GitHub Actions - Major updates (no grouping)",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["actions", "major-update"],
+      "automerge": false
+    },
+    {
+      "description": "Pin Docker digests for security actions",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": [
+        "step-security/harden-runner",
+        "ossf/scorecard-action",
+        "github/codeql-action/upload-sarif"
+      ],
+      "pinDigests": true
+    },
+    {
+      "description": "Group all mise tool dependencies",
+      "matchManagers": ["mise"],
+      "addLabels": ["tools"],
+      "groupName": "mise tools",
+      "groupSlug": "mise-tools"
+    },
+    {
+      "description": "Security and compliance tools",
+      "matchManagers": ["mise"],
+      "matchPackageNames": [
+        "aqua:zricethezav/gitleaks",
+        "aqua:siderolabs/conform",
+        "aqua:rhysd/actionlint"
+      ],
+      "addLabels": ["security-tools"],
+      "groupName": "security tools"
+    },
+    {
+      "description": "Documentation and build tools",
+      "matchManagers": ["mise"],
+      "matchPackageNames": [
+        "aqua:google/yamlfmt",
+        "ubi:rvben/rumdl",
+        "github:italia/publiccode-parser-go",
+        "aqua:casey/just"
+      ],
+      "addLabels": ["documentation"],
+      "groupName": "documentation tools"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["\\.github/workflows/.+\\.ya?ml$"],
+      "description": "Update Docker image references in GitHub Actions",
+      "matchStrings": [
+        "uses:\\s+docker://(?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"
+      ],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
+    }
+  ],
+  "prConcurrentLimit": 4,
+  "prCreation": "immediate",
+  "rangeStrategy": "auto",
+  "ignorePresets": [":prHourlyLimit2"]
+}

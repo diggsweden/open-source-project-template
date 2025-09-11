@@ -6,7 +6,7 @@ version = 1
 
 # configurations
 [[annotations]]
-path = [".github/pull_request_template.md",".markdownlint.json"]
+path = [".github/pull_request_template.md",".markdownlint.json", "renovate.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2025 The Open Source Project Template Authors"
 SPDX-License-Identifier = "CC0-1.0"
