@@ -14,7 +14,7 @@
     ":configMigration"
   ],
   "commitMessageLowerCase": "auto",
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "7 days",
   "labels": ["dependencies"],
   "vulnerabilityAlerts": {
     "labels": ["security", "dependencies"]
