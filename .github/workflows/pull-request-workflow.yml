@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+#
+# SPDX-License-Identifier: CC0-1.0
+name: Open Source Project Template Pull Request Workflow
+on: # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - main
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  commitlint:
+    uses: diggsweden/.github/.github/workflows/commit-lint.yml@main
+  dependencyreviewlint:
+    uses: diggsweden/.github/.github/workflows/dependency-review.yml@main
+  licenselint:
+    uses: diggsweden/.github/.github/workflows/license-lint.yml@main
+  lint:
+    uses: diggsweden/.github/.github/workflows/misc-lint.yml@main
+  lintpubliccode:
+    uses: diggsweden/.github/.github/workflows/publiccode-lint.yml@main

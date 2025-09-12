@@ -108,8 +108,8 @@ verify-deps:
         printf '%b{{checkmark}} All required tools installed!%b\n' "{{green}}" "{{nc}}"; \
     fi
 
-# Run all linters
-lint: lint-markdown lint-yaml lint-actions lint-secrets lint-publiccode lint-license lint-commit
+# Run mise based linters
+lint: lint-markdown lint-yaml lint-actions lint-secrets
     @echo "LINT_PASS" > /tmp/just_lint_status
 
 # Lint markdown files with rumdl (Rust)
