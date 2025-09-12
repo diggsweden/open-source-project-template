@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2024 Digg - The Agency for Digital Government
+#
+# SPDX-License-Identifier: CC0-1.0
+name: GitHub Release
+
+on:
+  workflow_call:
+    inputs:
+      draft:
+        description: "Create release as draft?"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+   
+      - name: Generate Releasenotes
+        uses: orhun/git-cliff-action@98c93442bb05a455a77bee982867857ae748eeea # v4.5.1
+        with:
+          args: --latest
+        env:
+          OUTPUT: ReleasenotesTmp
+          GITHUB_REPO: ${{ github.repository }}
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "Release ${GITHUB_REF_NAME}" \
+            --notes-file ReleasenotesTmp \
+            --draft=${{ inputs.draft }} \
+            --prerelease=false
