@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2024 Digg - The Agency for Digital Government
+#
+# SPDX-License-Identifier: CC0-1.0
+name: GitHub Release
+on:
+  workflow_call:
+    inputs:
+      draft:
+        description: "Create release as draft?"
+        required: false
+        default: true
+        type: boolean
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for all tags
+      - name: Get previous tag
+        id: get_previous_tag
+        run: |
+          # The current tag that triggered this workflow
+          CURRENT_TAG="${GITHUB_REF_NAME}"
+          
+          # Get all tags sorted by version, find the previous one
+          PREVIOUS_TAG=$(git tag --sort=-version:refname | grep -v "^${CURRENT_TAG}$" | head -1)
+          
+          # If no previous tag exists, use the initial commit
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "No previous tag found, using initial commit"
+            PREVIOUS_TAG=$(git rev-list --max-parents=0 HEAD)
+          fi
+          
+          echo "previous_tag=$PREVIOUS_TAG" >> $GITHUB_OUTPUT
+          echo "current_tag=$CURRENT_TAG" >> $GITHUB_OUTPUT
+          echo "Generating release notes from $PREVIOUS_TAG to $CURRENT_TAG"
+      - name: Generate Releasenotes
+        uses: orhun/git-cliff-action@98c93442bb05a455a77bee982867857ae748eeea # v4.5.1
+        with:
+          args: --ignore-tags '.*SNAPSHOT|early-access' ${{ steps.get_previous_tag.outputs.previous_tag }}..${{ steps.get_previous_tag.outputs.current_tag }}
+        env:
+          OUTPUT: ReleasenotesTmp
+          GITHUB_REPO: ${{ github.repository }}
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "Release ${GITHUB_REF_NAME}" \
+            --notes-file ReleasenotesTmp \
+            --draft=${{ inputs.draft }} \
+            --prerelease=false

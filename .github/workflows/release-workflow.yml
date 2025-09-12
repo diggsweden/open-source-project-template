@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: Release Workflow
+on:
+  push:
+    tags:
+      - "v[0-9]*.[0-9]*" # Forces at least vX.Y and then allows anything after
+permissions:
+  contents: read
+jobs:
+  version-bump:
+    secrets: inherit
+    permissions:
+      contents: write
+      packages: read
+    uses: diggsweden/.github/.github/workflows/version-bump-changelog.yml@main
+    with:
+      updatePom: false
+      file_pattern: CHANGELOG.md
+  release:
+    needs: [version-bump]
+    permissions:
+      contents: write
+    secrets: inherit
+    uses: ./.github/workflows/release.yml
