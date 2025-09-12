@@ -2,7 +2,6 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 name: GitHub Release
-
 on:
   workflow_call:
     inputs:
@@ -11,10 +10,8 @@ on:
         required: false
         default: true
         type: boolean
-
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -23,7 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-   
       - name: Generate Releasenotes
         uses: orhun/git-cliff-action@98c93442bb05a455a77bee982867857ae748eeea # v4.5.1
         with:
@@ -31,7 +27,6 @@ jobs:
         env:
           OUTPUT: ReleasenotesTmp
           GITHUB_REPO: ${{ github.repository }}
-
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
