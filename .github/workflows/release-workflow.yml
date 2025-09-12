@@ -25,3 +25,5 @@ jobs:
       contents: write
     secrets: inherit
     uses: ./.github/workflows/release.yml
+    with:
+      draft: true
