@@ -41,7 +41,7 @@ jobs:
           echo "current_tag=$CURRENT_TAG" >> "$GITHUB_OUTPUT"
           echo "Generating release notes from $PREVIOUS_TAG to $CURRENT_TAG"
       - name: Generate Releasenotes
-        uses: orhun/git-cliff-action@98c93442bb05a455a77bee982867857ae748eeea # v4.5.1
+        uses: orhun/git-cliff-action@d77b37db2e3f7398432d34b72a12aa3e2ba87e51 # v4.6.0
         with:
           args: --ignore-tags '.*SNAPSHOT|early-access' ${{ steps.get_previous_tag.outputs.previous_tag }}..${{ steps.get_previous_tag.outputs.current_tag }}
         env:
