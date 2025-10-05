@@ -12,10 +12,10 @@ experimental = true  # Enable experimental features (required for ubi backend)
 paranoid = true      # Enable strict security checks and verification
 
 [tools]
-"aqua:casey/just" = "1.41.0"
-"ubi:rvben/rumdl" = "v0.0.139"
-"aqua:google/yamlfmt" = "v0.10.0"
-"aqua:rhysd/actionlint" = "v1.6.26"
-"aqua:zricethezav/gitleaks" = "v8.18.1"
+"aqua:casey/just" = "1.43.0"
+"ubi:rvben/rumdl" = "v0.0.147"
+"aqua:google/yamlfmt" = "v0.17.2"
+"aqua:rhysd/actionlint" = "v1.7.7"
+"aqua:zricethezav/gitleaks" = "v8.28.0"
 "aqua:siderolabs/conform" = "v0.1.0-alpha.30"
 "github:italia/publiccode-parser-go" = "v4.3.7"
