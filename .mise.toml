@@ -13,7 +13,7 @@ paranoid = true      # Enable strict security checks and verification
 
 [tools]
 "aqua:casey/just" = "1.43.0"
-"ubi:rvben/rumdl" = "v0.0.147"
+"ubi:rvben/rumdl" = "v0.0.148"
 "aqua:google/yamlfmt" = "v0.17.2"
 "aqua:rhysd/actionlint" = "v1.7.7"
 "aqua:zricethezav/gitleaks" = "v8.28.0"
