@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+#
+# SPDX-License-Identifier: CC0-1.0
+name: Dev Release Workflow
+
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dev-release:
+    uses: diggsweden/reusable-ci/.github/workflows/release-dev-orchestrator.yml@v2
+    permissions:
+      contents: read
+      packages: write
+    secrets: inherit
+    with:
+      # This template is documentation/reference - not a buildable project
+      # Projects using this template should set their actual type:
+      # maven, npm, gradle, python
+      project-type: maven
+      container-file: Containerfile
+      working-directory: .
+      # For NPM projects, enable NPM publishing:
+      # publish-npm: true
+      # node-version: "22"

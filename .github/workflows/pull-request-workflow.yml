@@ -1,26 +1,34 @@
 # SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
-name: Open Source Project Template Pull Request Workflow
+name: Pull Request Workflow
 on: # yamllint disable-line rule:truthy
-  push:
-    branches:
-      - main
-    tags:
-      - v[0-9]+.[0-9]+.[0-9]+
   pull_request:
     branches:
       - main
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  commitlint:
-    uses: diggsweden/.github/.github/workflows/commit-lint.yml@main
-  dependencyreviewlint:
-    uses: diggsweden/.github/.github/workflows/dependency-review.yml@main
-  licenselint:
-    uses: diggsweden/.github/.github/workflows/license-lint.yml@main
-  lint:
-    uses: diggsweden/.github/.github/workflows/misc-lint.yml@main
-  lintpubliccode:
-    uses: diggsweden/.github/.github/workflows/publiccode-lint.yml@main
+  pr-checks:
+    uses: diggsweden/reusable-ci/.github/workflows/pullrequest-orchestrator.yml@v2
+    permissions:
+      contents: read
+      packages: read
+      security-events: write
+    secrets: inherit
+    with:
+      # This template is documentation/reference - not a buildable project
+      # Projects using this template should set their actual type:
+      # maven, npm, gradle, python, go, rust
+      project-type: maven
+      base-branch: main
+      # All linters enabled by default
+      # Projects can disable specific linters as needed
+      linters.commitlint: true
+      linters.licenselint: true
+      linters.dependencyreview: true
+      linters.megalint: true
+      linters.publiccodelint: true

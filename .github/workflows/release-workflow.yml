@@ -5,24 +5,31 @@ name: Release Workflow
 on:
   push:
     tags:
-      - "v[0-9]*.[0-9]*" # Forces at least vX.Y and then allows anything after
+      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-alpha*"
+      - "v[0-9]+.[0-9]+.[0-9]+-beta*"
+      - "v[0-9]+.[0-9]+.[0-9]+-rc*"
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 permissions:
   contents: read
 jobs:
-  version-bump:
-    secrets: inherit
-    permissions:
-      contents: write
-      packages: read
-    uses: diggsweden/.github/.github/workflows/version-bump-changelog.yml@main
-    with:
-      updatePom: false
-      file_pattern: CHANGELOG.md
   release:
-    needs: [version-bump]
+    uses: diggsweden/reusable-ci/.github/workflows/release-orchestrator.yml@v2
     permissions:
       contents: write
+      packages: write
+      id-token: write
+      actions: read
+      security-events: write
+      attestations: write
     secrets: inherit
-    uses: ./.github/workflows/release.yml
     with:
-      draft: true
+      artifacts-config: .github/artifacts.yml
+      changelog-creator: git-cliff
+      release-publisher: github-cli
+      release.draft: true
+      # Skip version bump for this template (no version files to update)
+      # Projects using this template should remove this line
+      changelog.skipversionbump: true

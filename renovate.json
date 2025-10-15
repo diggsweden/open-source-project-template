@@ -134,5 +134,8 @@
   "rangeStrategy": "auto",
   "ignorePresets": [
     ":prHourlyLimit2"
+  ],
+  "schedule": [
+    "after 1:00am and before 8:30pm on Saturday"
   ]
 }

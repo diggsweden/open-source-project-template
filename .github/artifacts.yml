@@ -1,0 +1,127 @@
+# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Artifacts Configuration
+#
+# This file defines what to build, publish, and containerize.
+# Customize this for your project type when using this template.
+#
+# Documentation: https://github.com/diggsweden/reusable-ci/blob/v2/docs/artifacts-reference.md
+
+# EXAMPLE 1: Maven Application with Container
+# Uncomment and customize for Java/Spring Boot projects
+#
+# artifacts:
+#   - name: my-app
+#     project-type: maven
+#     working-directory: .
+#     build-type: application
+#     config:
+#       java-version: 21
+#     publish-to:
+#       - github-packages
+#
+# containers:
+#   - name: my-app
+#     from: [my-app]
+#     container-file: Containerfile
+#     context: .
+#     platforms: linux/amd64,linux/arm64
+#     enable-slsa: true
+#     enable-sbom: true
+#     enable-scan: true
+
+# EXAMPLE 2: NPM Application with Container
+# Uncomment and customize for Node.js/TypeScript projects
+#
+# artifacts:
+#   - name: my-app
+#     project-type: npm
+#     working-directory: .
+#     config:
+#       node-version: 22
+#     publish-to:
+#       - github-packages
+#
+# containers:
+#   - name: my-app
+#     from: [my-app]
+#     container-file: Containerfile
+#     context: .
+#     platforms: linux/amd64,linux/arm64
+#     enable-slsa: true
+#     enable-sbom: true
+#     enable-scan: true
+
+# EXAMPLE 3: Maven Library (for publishing to Maven Central)
+# Uncomment and customize for shared libraries
+#
+# artifacts:
+#   - name: my-library
+#     project-type: maven
+#     working-directory: .
+#     build-type: library
+#     require-authorization: true
+#     config:
+#       java-version: 21
+#       maven-profile: central-release
+#     publish-to:
+#       - github-packages
+#       - maven-central
+#
+# Required secrets for Maven Central:
+#   MAVEN_CENTRAL_USERNAME
+#   MAVEN_CENTRAL_PASSWORD
+#   GPG_SECRET_KEY
+#   GPG_PASSPHRASE
+
+# EXAMPLE 4: Gradle/Android Application
+# Uncomment and customize for Android apps
+#
+# artifacts:
+#   - name: my-android-app
+#     project-type: gradle
+#     working-directory: .
+#     build-type: application
+#     config:
+#       java-version: 21
+#       gradle-tasks: assembleRelease bundleRelease
+#       build-module: app
+#       enable-android-signing: true
+#     publish-to:
+#       - github-packages
+
+# EXAMPLE 5: Monorepo with Multiple Artifacts
+# Uncomment and customize for projects with multiple components
+#
+# artifacts:
+#   - name: backend
+#     project-type: maven
+#     working-directory: backend
+#     build-type: application
+#     config:
+#       java-version: 21
+#
+#   - name: frontend
+#     project-type: npm
+#     working-directory: frontend
+#     config:
+#       node-version: 22
+#
+# containers:
+#   - name: backend
+#     from: [backend]
+#     container-file: backend/Containerfile
+#     context: backend
+#     platforms: linux/amd64,linux/arm64
+#
+#   - name: frontend
+#     from: [frontend]
+#     container-file: frontend/Containerfile
+#     context: frontend
+#     platforms: linux/amd64,linux/arm64
+
+# For template repositories without buildable artifacts:
+artifacts: []
+containers: []

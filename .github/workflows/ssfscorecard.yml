@@ -1,14 +1,11 @@
 # SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
-name: OpenSSF Scorecard analysis
+name: OpenSSF Scorecard Analysis
 on:
-  push:
-    branches:
-      - main
   schedule:
-    # Weekly on Monday nights at 23:30 UTC
-    - cron: "30 23 * * 1"
+    # Weekly on Saturday nights at 01:15 UTC
+    - cron: "15 1 * * 6"
 permissions:
   contents: read
 jobs:
@@ -17,4 +14,6 @@ jobs:
       contents: read
       security-events: write
       id-token: write
-    uses: diggsweden/.github/.github/workflows/openssf-scorecard.yml@main
+    uses: diggsweden/reusable-ci/.github/workflows/security-openssf-scorecard.yml@v2
+    with:
+      publish-results: true
