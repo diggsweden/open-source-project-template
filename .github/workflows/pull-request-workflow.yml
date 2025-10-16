@@ -4,8 +4,7 @@
 name: Pull Request Workflow
 on: # yamllint disable-line rule:truthy
   pull_request:
-    branches:
-      - main
+    
 permissions:
   contents: read
 concurrency:
@@ -24,11 +23,5 @@ jobs:
       # Projects using this template should set their actual type:
       # maven, npm, gradle, python, go, rust
       project-type: maven
-      base-branch: main
       # All linters enabled by default
       # Projects can disable specific linters as needed
-      linters.commitlint: true
-      linters.licenselint: true
-      linters.dependencyreview: true
-      linters.megalint: true
-      linters.publiccodelint: true
