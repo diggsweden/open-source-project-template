@@ -20,6 +20,17 @@ default:
     @printf 'Available commands:\n'
     @just --list --unsorted | grep -v "default"
 
+# Install development tools using mise
+install:
+    @printf 'Installing development tools from .mise.toml...\n'
+    @if ! command -v mise >/dev/null 2>&1; then \
+        printf '{{red}}{{missing}} mise not found. Please install mise first.{{nc}}\n'; \
+        printf 'Visit: https://mise.jdx.dev/getting-started.html\n'; \
+        exit 1; \
+    fi
+    @mise install
+    @printf '{{green}}{{checkmark}} All tools installed{{nc}}\n'
+
 # Run all quality verifications
 verify: verify-deps lint lint-publiccode lint-license lint-commit
     @printf '\n{{yellow}}======== QUALITY CHECK SUMMARY ========{{nc}}\n\n' && \
