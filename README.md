@@ -11,7 +11,7 @@ SPDX-License-Identifier: CC0-1.0
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/diggsweden/open-source-project-template/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/diggsweden/open-source-project-template)
 ![Standard for Public Code Commitment](https://img.shields.io/badge/Standard%20for%20Public%20Code%20Commitment-green?style=for-the-badge)
 
-Ad template for starting open source projects with best practices built in. Copy this structure to your repository and customize it for your needs.
+Ad template for starting open source projects with best practices built in. Copy this sdtructure to your repository and customize it for your needs.
 
 Based on well-established open source guidelines and practices. Suitable for any organization that wants a well-structured open source project.
 
