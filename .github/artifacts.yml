@@ -121,7 +121,6 @@
 #     container-file: frontend/Containerfile
 #     context: frontend
 #     platforms: linux/amd64,linux/arm64
-
 # For template repositories without buildable artifacts:
 artifacts: []
 containers: []

@@ -4,7 +4,6 @@
 name: Pull Request Workflow
 on: # yamllint disable-line rule:truthy
   pull_request:
-    
 permissions:
   contents: read
 concurrency:
