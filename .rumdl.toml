@@ -6,10 +6,10 @@
 # See: https://github.com/rvben/rumdl/blob/main/docs/RULES.md
 
 [global]
-# Files to exclude from linting (no glob patterns - just directory/file names)
+# Files to exclude from linting
 exclude = [
   "CHANGELOG.md",
-  ".mise",
+  ".mise/**",
   "node_modules",
   "vendor"
 ]

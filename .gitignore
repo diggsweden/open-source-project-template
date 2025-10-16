@@ -15,6 +15,9 @@ mega-linter-reports
 .ruff_cache
 __pycache__
 
+# Tool version managers
+.mise
+
 # OS files
 .DS_Store
 Thumbs.db
