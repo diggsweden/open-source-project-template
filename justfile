@@ -141,15 +141,12 @@ lint-actions:
 # Check for secrets with gitleaks - only scan commits different from main
 lint-secrets:
     @printf '{{yellow}}\n************ SECRET SCANNING (GITLEAKS) ***********{{nc}}\n\n'
-    @# Get the default branch (usually main or master)
-    @default_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || printf 'main'); \
-    current_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); \
-    if [ "$current_branch" = "$default_branch" ]; then \
-        printf 'On default branch, scanning all commits...\n'; \
-        gitleaks detect --no-banner; \
+    @if [ -n "$GITHUB_BASE_REF" ]; then \
+        printf 'In PR, scanning commits different from origin/%s...\n' "$GITHUB_BASE_REF"; \
+        gitleaks detect --no-banner --log-opts="origin/$GITHUB_BASE_REF..HEAD"; \
     else \
-        printf 'Scanning commits different from %s...\n' "$default_branch"; \
-        gitleaks detect --no-banner --log-opts="$default_branch..HEAD"; \
+        printf 'Scanning all commits...\n'; \
+        gitleaks detect --no-banner; \
     fi && printf '{{green}}{{checkmark}} No secrets found{{nc}}\n' || { printf '{{red}}{{missing}} Secret scanning failed{{nc}}\n'; exit 1; }
     @printf '\n'
 
