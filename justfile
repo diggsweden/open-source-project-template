@@ -20,6 +20,17 @@ default:
     @printf 'Available commands:\n'
     @just --list --unsorted | grep -v "default"
 
+# Install development tools using mise
+install:
+    @printf 'Installing development tools from .mise.toml...\n'
+    @if ! command -v mise >/dev/null 2>&1; then \
+        printf '{{red}}{{missing}} mise not found. Please install mise first.{{nc}}\n'; \
+        printf 'Visit: https://mise.jdx.dev/getting-started.html\n'; \
+        exit 1; \
+    fi
+    @mise install
+    @printf '{{green}}{{checkmark}} All tools installed{{nc}}\n'
+
 # Run all quality verifications
 verify: verify-deps lint lint-publiccode lint-license lint-commit
     @printf '\n{{yellow}}======== QUALITY CHECK SUMMARY ========{{nc}}\n\n' && \
@@ -123,7 +134,7 @@ lint: lint-markdown lint-yaml lint-actions lint-secrets
 # Lint markdown files with rumdl
 lint-markdown:
     @printf '{{yellow}}\n************ MARKDOWN LINTING (RUMDL) ***********{{nc}}\n\n'
-    @rumdl check . --exclude CHANGELOG.md && printf '{{green}}{{checkmark}} Markdown linting passed{{nc}}\n' || { printf '{{red}}{{missing}} Markdown linting failed - run '\''just lint-markdown-fix'\'' to fix{{nc}}\n'; exit 1; }
+    @rumdl check . && printf '{{green}}{{checkmark}} Markdown linting passed{{nc}}\n' || { printf '{{red}}{{missing}} Markdown linting failed - run '\''just lint-markdown-fix'\'' to fix{{nc}}\n'; exit 1; }
     @printf '\n'
 
 # Lint YAML files with yamlfmt
@@ -141,15 +152,12 @@ lint-actions:
 # Check for secrets with gitleaks - only scan commits different from main
 lint-secrets:
     @printf '{{yellow}}\n************ SECRET SCANNING (GITLEAKS) ***********{{nc}}\n\n'
-    @# Get the default branch (usually main or master)
-    @default_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || printf 'main'); \
-    current_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); \
-    if [ "$current_branch" = "$default_branch" ]; then \
-        printf 'On default branch, scanning all commits...\n'; \
-        gitleaks detect --no-banner; \
+    @if [ -n "$GITHUB_BASE_REF" ]; then \
+        printf 'In PR, scanning commits different from origin/%s...\n' "$GITHUB_BASE_REF"; \
+        gitleaks detect --no-banner --log-opts="origin/$GITHUB_BASE_REF..HEAD"; \
     else \
-        printf 'Scanning commits different from %s...\n' "$default_branch"; \
-        gitleaks detect --no-banner --log-opts="$default_branch..HEAD"; \
+        printf 'Scanning all commits...\n'; \
+        gitleaks detect --no-banner; \
     fi && printf '{{green}}{{checkmark}} No secrets found{{nc}}\n' || { printf '{{red}}{{missing}} Secret scanning failed{{nc}}\n'; exit 1; }
     @printf '\n'
 
