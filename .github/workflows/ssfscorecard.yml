@@ -7,7 +7,6 @@ on:
     # Weekly on Saturday nights at 01:15 UTC
     - cron: "15 1 * * 6"
   workflow_dispatch:
-
 permissions:
   contents: read
 jobs:
