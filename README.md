@@ -13,7 +13,7 @@ SPDX-License-Identifier: CC0-1.0
 
 A template for starting open source projects with best practices built in. Copy this structure to your repository and customize it for your needs.
 
-Based on well-established open source guidelines and practices. Suitable for any organization that wants a well-structured open source project.
+Based don well-established open source guidelines and practices. Suitable for any organization that wants a well-structured open source project.
 
 ## What's Included
 
