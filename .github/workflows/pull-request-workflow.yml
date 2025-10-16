@@ -23,5 +23,8 @@ jobs:
       # Projects using this template should set their actual type:
       # maven, npm, gradle, python, go, rust
       project-type: maven
-      # All linters enabled by default
-      # Projects can disable specific linters as needed
+      # Use just+mise-based linting (lightweight, uses .mise.toml + justfile)
+      linters.justmiselint: true
+      # Disable heavy MegaLinter (optional - keep both if needed)
+      linters.megalint: false
+      # Other linters remain enabled by default
