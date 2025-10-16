@@ -19,6 +19,7 @@ Based on well-established open source guidelines and practices. Suitable for any
 
 **Documentation** - Common open source community health files (README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, GOVERNANCE, CHANGELOG, CODEOWNERS)
 
+
 **Compliance** - Tools for REUSE license setup, publiccode.yml for transparency, security scorecards, commit message standards
 
 **Workflows** - Example GitHub Actions for quality checks and compliance (`.github/workflows/`)
