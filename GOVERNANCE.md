@@ -12,6 +12,7 @@ SPDX-License-Identifier: CC0-1.0
 Decisions about the project's direction, new features, and significant changes are made through consensus among maintainers and contributors.
 We value open and transparent decision-making and strive to involve the community in shaping the project's future.  
 
+a
 ## Roles
 
 This section describes the different roles, their responsibilities, and how they are selected.
