@@ -4,16 +4,18 @@
   "dependencyDashboardOSVVulnerabilitySummary": "all",
   "extends": [
     "config:best-practices",
+    "workarounds:all",
     "security:openssf-scorecard",
+    ":configMigration",
+    ":dependencyDashboard",
     ":gitSignOff",
     ":automergeMinor",
     ":semanticCommits",
-    ":semanticCommitTypeAll(chore)",
     ":rebaseStalePrs",
-    ":dependencyDashboard",
-    "mergeConfidence:all-badges",
-    ":configMigration"
+    "mergeConfidence:all-badges"
   ],
+  "semanticCommitType": "build",
+  "semanticCommitScope": "deps",
   "commitMessageLowerCase": "auto",
   "minimumReleaseAge": "7 days",
   "labels": [
@@ -27,8 +29,7 @@
   },
   "enabledManagers": [
     "github-actions",
-    "mise",
-    "custom.regex"
+    "mise"
   ],
   "packageRules": [
     {
@@ -115,20 +116,6 @@
       "groupName": "documentation tools"
     }
   ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/\\.github/workflows/.+\\.ya?ml$/"
-      ],
-      "description": "Update Docker image references in GitHub Actions",
-      "matchStrings": [
-        "uses:\\s+docker://(?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"
-      ],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
-    }
-  ],
   "prConcurrentLimit": 4,
   "prCreation": "immediate",
   "rangeStrategy": "auto",
@@ -136,6 +123,7 @@
     ":prHourlyLimit2"
   ],
   "schedule": [
-    "after 1:00am and before 8:30pm on Saturday"
+    "after 8:00pm on Saturday",
+    "before 11:59pm on Sunday"
   ]
 }
