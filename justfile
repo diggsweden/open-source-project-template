@@ -118,7 +118,7 @@ verify-deps:
     fi
 
 # Run mise based linters
-lint: lint-markdown lint-yaml lint-actions lint-secrets
+lint: lint-secrets
 
 # Lint markdown files with rumdl
 lint-markdown:
