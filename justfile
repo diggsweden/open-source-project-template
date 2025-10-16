@@ -123,7 +123,7 @@ lint: lint-markdown lint-yaml lint-actions lint-secrets
 # Lint markdown files with rumdl
 lint-markdown:
     @printf '{{yellow}}\n************ MARKDOWN LINTING (RUMDL) ***********{{nc}}\n\n'
-    @rumdl check . && printf '{{green}}{{checkmark}} Markdown linting passed{{nc}}\n' || { printf '{{red}}{{missing}} Markdown linting failed - run '\''just lint-markdown-fix'\'' to fix{{nc}}\n'; exit 1; }
+    @rumdl check --exclude .mise . && printf '{{green}}{{checkmark}} Markdown linting passed{{nc}}\n' || { printf '{{red}}{{missing}} Markdown linting failed - run '\''just lint-markdown-fix'\'' to fix{{nc}}\n'; exit 1; }
     @printf '\n'
 
 # Lint YAML files with yamlfmt
@@ -189,7 +189,7 @@ lint-fix: lint-markdown-fix lint-yaml-fix
 # Fix markdown issues with rumdl
 lint-markdown-fix:
     @printf '{{yellow}}\n************ FIXING MARKDOWN (RUMDL) ***********{{nc}}\n\n'
-    @rumdl check --fix . && printf '{{green}}{{checkmark}} Markdown files fixed{{nc}}\n' || { printf '{{red}}{{missing}} Failed to fix markdown files{{nc}}\n'; exit 1; }
+    @rumdl check --fix --exclude .mise . && printf '{{green}}{{checkmark}} Markdown files fixed{{nc}}\n' || { printf '{{red}}{{missing}} Failed to fix markdown files{{nc}}\n'; exit 1; }
     @printf '\n'
 
 # Fix YAML formatting with yamlfmt
