@@ -1,14 +1,12 @@
 # SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
 #
 # SPDX-License-Identifier: CC0-1.0
-
 # Artifacts Configuration
 #
 # This file defines what to build, publish, and containerize.
 # Customize this for your project type when using this template.
 #
 # Documentation: https://github.com/diggsweden/reusable-ci/blob/v2/docs/artifacts-reference.md
-
 # EXAMPLE 1: Maven Application with Container
 # Uncomment and customize for Java/Spring Boot projects
 #
@@ -31,7 +29,6 @@
 #     enable-slsa: true
 #     enable-sbom: true
 #     enable-scan: true
-
 # EXAMPLE 2: NPM Application with Container
 # Uncomment and customize for Node.js/TypeScript projects
 #
@@ -53,7 +50,6 @@
 #     enable-slsa: true
 #     enable-sbom: true
 #     enable-scan: true
-
 # EXAMPLE 3: Maven Library (for publishing to Maven Central)
 # Uncomment and customize for shared libraries
 #
@@ -75,7 +71,6 @@
 #   MAVEN_CENTRAL_PASSWORD
 #   GPG_SECRET_KEY
 #   GPG_PASSPHRASE
-
 # EXAMPLE 4: Gradle/Android Application
 # Uncomment and customize for Android apps
 #
@@ -91,7 +86,6 @@
 #       enable-android-signing: true
 #     publish-to:
 #       - github-packages
-
 # EXAMPLE 5: Monorepo with Multiple Artifacts
 # Uncomment and customize for projects with multiple components
 #
@@ -121,7 +115,6 @@
 #     container-file: frontend/Containerfile
 #     context: frontend
 #     platforms: linux/amd64,linux/arm64
-
 # For template repositories without buildable artifacts:
 artifacts: []
 containers: []

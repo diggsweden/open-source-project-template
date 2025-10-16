@@ -7,7 +7,12 @@
 
 [global]
 # Files to exclude from linting
-exclude = ["CHANGELOG.md"]
+exclude = [
+  "CHANGELOG.md",
+  ".mise/**",
+  "node_modules/**",
+  "vendor/**"
+]
 
 # Disable rules that cause issues or are not appropriate for this project
 disable = [
