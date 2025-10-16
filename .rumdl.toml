@@ -6,13 +6,14 @@
 # See: https://github.com/rvben/rumdl/blob/main/docs/RULES.md
 
 [global]
-# Files to exclude from linting
+# Files to exclude from linting (no glob patterns - just directory/file names)
 exclude = [
   "CHANGELOG.md",
-  ".mise/**",
-  "node_modules/**",
-  "vendor/**"
+  ".mise",
+  "node_modules",
+  "vendor"
 ]
+respect-gitignore = true
 
 # Disable rules that cause issues or are not appropriate for this project
 disable = [
