@@ -1,66 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "osvVulnerabilityAlerts": true,
-  "dependencyDashboardOSVVulnerabilitySummary": "all",
   "extends": [
-    "config:best-practices",
-    "workarounds:all",
-    "security:openssf-scorecard",
-    ":configMigration",
-    ":dependencyDashboard",
-    ":gitSignOff",
-    ":automergeMinor",
-    ":semanticCommits",
-    ":rebaseStalePrs",
-    "mergeConfidence:all-badges"
+    "local>diggsweden/.github:renovate-base"
   ],
-  "semanticCommitType": "build",
-  "semanticCommitScope": "deps",
-  "commitMessageLowerCase": "auto",
-  "minimumReleaseAge": "7 days",
-  "labels": [
-    "dependencies"
-  ],
-  "vulnerabilityAlerts": {
-    "labels": [
-      "security",
-      "dependencies"
-    ]
-  },
   "enabledManagers": [
     "github-actions",
     "mise"
   ],
   "packageRules": [
-    {
-      "description": "Group all GitHub Actions minor and patch updates",
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "addLabels": [
-        "actions"
-      ],
-      "groupName": "github actions",
-      "groupSlug": "github-actions"
-    },
-    {
-      "description": "GitHub Actions - Major updates (no grouping)",
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "addLabels": [
-        "actions",
-        "major-update"
-      ],
-      "automerge": false
-    },
     {
       "description": "Pin Docker digests for security actions",
       "matchManagers": [
@@ -74,15 +21,18 @@
       "pinDigests": true
     },
     {
-      "description": "Group all mise tool dependencies",
-      "matchManagers": [
-        "mise"
-      ],
-      "addLabels": [
-        "tools"
-      ],
-      "groupName": "mise tools",
-      "groupSlug": "mise-tools"
+      "description": "Mise tools - Major updates",
+      "matchManagers": ["mise"],
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["tools", "major-update"],
+      "groupName": "mise major"
+    },
+    {
+      "description": "Mise tools - Non-major updates",
+      "matchManagers": ["mise"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "addLabels": ["tools"],
+      "groupName": "mise non-major"
     },
     {
       "description": "Security and compliance tools",
@@ -115,15 +65,5 @@
       ],
       "groupName": "documentation tools"
     }
-  ],
-  "prConcurrentLimit": 4,
-  "prCreation": "immediate",
-  "rangeStrategy": "auto",
-  "ignorePresets": [
-    ":prHourlyLimit2"
-  ],
-  "schedule": [
-    "after 8:00pm on Saturday",
-    "before 11:59pm on Sunday"
   ]
 }
