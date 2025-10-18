@@ -1,14 +1,20 @@
-# SPDX-FileCopyrightText: 2025 The Open Source Project Template Authors
+# SPDX-FileCopyrightText: 2025 Digg - Agency for Digital Government
 #
 # SPDX-License-Identifier: CC0-1.0
+
+---
 name: OpenSSF Scorecard Analysis
 on:
   schedule:
-    # Weekly on Saturday nights at 01:15 UTC
-    - cron: "15 1 * * 6"
+    # Saturdays at 02:15 UTC
+    - cron: "15 2 * * 6"
+    # Wednesdays at 02:15 UTC
+    - cron: "15 2 * * 3"
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   scorecard-analysis:
     permissions:
