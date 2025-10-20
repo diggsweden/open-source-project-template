@@ -1,8 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Digg - Agency for Digital Government
 #
 # SPDX-License-Identifier: CC0-1.0
-
----
 name: OpenSSF Scorecard Analysis
 on:
   schedule:
@@ -11,10 +9,8 @@ on:
     # Wednesdays at 02:15 UTC
     - cron: "15 2 * * 3"
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   scorecard-analysis:
     permissions:
