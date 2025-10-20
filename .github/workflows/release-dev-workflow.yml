@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   dev-release:
-    uses: diggsweden/reusable-ci/.github/workflows/release-dev-orchestrator.yml@v2
+    uses: diggsweden/reusable-ci/.github/workflows/release-dev-orchestrator.yml@1a7dcd9c5257495ebf141e4e4b4bac438a8aae56 # v2.0.0
     permissions:
       contents: read
       packages: write
