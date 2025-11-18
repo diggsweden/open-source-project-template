@@ -11,6 +11,18 @@ experimental = true  # Enable experimental features (required for ubi backend)
 #lockfile = true      # Enable lockfile with checksum verification for all downloads not avail yet
 paranoid = true      # Enable strict security checks and verification
 
+[env]
+# These will be available during tool installation AND runtime
+HTTP_PROXY = "{{ get_env(name='HTTP_PROXY', default='') }}"
+HTTPS_PROXY = "{{ get_env(name='HTTPS_PROXY', default='') }}"
+NO_PROXY = "{{ get_env(name='NO_PROXY', default='') }}"
+http_proxy = "{{ get_env(name='http_proxy', default='') }}"
+https_proxy = "{{ get_env(name='https_proxy', default='') }}"
+no_proxy = "{{ get_env(name='no_proxy', default='') }}"
+
+# Pip/pipx configuration
+PIP_INDEX_URL = "{{ get_env(name='PIP_INDEX_URL', default='') }}"
+
 [tools]
 "aqua:casey/just" = "1.43.0"
 "ubi:rvben/rumdl" = "v0.0.173"
@@ -19,3 +31,4 @@ paranoid = true      # Enable strict security checks and verification
 "aqua:zricethezav/gitleaks" = "v8.29.0"
 "aqua:siderolabs/conform" = "v0.1.0-alpha.30"
 "github:italia/publiccode-parser-go" = "v4.3.7"
+"pipx:reuse" = "6.2.0"
