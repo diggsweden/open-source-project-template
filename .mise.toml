@@ -25,10 +25,10 @@ PIP_INDEX_URL = "{{ get_env(name='PIP_INDEX_URL', default='') }}"
 
 [tools]
 "aqua:casey/just" = "1.43.1"
-"ubi:rvben/rumdl" = "v0.0.181"
+"ubi:rvben/rumdl" = "v0.0.185"
 "aqua:google/yamlfmt" = "v0.20.0"
 "aqua:rhysd/actionlint" = "v1.7.9"
-"aqua:zricethezav/gitleaks" = "v8.29.1"
+"aqua:zricethezav/gitleaks" = "v8.30.0"
 "aqua:siderolabs/conform" = "v0.1.0-alpha.30"
 "github:italia/publiccode-parser-go" = "v4.3.7"
 "pipx:reuse" = "6.2.0"
