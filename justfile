@@ -5,8 +5,8 @@
 # Quality checks and automation for Open Source Project Template
 # Run 'just' to see available commands
 
-devtools_repo := env("DEVBASE_JUSTKIT_REPO", "https://github.com/diggsweden/devbase-justkit")
-devtools_dir := env("XDG_DATA_HOME", env("HOME") + "/.local/share") + "/devbase-justkit"
+devtools_repo := env("DEVBASE_CHECK_REPO", "https://github.com/diggsweden/devbase-check")
+devtools_dir := env("XDG_DATA_HOME", env("HOME") + "/.local/share") + "/devbase-check"
 lint := devtools_dir + "/linters"
 colors := devtools_dir + "/utils/colors.sh"
 
@@ -40,18 +40,21 @@ setup-devtools:
     #!/usr/bin/env bash
     set -euo pipefail
     if [[ -d "{{devtools_dir}}" ]]; then
-        "{{devtools_dir}}/scripts/setup.sh" "{{devtools_repo}}" "{{devtools_dir}}"
+        # setup.sh handles update checks with 1-hour cache
+        if [[ -f "{{devtools_dir}}/scripts/setup.sh" ]]; then
+            "{{devtools_dir}}/scripts/setup.sh" "{{devtools_repo}}" "{{devtools_dir}}"
+        fi
     else
-        printf "Cloning devbase-justkit to %s...\n" "{{devtools_dir}}"
+        printf "Cloning devbase-check to %s...\n" "{{devtools_dir}}"
         mkdir -p "$(dirname "{{devtools_dir}}")"
         git clone --depth 1 "{{devtools_repo}}" "{{devtools_dir}}"
-        git -C "{{devtools_dir}}" fetch --tags --quiet
+        git -C "{{devtools_dir}}" fetch --tags --depth 1 --quiet
         latest=$(git -C "{{devtools_dir}}" describe --tags --abbrev=0 origin/main 2>/dev/null || echo "")
         if [[ -n "$latest" ]]; then
             git -C "{{devtools_dir}}" fetch --depth 1 origin tag "$latest" --quiet
             git -C "{{devtools_dir}}" checkout "$latest" --quiet
         fi
-        printf "Installed devbase-justkit %s\n" "${latest:-main}"
+        printf "Installed devbase-check %s\n" "${latest:-main}"
     fi
 
 # Check required tools are installed

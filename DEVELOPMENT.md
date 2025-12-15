@@ -8,22 +8,98 @@ SPDX-License-Identifier: CC0-1.0
 
 This guide outlines the process for submitting Pull Requests and ensuring code quality in our project.
 
-## Quick Start
+## Quick Start - Linux
 
-```bash
-# 1. Install mise (tool version manager)
-curl https://mise.run | sh
-eval "$(mise activate bash)"
+1. Install [mise](https://mise.jdx.dev/) (manages linting tools):
 
-# 2. Install all project tools from .mise.toml
-mise install
+   ```bash
+   curl https://mise.run | sh
+   ```
 
-# 3. Install system packages
-apt install reuse
+2. Activate mise in your shell:
 
-# 4. Run quality checks
-just verify
-```
+   ```bash
+   # For bash - add to ~/.bashrc
+   eval "$(mise activate bash)"
+
+   # For zsh - add to ~/.zshrc
+   eval "$(mise activate zsh)"
+
+   # For fish - add to ~/.config/fish/config.fish
+   mise activate fish | source
+   ```
+
+   Then restart your terminal.
+
+3. Install pipx (needed for reuse license linting):
+
+   ```bash
+   # Debian/Ubuntu
+   sudo apt install pipx
+   ```
+
+4. Install project tools:
+
+   ```bash
+   mise install
+   ```
+
+5. Run quality checks:
+
+   ```bash
+   just verify
+   ```
+6. List all just jobs
+
+   ```bash
+   just 
+   ```
+## Quick Start - macOS
+
+1. Install [mise](https://mise.jdx.dev/) (manages linting tools):
+
+   ```bash
+   brew install mise
+   ```
+
+2. Activate mise in your shell:
+
+   ```bash
+   # For zsh - add to ~/.zshrc
+   eval "$(mise activate zsh)"
+
+   # For bash - add to ~/.bashrc
+   eval "$(mise activate bash)"
+
+   # For fish - add to ~/.config/fish/config.fish
+   mise activate fish | source
+   ```
+
+   Then restart your terminal.
+
+3. Install newer bash than macOS default:
+
+   ```bash
+   brew install bash
+   ```
+
+4. Install pipx (needed for reuse license linting):
+
+   ```bash
+   brew install pipx
+   ```
+
+5. Install project tools:
+
+   ```bash
+   mise install
+   ```
+
+6. Run quality checks:
+
+   ```bash
+   just verify
+   ```
 
 ## Pull Request Checks
 
