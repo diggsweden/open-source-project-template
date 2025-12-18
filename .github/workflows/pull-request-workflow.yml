@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   pr-checks:
-    uses: diggsweden/reusable-ci/.github/workflows/pullrequest-orchestrator.yml@e29145e720cef0b86ef147c72c2d001b5ac6c8b9 # v2.4.2
+    uses: diggsweden/reusable-ci/.github/workflows/pullrequest-orchestrator.yml@e1e1387d5b0399bb5edb00e40485746772344176 # v2.6.0
     permissions:
       contents: read
       packages: read
@@ -23,7 +23,7 @@ jobs:
       # maven, npm, gradle, python, go, rust
       project-type: maven
       # Use just+mise-based linting (lightweight, uses .mise.toml + justfile)
-      linters.justmiselint: true
+      linters.devbasecheck: true
       # Disable heavy MegaLinter (optional - keep both if needed)
       linters.megalint: false
       # Other linters remain enabled by default
