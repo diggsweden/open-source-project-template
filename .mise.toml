@@ -30,7 +30,7 @@ PIP_INDEX_URL = "{{ get_env(name='PIP_INDEX_URL', default='') }}"
 "aqua:rhysd/actionlint" = "v1.7.9"
 "aqua:zricethezav/gitleaks" = "v8.30.0"
 "forgejo:itiquette/gommitlint" = "0.9.4"
-"github:italia/publiccode-parser-go" = "v4.3.7"
+"github:italia/publiccode-parser-go" = "v5.2.3"
 "pipx:reuse" = "6.2.0"
 "aqua:koalaman/shellcheck" = "v0.10.0"
 "aqua:mvdan/sh" = "v3.11.0"  # shfmt
