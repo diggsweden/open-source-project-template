@@ -25,6 +25,8 @@ jobs:
       project-type: maven
       # Use just+mise-based linting (lightweight, uses .mise.toml + justfile)
       linters.devbasecheck: true
-      # Disable heavy MegaLinter (optional - keep both if needed)
+      # Disable deprecated linters (handled by justmiselint)
+      linters.commitlint: false
+      linters.licenselint: false
       linters.megalint: false
       # Other linters remain enabled by default
