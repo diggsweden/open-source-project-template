@@ -8,12 +8,13 @@ permissions:
   contents: read
 jobs:
   dev-release:
-    uses: diggsweden/reusable-ci/.github/workflows/release-dev-orchestrator.yml@e1e1387d5b0399bb5edb00e40485746772344176 # v2.6.0
+    uses: diggsweden/reusable-ci/.github/workflows/release-dev-orchestrator.yml@72b9c326139080c9a9c91999ada2d62d19e7ee54 # main
     permissions:
       contents: read
       packages: write
     secrets: inherit
     with:
+      reusable-ci-ref: main
       # This template is documentation/reference - not a buildable project
       # Projects using this template should set their actual type:
       # maven, npm, gradle, python

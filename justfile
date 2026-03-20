@@ -60,7 +60,7 @@ setup-devtools:
 # Check required tools are installed
 [group('setup')]
 check-tools: _ensure-devtools
-    @{{devtools_dir}}/scripts/check-tools.sh --check-devtools mise git just rumdl yamlfmt actionlint gitleaks shellcheck shfmt conform reuse
+    @{{devtools_dir}}/scripts/check-tools.sh --check-devtools mise git just rumdl yamlfmt actionlint gitleaks shellcheck shfmt gommitlint reuse
 
 # Install tools via mise
 [group('setup')]
@@ -84,6 +84,11 @@ verify: _ensure-devtools check-tools
 [group('lint')]
 lint-all: _ensure-devtools
     @{{devtools_dir}}/scripts/verify.sh
+
+# Validate version control
+[group('lint')]
+lint-version-control:
+    @{{lint}}/version-control.sh
 
 # Validate commit messages
 [group('lint')]

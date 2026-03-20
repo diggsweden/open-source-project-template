@@ -133,7 +133,7 @@ The `.mise.toml` file defines exact versions for reproducible builds:
 | **yamlfmt** | YAML formatting/linting | go | [GitHub](https://github.com/google/yamlfmt) |
 | **actionlint** | GitHub Actions linting | go | [GitHub](https://github.com/rhysd/actionlint) |
 | **gitleaks** | Secret scanning | go | [GitHub](https://github.com/gitleaks/gitleaks) |
-| **conform** | Commit message validation | go | [GitHub](https://github.com/siderolabs/conform) |
+| **gommitlint** | Commit message validation | go | [Forgejo](https://codeberg.org/itiquette/gommitlint) |
 | **publiccode-parser** | publiccode.yml validation | ubi | [GitHub](https://github.com/italia/publiccode-parser-go) |
 
 #### System Package
@@ -167,7 +167,7 @@ apt install reuse  # Debian/Ubuntu
 | `just lint-secrets` | Scan for secrets with gitleaks (branch commits only) |
 | `just lint-publiccode` | Validate publiccode.yml |
 | `just lint-license` | Check REUSE compliance |
-| `just lint-commit` | Check commit messages with conform |
+| `just lint-commits` | Check commit messages with gommitlint |
 
 ### Auto-fix Commands
 
@@ -184,7 +184,7 @@ apt install reuse  # Debian/Ubuntu
 | `justfile` | Command runner definitions |
 | `.mise.toml` | Tool versions (single source of truth) |
 | `.rumdl.toml` | Markdown linting rules |
-| `.conform.yaml` | Commit message validation rules |
+| `.gommitlint.yaml` | Commit message validation rules |
 | `publiccode.yml` | Public code metadata |
 | `REUSE.toml` | License compliance configuration |
 
@@ -230,9 +230,9 @@ Ensures all files have proper SPDX license headers.
 
 ### 6. Commit Message Validation
 
-**Tool:** conform (Go-based, ~6MB)  
-**Config:** `.conform.yaml`  
-**Command:** `just lint-commit`
+**Tool:** gommitlint (Go-based)  
+**Config:** `.gommitlint.yaml`  
+**Command:** `just lint-commits`
 
 Validates commit messages follow [Conventional Commits](https://www.conventionalcommits.org) format.
 
