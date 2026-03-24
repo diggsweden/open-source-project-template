@@ -16,7 +16,7 @@ permissions:
   contents: read
 jobs:
   release:
-    uses: diggsweden/reusable-ci/.github/workflows/release-orchestrator.yml@cd65f1f80267cc82d7e4cdecc26be83908417b01 # v2.7.1
+    uses: diggsweden/reusable-ci/.github/workflows/release-orchestrator.yml@2afbedbefbb457a5fc6175de232e4644cab58a69 # v2.7.3
     permissions:
       contents: write
       packages: write
@@ -26,7 +26,7 @@ jobs:
       attestations: write
     secrets: inherit
     with:
-      reusable-ci-ref: v2.7.1
+      reusable-ci-ref: v2.7.3
       artifacts-config: .github/artifacts.yml
       changelog-creator: git-cliff
       release-publisher: github-cli

@@ -11,14 +11,14 @@ concurrency:
   cancel-in-progress: true
 jobs:
   pr-checks:
-    uses: diggsweden/reusable-ci/.github/workflows/pullrequest-orchestrator.yml@cd65f1f80267cc82d7e4cdecc26be83908417b01 # v2.7.1
+    uses: diggsweden/reusable-ci/.github/workflows/pullrequest-orchestrator.yml@2afbedbefbb457a5fc6175de232e4644cab58a69 # v2.7.3
     permissions:
       contents: read
       packages: read
       security-events: write
     secrets: inherit
     with:
-      reusable-ci-ref: v2.7.1
+      reusable-ci-ref: v2.7.3
       # This template is documentation/reference - not a buildable project
       # Projects using this template should set their actual type:
       # maven, npm, gradle, python, go, rust
