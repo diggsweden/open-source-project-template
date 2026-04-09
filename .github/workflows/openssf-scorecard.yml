@@ -17,6 +17,6 @@ jobs:
       contents: read
       security-events: write
       id-token: write
-    uses: diggsweden/reusable-ci/.github/workflows/security-openssf-scorecard.yml@2afbedbefbb457a5fc6175de232e4644cab58a69 # v2.7.3
+    uses: diggsweden/reusable-ci/.github/workflows/security-openssf-scorecard.yml@bab9e1bbbf2fd454ebd9b467271131263a57805c # v2.7.6
     with:
       publish-results: true
