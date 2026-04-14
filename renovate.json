@@ -56,7 +56,7 @@
       ],
       "matchPackageNames": [
         "aqua:google/yamlfmt",
-        "ubi:rvben/rumdl",
+        "aqua:rvben/rumdl",
         "github:italia/publiccode-parser-go",
         "aqua:casey/just"
       ],
